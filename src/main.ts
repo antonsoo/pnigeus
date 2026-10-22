@@ -1,5 +1,3 @@
-import "./style.css";
-import "./drawing.css";
 import { modelReading, sourceReading, wordNotes } from "./content";
 import { releasePcm, wave } from "./core/audio";
 import {
