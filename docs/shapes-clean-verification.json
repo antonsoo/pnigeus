@@ -1,0 +1,40 @@
+{
+  "sourceRevision": "f97d44806479163c739c0ed406c2600acf6b1871",
+  "reviewerRevision": "0068799d589e44deb404d31531731f2ade92ca7c",
+  "edition": "02363524c4e953e9e08b8c2f874791778baf7bab30a1f918c21a4525725bcf3c",
+  "installation": "npm ci in a fresh Git archive, then npm run check; reviewer-only changes use the same lockfile.",
+  "node": "v26.7.0",
+  "npm": "12.0.1",
+  "python": "3.12.3",
+  "buildFiles": {
+    "sw.js": "e31eb56439aab3e4ca81ef7cc69f61a1e88aa40bc55bfa7763e138ad897f051b",
+    "index.html": "5850008fdc092d170a56f402b016159db3d4ccff6b89663cb92751b3bebb4109",
+    "shapes.html": "8617111a2751c9bae41e6c4c24f9986370b2fb370554ca9aae813041388c4ead",
+    "fonts/NotoSerif-Regular.ttf": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6",
+    "fonts/NotoSerif-OFL.txt": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+    "fonts/IBMPlexSans-SemiBold.woff2": "f78048030eab62e860efa39a0df79e2e5581bf122eb95b9bc42c0b8a4988d205",
+    "fonts/IBMPlexSans-Regular.woff2": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+    "fonts/IBMPlex-OFL.txt": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+    "sources/hero-schmidt-192.jpg": "b353ae798dfcf466b9a95d965adee39a9dbd179b4534a3b62f5b915916f9e10d",
+    "sources/hero-fig76.jpg": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+    "assets/main-Bznl6PjT.css": "5873556065cfd9aaa724923fd1d6f20d6e871d0d5206c34f0460d95230db8f73",
+    "assets/offline-B0CFMBie.js": "812f3b093a7dcc4487c2aa1004291fef9863fe7626e5d64f20ff06aae8c87a68",
+    "assets/offline-C9A2EXqx.css": "4d1b068b6fe760a02a8452595b4e03b33e15950f4e8a098c625de1c15b756725",
+    "assets/shapes-DiOAloMA.js": "8b9d71b7f293a8e064e8361be890870ba6642e03e59c174107f1354a041eb43f",
+    "assets/shapes-ph047G3t.css": "29aa3f216f000da66891549607574964675d38e4914dad05dab50c13f21b369b",
+    "assets/main-BlPueDQw.js": "ad1ba182854be66af965bf2974ad3281adcdc464283358dd0963071d9c60a649"
+  },
+  "buildFilesIdenticalToWorkingCheckout": true,
+  "checks": [
+    "lint",
+    "strict typecheck",
+    "nine core tests",
+    "production build",
+    "168 independent pump cases",
+    "1215 independent shape cases",
+    "both browser engines at both widths, both workshops",
+    "both documented development workflows",
+    "independent SVG/CSV and audio checks"
+  ],
+  "hostedCIExecutionEstablished": false
+}

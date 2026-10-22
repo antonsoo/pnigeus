@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "cases": 1215,
+  "comparisons": 184194,
+  "maximum_absolute_errors": {
+    "physical": 8.29913915367797e-12,
+    "svg": 0.0
+  },
+  "method": "Independent pressure-coordinate water solver and cross-section quadrature.\n\nNo application imports or closed-form cap primitives. Simpson integration of\nquadratic cross-sections, split at rim and roof, provides geometric volumes.\nThe app instead solves outside height from inside height and inverts pressure.\n"
+}

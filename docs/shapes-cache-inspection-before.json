@@ -1,0 +1,26 @@
+{
+  "sourceRevision": "bbef6d09e972faa219290a3e412d903ccde4e9d6",
+  "scope": "Actual generated worker in fresh Chromium and Firefox contexts. Delete its cache, then request inspection. Before the fix, this read recreated an empty cache.",
+  "results": [
+    {
+      "engine": "chromium",
+      "before": [],
+      "inspection": {
+        "type": "PNIGEUS_EDITION",
+        "edition": "f5eab6034652ff37431e93022c26edd8de4c23306cd147cc59771293f92c09a0",
+        "complete": false
+      },
+      "after": ["pnigeus-f5eab6034652ff37431e93022c26edd8de4c23306cd147cc59771293f92c09a0"]
+    },
+    {
+      "engine": "firefox",
+      "before": [],
+      "inspection": {
+        "type": "PNIGEUS_EDITION",
+        "edition": "f5eab6034652ff37431e93022c26edd8de4c23306cd147cc59771293f92c09a0",
+        "complete": false
+      },
+      "after": ["pnigeus-f5eab6034652ff37431e93022c26edd8de4c23306cd147cc59771293f92c09a0"]
+    }
+  ]
+}

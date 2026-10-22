@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "style": {
+        "font": "Workshop, sans-serif",
+        "background": "rgb(232, 239, 243)",
+        "layout": "grid",
+        "overflow": false,
+        "drawingStroke": "rgb(147, 100, 21)"
+      },
+      "pump": true,
+      "release": true,
+      "reset": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "style": {
+        "font": "Workshop, sans-serif",
+        "background": "rgb(232, 239, 243)",
+        "layout": "block",
+        "overflow": false,
+        "drawingStroke": "rgb(147, 100, 21)"
+      },
+      "pump": true,
+      "release": true,
+      "reset": true,
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "style": {
+        "font": "Workshop, sans-serif",
+        "background": "rgb(232, 239, 243)",
+        "layout": "grid",
+        "overflow": false,
+        "drawingStroke": "rgb(147, 100, 21)"
+      },
+      "pump": true,
+      "release": true,
+      "reset": true,
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "style": {
+        "font": "Workshop, sans-serif",
+        "background": "rgb(232, 239, 243)",
+        "layout": "block",
+        "overflow": false,
+        "drawingStroke": "rgb(147, 100, 21)"
+      },
+      "pump": true,
+      "release": true,
+      "reset": true,
+      "errors": []
+    }
+  ],
+  "sourceRevision": "f97d44806479163c739c0ed406c2600acf6b1871",
+  "reviewerRevision": "0068799d589e44deb404d31531731f2ade92ca7c",
+  "buildEdition": "02363524c4e953e9e08b8c2f874791778baf7bab30a1f918c21a4525725bcf3c",
+  "artifactPaths": "Raw local paths omitted; reproduce with the documented command."
+}

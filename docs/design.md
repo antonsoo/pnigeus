@@ -58,3 +58,22 @@ mistaking wall-clock or a background browser tab for experimental time.
 No historical constant-pressure claim: the head changes as gas volume changes.
 At the rim, extra air vents. At equal water levels, useful gauge pressure is zero;
 the chamber still contains air. Water volume is conserved throughout.
+
+## Shape and usable-wind study
+
+A second room connects Hero’s eight-word Greek instruction to a physical
+question: how much air can a chosen chamber deliver within a pressure band?
+The large diagram shows both surfaces, a real chamber profile and a schematic
+tank width. A plan inset preserves the tangent octagon’s corner channels.
+Stable controls preserve focus; the comparison table and pressure curves use
+actual and ambient-equivalent litres as separate quantities.
+
+The Greek passage is read beside the retained printed page. Vitruvius’s funnel
+wording is not assigned to a mathematical cone: Hagel’s discussion of rounded
+Roman funnels makes that a misleading equivalence. The hemisphere follows
+Hero’s form; the cylinder and cone are explicitly modern comparisons.
+
+The study deliberately holds footprint and height fixed, rather than claiming
+an optimal chamber under all constraints. Its source-inspired 80 cm preset
+is labelled as scholarly reconstruction. The independent model and its
+limitations are derived in [shapes-model.md](shapes-model.md).

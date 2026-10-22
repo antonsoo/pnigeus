@@ -14,8 +14,9 @@ with an experiment, an original cutaway, a Latin reading and the source drawing.
 ![Three pump strokes stored behind two different water levels](docs/assets/workshop-1440.png)
 
 [Open the live experiment](https://antonsoo.github.io/pnigeus/).
-The [publication review](docs/publication.md) records matching hosted bytes and
-real browser workflows on the public site.
+The [initial publication review](docs/publication.md) records the first pump
+workshop edition. The [shape study review](docs/shapes-review.md) records the
+expanded two-workshop edition separately.
 The [saved illustrated reading](examples/one-pipe-reading.html), its
 [printable PDF](examples/one-pipe-reading.pdf), and a
 [five-second sound example](examples/one-pipe-release.wav) can be inspected locally.
@@ -58,6 +59,45 @@ The experiment advances only when you issue a command. Pump strokes are
 idealized instantaneous deliveries. “Release” advances the experiment clock
 by two or five seconds. Pausing a tab does not consume experimental air.
 
+## Explore the chamber’s shape
+
+[Open the shape study](https://antonsoo.github.io/pnigeus/shapes.html).
+Hero’s Greek instruction calls for a hollow hemisphere, turned upside down.
+Read its eight-word clause beside the printed 1899 page, then compare that
+form with a cylinder and a mathematical cone.
+
+The second workshop asks a specific engineering question: **how much air can
+a full chamber supply before pressure falls by a chosen percentage?** It varies
+rim radius, initial fill and tank plan. An octagon around the rim circle leaves
+water channels in its corners. Actual chamber space and gas measured at
+atmospheric pressure stay in separate columns and downloads.
+
+At the 80 cm diameter, roof-filled hemisphere preset, the calculations give:
+
+| Quantity                           | Value                       |
+| ---------------------------------- | --------------------------- |
+| Full air space                     | 134.041 L                   |
+| Full head                          | 652.816 mm water            |
+| Full gauge pressure                | 6401.937 Pa                 |
+| Space lost for a 30% pressure drop | 49.970 actual L             |
+| Air supplied for that drop         | 54.721 ambient-equivalent L |
+
+This reproduces the rounded geometric example discussed by Stefan Hagel
+(2023), and adds a stated isothermal gas correction. The dimensions are a
+scholarly reconstruction, not an ancient instrument’s measured pressure.
+Halving the radius halves the head and divides geometric space by eight;
+ambient gas stock has an additional pressure-dependent correction.
+
+Vitruvius’s “inverted funnel” need not mean a cone: Roman funnels could be
+rounded. The app treats the cone as a modern comparison. Footprint, height,
+fill and tank area are held fixed, rather than claiming a universally optimal
+form. The [full derivation](docs/shapes-model.md) states all constraints.
+
+Each saved Greek reading embeds the complete source page, diagrams, fonts,
+grammar notes and an exact CSV download. It opens and prints offline. Inspect
+the [actual saved reading](examples/shape-reading.html), its
+[PDF](examples/shape-reading.pdf) and [CSV](examples/shape-curves.csv).
+
 ## Read and keep the evidence
 
 - Inspect the chamber, water, pump, open rim and pressure head in the cutaway.
@@ -81,6 +121,8 @@ by two or five seconds. Pausing a tab does not consume experimental air.
 The ancient texts provide the arrangement, not the numbers. The model uses a
 constant-section chamber so water conservation and gas storage can be derived
 directly. Hero describes a hemisphere; Vitruvius compares his chamber to a funnel.
+Those wordings need not establish different forms. The shape study explains
+that source distinction and keeps the cone as a modern comparison.
 
 | Chosen parameter                       | Value                                      |
 | -------------------------------------- | ------------------------------------------ |
@@ -160,6 +202,21 @@ python3 scripts/audio-oracle.py /tmp/pnigeus-review/hosted.json
 Hosted offline checks disable browser networking; local checks additionally
 close the origin server.
 
+Check the shape study’s independent geometric solver and actual SVG/CSV:
+
+```sh
+npm run verify:shapes
+npm run test:shapes -- /tmp/pnigeus-review/shapes.json
+python3 scripts/shapes-oracle.py /tmp/pnigeus-review/shapes.json
+```
+
+For development, pass the running base URL and `development` as the final
+argument to `scripts/shapes-browser.mjs`; for a hosted review, pass the public
+HTTPS base URL. The shape checker integrates cross-sections with Simpson’s
+rule and solves water conservation in pressure coordinates. It imports no
+application code or cap-volume primitives. It also inspects the actual drawn
+profiles, tank plans, water lines, curve vertices and downloaded CSV rows.
+
 The physics checker imports no application code. It derives the gas volume
 from pressure and water conservation, then integrates a pressure-coordinate
 ODE with RK4. The app instead inverts an exact displacement-coordinate time
@@ -172,7 +229,9 @@ real downloads, delayed audio cancellation, native saved readings and offline
 reloads after the origin’s sockets close. The audio checker reconstructs every
 sample of eight WAVs and eight captured live buffers, including the silence
 after four open pipes exhaust the reserve. The [review](docs/review.md) records
-the build, measured results and the limits of each check.
+the initial build, measured results and the limits of each check. The
+[shape review](docs/shapes-review.md) records the expanded edition and both
+workshops’ current regression checks.
 
 ## Accuracy and limitations
 

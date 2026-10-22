@@ -1,0 +1,61 @@
+{
+  "sourceRevision": "f97d44806479163c739c0ed406c2600acf6b1871",
+  "edition": "02363524c4e953e9e08b8c2f874791778baf7bab30a1f918c21a4525725bcf3c",
+  "files": [
+    {
+      "file": "docs/assets/shapes-firefox-375-greek.png",
+      "bytes": 117001,
+      "sha256": "dbfad668b1fcc74ed0635b1c19c657d67e2368d8ec8d65f9e1fa993aa98b0d26"
+    },
+    {
+      "file": "docs/assets/shapes-firefox-1440-workshop.png",
+      "bytes": 159384,
+      "sha256": "c407bcafcd6d9c5cf854ae0d33e83a2f2f61d5de42a12d73b88323986c82fda9"
+    },
+    {
+      "file": "docs/assets/shapes-chromium-375-workshop.png",
+      "bytes": 50898,
+      "sha256": "62d0790c04cd3539645360f678898bbe206a368fcec8ea0ead90ea01f1b91efb"
+    },
+    {
+      "file": "docs/assets/shapes-firefox-1440-greek.png",
+      "bytes": 261935,
+      "sha256": "7e840f504d3b58362c0eed7b3d55eddd68b3a075fc5562aa3dfac6d80b4e00f4"
+    },
+    {
+      "file": "docs/assets/shapes-firefox-375-workshop.png",
+      "bytes": 78557,
+      "sha256": "89aa17f49a1dbd342433032d14b7c908baef1700cf659e9bc2d3bba21195e1b2"
+    },
+    {
+      "file": "docs/assets/shapes-chromium-1440-workshop.png",
+      "bytes": 98887,
+      "sha256": "95aebd576669e1755c58c45608516602804bef2d5cfe1d00016d1a084e518299"
+    },
+    {
+      "file": "docs/assets/shapes-chromium-375-greek.png",
+      "bytes": 68907,
+      "sha256": "85c51787bc10c90d0b1623eb4b524cf781b64957f8d67107ae4a0fd951eab3f4"
+    },
+    {
+      "file": "docs/assets/shapes-chromium-1440-greek.png",
+      "bytes": 176007,
+      "sha256": "d84ba1570d3b62cee1bb0a344f65421b67b0ccbba26a7c045a4756e5bbbd8fdf"
+    },
+    {
+      "file": "examples/shape-reading.html",
+      "bytes": 1476807,
+      "sha256": "1fbfe77284e0ef5584f52a07538a7c994b61d2b3b80c0a230ad343f971b0beb3"
+    },
+    {
+      "file": "examples/shape-reading.pdf",
+      "bytes": 631505,
+      "sha256": "22cc406fbde1299191baba789c451354eaa2bf0ff5e720a8c9c999597a6f42c1"
+    },
+    {
+      "file": "examples/shape-curves.csv",
+      "bytes": 58278,
+      "sha256": "e84b23daa2b32d9ca4b5632cb202cfa9e1d68ea610d84ef5e219f6ca63b02df8"
+    }
+  ]
+}
