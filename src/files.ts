@@ -99,6 +99,10 @@ export async function study(
       ? `<h2>Last release</h2><p>Action ${last.index}: ${escapeHtml(commandName(last.command))}. Modern sine reference tones; illustrative pressure-to-amplitude mapping.</p><audio controls src="${dataUrl(wave(releasePcm(last.before, tank, last.command.seconds)), "audio/wav")}"></audio>`
       : "";
   const sources = sourceReading
+    .replace(
+      "Select a Latin phrase to inspect its grammar and find its part on the drawing.",
+      "The Latin word notes below explain the grammar and identify the corresponding parts.",
+    )
     .replaceAll('loading="lazy"', "")
     .replaceAll('href="sources/hero-fig76.jpg"', `href="${dataUrl(image, "image/jpeg")}"`)
     .replaceAll('src="sources/hero-fig76.jpg"', `src="${dataUrl(image, "image/jpeg")}"`)
