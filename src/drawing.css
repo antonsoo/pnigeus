@@ -1,0 +1,105 @@
+.cutaway text,
+svg text {
+  fill: #193648;
+  font-family: Workshop, sans-serif;
+  font-size: 19px;
+}
+.cutaway .plate-note {
+  font-size: 15px;
+}
+.tank-wall {
+  fill: none;
+  stroke: #193648;
+  stroke-width: 5;
+}
+.water-fill {
+  fill: #a9cedf;
+}
+.water-line {
+  fill: none;
+  stroke: #346e90;
+  stroke-width: 3;
+}
+.bell-body {
+  fill: none;
+  stroke: #936415;
+  stroke-width: 9;
+  stroke-linejoin: round;
+}
+.trapped-air {
+  fill: #fff2cf;
+}
+.air-direction {
+  fill: none;
+  stroke: #936415;
+  stroke-width: 2;
+}
+.pump-body {
+  fill: #e3d3ae;
+  stroke: #936415;
+  stroke-width: 3;
+}
+.mechanism {
+  stroke: #193648;
+  stroke-width: 6;
+  fill: none;
+}
+.annotation {
+  fill: none;
+  stroke: #193648;
+  stroke-width: 1.5;
+}
+.head-line {
+  stroke: #193648;
+  stroke-width: 2;
+  fill: none;
+}
+.head-label {
+  font-weight: 600;
+}
+.rim-line {
+  stroke: #936415;
+  stroke-width: 5;
+}
+.selected-part .head-line,
+.selected-part .water-line,
+.selected-part .rim-line {
+  stroke: #a34330;
+  stroke-width: 4;
+}
+.selected-part .bell-body,
+.selected-part .pump-body {
+  stroke: #a34330;
+}
+.chart-axis {
+  fill: none;
+  stroke: #536776;
+  stroke-width: 1.5;
+}
+.chart-grid {
+  stroke: #c8d4dc;
+  stroke-width: 1;
+}
+.trace-water {
+  fill: none;
+  stroke: #346e90;
+  stroke-width: 3;
+}
+.trace-dry {
+  fill: none;
+  stroke: #88501a;
+  stroke-width: 2.5;
+  stroke-dasharray: 8 5;
+}
+
+.compact text {
+  font-size: 24px;
+}
+.compact .plate-note,
+.compact .surface-label,
+.compact .scale-axis,
+.compact .scale-number,
+.compact .pump-diagram,
+.compact .from-pump {
+  display: none;
+}
