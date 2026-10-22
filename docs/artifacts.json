@@ -1,0 +1,65 @@
+{
+  "edition": "471c19da39be900345eccd978c1b0c7dbb92f140ebd139699fc07a16f6044b9d",
+  "files": [
+    {
+      "file": "docs/assets/firefox-reading-1440.png",
+      "bytes": 397835,
+      "sha256": "6a2b8d63355ced31574a6c9e8a266ece0083ba5a7a66d05bee68871ef1073047"
+    },
+    {
+      "file": "docs/assets/firefox-reading-375.png",
+      "bytes": 121472,
+      "sha256": "071f2a0ad569faf350f77873dff72e612517a9ac2706e863351c47cd920d56e7"
+    },
+    {
+      "file": "docs/assets/firefox-workshop-1440.png",
+      "bytes": 152771,
+      "sha256": "6aff05bfaa957c5eba697cedd3a62d83b86e115c4cdd1b6596fc5ff23dd308e1"
+    },
+    {
+      "file": "docs/assets/firefox-workshop-375.png",
+      "bytes": 79375,
+      "sha256": "ffbe1338be014fd94b7d663eb23afe451e8acee8b92ebfa956de8c573e9d2559"
+    },
+    {
+      "file": "docs/assets/reading-1440.png",
+      "bytes": 301547,
+      "sha256": "7a069f118c8d30def81c095ef5855be5b900e8ab60f6af52ede9a3d940d90825"
+    },
+    {
+      "file": "docs/assets/reading-375.png",
+      "bytes": 64008,
+      "sha256": "bec7c6390045857317712e56c352f4d733cf752a98b96096d49d6883e6df9499"
+    },
+    {
+      "file": "docs/assets/workshop-1440.png",
+      "bytes": 93498,
+      "sha256": "13ae26e5129b5c224c24e75d6c6722a796399bcb268bad76bca5eb17fdd7dfcd"
+    },
+    {
+      "file": "docs/assets/workshop-375.png",
+      "bytes": 48003,
+      "sha256": "267ed18716b13cdc4351635f965e7ae112ace3e6daf8bd3d36c6f1743536da49"
+    },
+    {
+      "file": "examples/one-pipe-measurements.csv",
+      "bytes": 1133,
+      "sha256": "9cb0bf97709bc134a6dbea2fb4a21871bd25359acb88ca95fc42cd83507d6f05"
+    },
+    {
+      "file": "examples/one-pipe-reading.html",
+      "bytes": 1649123,
+      "sha256": "a6d733353b684254532b907abc66e22ccee87284959740ce68e52ee2b9ead686"
+    },
+    {
+      "file": "examples/one-pipe-reading.pdf",
+      "bytes": 587578,
+      "sha256": "cad741b514c4d1e26ab246c8379f71018da9475017f8d1ec7bae3ca83cf02e85"
+    },
+    {
+      "file": "examples/one-pipe-release.wav",
+      "bytes": 480044,
+      "sha256": "1f7c3a73f5c0ac1329cdd85c6fc334c75d4c038baa62fe0ebcf3d8cadee3df85"
+    }
+  ]
+}

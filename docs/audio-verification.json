@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "wav_files": 8,
+  "live_buffers": 8,
+  "samples_per_format": 1920000,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "example": "one-pipe",
+      "samples": 240000,
+      "maximum_live_error": 0.0,
+      "maximum_wav_error_lsb": 0,
+      "live_to_wav_error_lsb": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "example": "four-pipes",
+      "samples": 240000,
+      "maximum_live_error": 1.4551915228366852e-11,
+      "maximum_wav_error_lsb": 0,
+      "live_to_wav_error_lsb": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "example": "one-pipe",
+      "samples": 240000,
+      "maximum_live_error": 0.0,
+      "maximum_wav_error_lsb": 0,
+      "live_to_wav_error_lsb": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "example": "four-pipes",
+      "samples": 240000,
+      "maximum_live_error": 1.4551915228366852e-11,
+      "maximum_wav_error_lsb": 0,
+      "live_to_wav_error_lsb": 0
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "example": "one-pipe",
+      "samples": 240000,
+      "maximum_live_error": 0.0,
+      "maximum_wav_error_lsb": 0,
+      "live_to_wav_error_lsb": 0
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "example": "four-pipes",
+      "samples": 240000,
+      "maximum_live_error": 1.4551915228366852e-11,
+      "maximum_wav_error_lsb": 0,
+      "live_to_wav_error_lsb": 0
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "example": "one-pipe",
+      "samples": 240000,
+      "maximum_live_error": 0.0,
+      "maximum_wav_error_lsb": 0,
+      "live_to_wav_error_lsb": 0
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "example": "four-pipes",
+      "samples": 240000,
+      "maximum_live_error": 1.4551915228366852e-11,
+      "maximum_wav_error_lsb": 0,
+      "live_to_wav_error_lsb": 0
+    }
+  ],
+  "scope": "digital samples; modern sine tones and illustrative amplitude, not physical speakers or ancient pipe acoustics"
+}

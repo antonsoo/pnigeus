@@ -1,0 +1,68 @@
+{
+  "scope": "local Vite preview HTTP responses; no public deployment",
+  "files": [
+    {
+      "file": "assets/index-BVg4q9oq.js",
+      "sha256": "7cda4d8f7b2a7fcd6d43545be9afd9f7e005c8b22cfc30a78db377dd99602f8e",
+      "http_status": 200,
+      "matches": true
+    },
+    {
+      "file": "assets/index-BYu9oFl3.css",
+      "sha256": "4ed9b8fc9ead5e8e159c58364e8a86fe6ea16588df8c51c407e407b0f09368f4",
+      "http_status": 200,
+      "matches": true
+    },
+    {
+      "file": "fonts/IBMPlex-OFL.txt",
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "http_status": 200,
+      "matches": true
+    },
+    {
+      "file": "fonts/IBMPlexSans-Regular.woff2",
+      "sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+      "http_status": 200,
+      "matches": true
+    },
+    {
+      "file": "fonts/IBMPlexSans-SemiBold.woff2",
+      "sha256": "f78048030eab62e860efa39a0df79e2e5581bf122eb95b9bc42c0b8a4988d205",
+      "http_status": 200,
+      "matches": true
+    },
+    {
+      "file": "fonts/NotoSerif-OFL.txt",
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+      "http_status": 200,
+      "matches": true
+    },
+    {
+      "file": "fonts/NotoSerif-Regular.ttf",
+      "sha256": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6",
+      "http_status": 200,
+      "matches": true
+    },
+    {
+      "file": "index.html",
+      "sha256": "e14d76ad6393a79cbf03ffbecc5d57569e4b5903842e0a3e2a9d5b0922e75e18",
+      "http_status": 200,
+      "matches": true
+    },
+    {
+      "file": "sources/hero-fig76.jpg",
+      "sha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+      "http_status": 200,
+      "matches": true
+    },
+    {
+      "file": "sw.js",
+      "sha256": "250d2dc6c59560e94b6b7f56844e9d3a9275bc3fa8748cd4ea5bd67b68d20dc3",
+      "http_status": 200,
+      "matches": true
+    }
+  ],
+  "root_entry_matches_index": true,
+  "file_count": 10,
+  "all_match": true
+}

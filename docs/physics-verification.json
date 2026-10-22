@@ -1,0 +1,10 @@
+{
+  "model_cases": 168,
+  "comparisons": 2520,
+  "max_absolute_errors": {
+    "numeric": 1.864464138634503e-11,
+    "svg_pixels": 0.0
+  },
+  "method": "independent pressure-coordinate RK4, dt <= 0.002 s; bisection from water conservation and PV",
+  "status": "passed"
+}

@@ -1,0 +1,23 @@
+{
+  "reviewed": "2026-10-22",
+  "latin": {
+    "edition": "Valentin Rose, second edition, 1899",
+    "work": "Vitruvius, De architectura X.8.2",
+    "page": 257,
+    "prior_edition_marginal_page": 261,
+    "url": "https://www.gutenberg.org/cache/epub/51812/pg51812-images.html#vitruvius-para671",
+    "excerpt": "intra arcam, quo loci aqua sustinetur, inest pnigeus uti infundibulum inversum",
+    "words": 11,
+    "matches_edition": true
+  },
+  "illustration": {
+    "edition": "Greenwood translation, Woodcroft editor, 1851",
+    "work": "Hero, Pneumatics, section 76",
+    "pages": [105, 106, 107],
+    "figure": 76,
+    "url": "https://www.gutenberg.org/cache/epub/77400/images/fig76.jpg",
+    "bytes": 115259,
+    "sha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+    "historical_status": "1851 explanatory illustration, not an ancient plan"
+  }
+}
