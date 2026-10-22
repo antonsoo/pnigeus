@@ -1,7 +1,7 @@
 # Review of the water-organ workshop
 
 Reviewed on 2026-10-22. Functional source revision:
-`88e5b22345f3ecf29d159d1dd17cce23b2de92f1`.
+`7c9129e5075e566d50adb72a1391820e70042a63`.
 The later documentation commits retain this review and do not change application inputs.
 
 Build edition:
