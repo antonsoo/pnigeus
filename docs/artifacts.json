@@ -1,15 +1,35 @@
 {
-  "edition": "471c19da39be900345eccd978c1b0c7dbb92f140ebd139699fc07a16f6044b9d",
+  "edition": "00a80a0d1b7dd78eea4e918b212d2684a618104befa79a76c831832c084a053c",
   "files": [
     {
+      "file": "examples/one-pipe-measurements.csv",
+      "bytes": 1133,
+      "sha256": "9cb0bf97709bc134a6dbea2fb4a21871bd25359acb88ca95fc42cd83507d6f05"
+    },
+    {
+      "file": "examples/one-pipe-reading.html",
+      "bytes": 1649123,
+      "sha256": "da7205659652b8964622d4a823a326ca8a4f2df460a5bb0d622f7ca7efa7f494"
+    },
+    {
+      "file": "examples/one-pipe-reading.pdf",
+      "bytes": 587566,
+      "sha256": "50b51afe7f4c7674f311c744755e430d9d08ebb48a114cd6bf52ec21271555da"
+    },
+    {
+      "file": "examples/one-pipe-release.wav",
+      "bytes": 480044,
+      "sha256": "1f7c3a73f5c0ac1329cdd85c6fc334c75d4c038baa62fe0ebcf3d8cadee3df85"
+    },
+    {
       "file": "docs/assets/firefox-reading-1440.png",
-      "bytes": 397835,
-      "sha256": "6a2b8d63355ced31574a6c9e8a266ece0083ba5a7a66d05bee68871ef1073047"
+      "bytes": 399110,
+      "sha256": "119ebb2028f73ed14023cbf4f67e67931a89adec6a8c69a48e04083d9acfd9bb"
     },
     {
       "file": "docs/assets/firefox-reading-375.png",
-      "bytes": 121472,
-      "sha256": "071f2a0ad569faf350f77873dff72e612517a9ac2706e863351c47cd920d56e7"
+      "bytes": 121473,
+      "sha256": "f701bc4702f0a1f3bcf64514e8a8b128005d20893097613d1a2344220671ef05"
     },
     {
       "file": "docs/assets/firefox-workshop-1440.png",
@@ -40,26 +60,6 @@
       "file": "docs/assets/workshop-375.png",
       "bytes": 48003,
       "sha256": "267ed18716b13cdc4351635f965e7ae112ace3e6daf8bd3d36c6f1743536da49"
-    },
-    {
-      "file": "examples/one-pipe-measurements.csv",
-      "bytes": 1133,
-      "sha256": "9cb0bf97709bc134a6dbea2fb4a21871bd25359acb88ca95fc42cd83507d6f05"
-    },
-    {
-      "file": "examples/one-pipe-reading.html",
-      "bytes": 1649123,
-      "sha256": "a6d733353b684254532b907abc66e22ccee87284959740ce68e52ee2b9ead686"
-    },
-    {
-      "file": "examples/one-pipe-reading.pdf",
-      "bytes": 587578,
-      "sha256": "cad741b514c4d1e26ab246c8379f71018da9475017f8d1ec7bae3ca83cf02e85"
-    },
-    {
-      "file": "examples/one-pipe-release.wav",
-      "bytes": 480044,
-      "sha256": "1f7c3a73f5c0ac1329cdd85c6fc334c75d4c038baa62fe0ebcf3d8cadee3df85"
     }
   ]
 }

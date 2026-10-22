@@ -1,0 +1,26 @@
+{
+  "source_revision": "88e5b22",
+  "node": "26.7.0",
+  "npm": "12.0.1",
+  "python": "3.12.3",
+  "archive_install": "passed",
+  "lint": "passed",
+  "typecheck": "passed",
+  "core_tests": 5,
+  "build": "passed",
+  "independent_model_cases": 168,
+  "build_byte_identical": true,
+  "build_file_count": 10,
+  "files": {
+    "sw.js": "3f17f705de0478a24cd7ecaece9ff2842dc61888b359a1bae96daef6a5331695",
+    "index.html": "18dbcd664303a84a5545c9adf443bcb20d58673353c69bb91b9c03f4f148a815",
+    "fonts/NotoSerif-Regular.ttf": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6",
+    "fonts/NotoSerif-OFL.txt": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+    "fonts/IBMPlexSans-SemiBold.woff2": "f78048030eab62e860efa39a0df79e2e5581bf122eb95b9bc42c0b8a4988d205",
+    "fonts/IBMPlexSans-Regular.woff2": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+    "fonts/IBMPlex-OFL.txt": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+    "sources/hero-fig76.jpg": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+    "assets/index-DKwbAqNH.js": "856ed70232e06489c803845e989d530d13bfe9f4496153b727cdcce33a178420",
+    "assets/index-BYu9oFl3.css": "4ed9b8fc9ead5e8e159c58364e8a86fe6ea16588df8c51c407e407b0f09368f4"
+  }
+}

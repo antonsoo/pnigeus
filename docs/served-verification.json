@@ -1,15 +1,16 @@
 {
-  "scope": "local Vite preview HTTP responses; no public deployment",
+  "scope": "Local Vite preview from fresh Git archive; no public deployment",
+  "edition": "00a80a0d1b7dd78eea4e918b212d2684a618104befa79a76c831832c084a053c",
   "files": [
     {
-      "file": "assets/index-BVg4q9oq.js",
-      "sha256": "7cda4d8f7b2a7fcd6d43545be9afd9f7e005c8b22cfc30a78db377dd99602f8e",
+      "file": "assets/index-BYu9oFl3.css",
+      "sha256": "4ed9b8fc9ead5e8e159c58364e8a86fe6ea16588df8c51c407e407b0f09368f4",
       "http_status": 200,
       "matches": true
     },
     {
-      "file": "assets/index-BYu9oFl3.css",
-      "sha256": "4ed9b8fc9ead5e8e159c58364e8a86fe6ea16588df8c51c407e407b0f09368f4",
+      "file": "assets/index-DKwbAqNH.js",
+      "sha256": "856ed70232e06489c803845e989d530d13bfe9f4496153b727cdcce33a178420",
       "http_status": 200,
       "matches": true
     },
@@ -45,7 +46,7 @@
     },
     {
       "file": "index.html",
-      "sha256": "e14d76ad6393a79cbf03ffbecc5d57569e4b5903842e0a3e2a9d5b0922e75e18",
+      "sha256": "18dbcd664303a84a5545c9adf443bcb20d58673353c69bb91b9c03f4f148a815",
       "http_status": 200,
       "matches": true
     },
@@ -57,7 +58,7 @@
     },
     {
       "file": "sw.js",
-      "sha256": "250d2dc6c59560e94b6b7f56844e9d3a9275bc3fa8748cd4ea5bd67b68d20dc3",
+      "sha256": "3f17f705de0478a24cd7ecaece9ff2842dc61888b359a1bae96daef6a5331695",
       "http_status": 200,
       "matches": true
     }

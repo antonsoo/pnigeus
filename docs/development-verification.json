@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "style": {
+        "font": "Workshop, sans-serif",
+        "background": "rgb(232, 239, 243)",
+        "layout": "grid",
+        "overflow": false,
+        "drawingStroke": "rgb(147, 100, 21)"
+      },
+      "pump": true,
+      "release": true,
+      "reading": true,
+      "reset": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "style": {
+        "font": "Workshop, sans-serif",
+        "background": "rgb(232, 239, 243)",
+        "layout": "block",
+        "overflow": false,
+        "drawingStroke": "rgb(147, 100, 21)"
+      },
+      "pump": true,
+      "release": true,
+      "reading": true,
+      "reset": true,
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "style": {
+        "font": "Workshop, sans-serif",
+        "background": "rgb(232, 239, 243)",
+        "layout": "grid",
+        "overflow": false,
+        "drawingStroke": "rgb(147, 100, 21)"
+      },
+      "pump": true,
+      "release": true,
+      "reading": true,
+      "reset": true,
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "style": {
+        "font": "Workshop, sans-serif",
+        "background": "rgb(232, 239, 243)",
+        "layout": "block",
+        "overflow": false,
+        "drawingStroke": "rgb(147, 100, 21)"
+      },
+      "pump": true,
+      "release": true,
+      "reading": true,
+      "reset": true,
+      "errors": []
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 # Review of the water-organ workshop
 
 Reviewed on 2026-10-22. Functional source revision:
-`7cbfbbf0b7605d4bebb9eebffc7a410d7d87474b`.
+`88e5b22345f3ecf29d159d1dd17cce23b2de92f1`.
 The later documentation commits retain this review and do not change application inputs.
 
 Build edition:
-`471c19da39be900345eccd978c1b0c7dbb92f140ebd139699fc07a16f6044b9d`.
+`00a80a0d1b7dd78eea4e918b212d2684a618104befa79a76c831832c084a053c`.
 
 The edition is a SHA-256 digest of the application source, public files, entry
 HTML, package metadata, lockfile and build configuration. The service worker
@@ -16,6 +16,10 @@ cannot produce a successful receipt.
 Environment used: Node.js 26.7.0, npm 12.0.1, Python 3.12.3, Playwright 1.63.0,
 installed Chromium and Firefox, Linux/WSL. The documented requirement is Node 24
 or newer; this review does not claim a separate execution on Node 24.
+
+A [fresh Git archive check](clean-verification.json) installed all dependencies
+again and reproduced all ten build files byte-for-byte. The browser and audio
+receipts below come from that fresh installation.
 
 ## What was checked
 
@@ -39,6 +43,19 @@ Float32 difference was below `1.5e-11`. No downloaded PCM16 sample differed
 from the independently rounded expected value in this reviewed population.
 The last quarter-second of every four-pipe release was silent after useful
 wind had run out. Physical loudspeakers and ancient pipe behaviour were not measured.
+
+## Development mode
+
+The documented `npm run dev` initially operated the controls but lost its
+styles: Vite injected styles that the page’s policy rejected. The entry HTML
+now loads both stylesheets through ordinary external links in development and
+production. The production policy keeps `style-src 'self'`.
+
+The [development review](development-verification.json) verifies computed
+body and drawing styles, responsive layout, keyboard pumping, release, reset
+and actual standalone reading downloads in both engines at both widths. It
+also ran from the fresh archive. This check is included in the prepared CI
+workflow; this review does not establish execution on hosted CI.
 
 ## Actual user workflows
 
