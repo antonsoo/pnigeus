@@ -382,6 +382,31 @@ for (const [name, engine] of Object.entries({ chromium, firefox })) {
           workflow.offlineWithOriginClosed = !external;
         }
         await context.setOffline(false);
+        if (!development) {
+          const evicted = await page.evaluate(async () => {
+            for (const name of await caches.keys())
+              if (name.startsWith("pnigeus-")) await caches.delete(name);
+            const channel = new MessageChannel();
+            const reply = new Promise((resolve, reject) => {
+              const timer = setTimeout(() => reject(new Error("Inspection timed out")), 8000);
+              channel.port1.onmessage = (event) => {
+                clearTimeout(timer);
+                channel.port1.close();
+                resolve(event.data);
+              };
+            });
+            navigator.serviceWorker.controller.postMessage({ type: "PNIGEUS_INSPECT" }, [
+              channel.port2,
+            ]);
+            const result = await reply;
+            return {
+              complete: result.complete,
+              caches: (await caches.keys()).filter((n) => n.startsWith("pnigeus-")),
+            };
+          });
+          assert.deepEqual(evicted, { complete: false, caches: [] });
+          workflow.missingCacheInspectionReadonly = true;
+        }
         assert.deepEqual(errors, []);
         assert.deepEqual(externalRequests, []);
         workflow.pageErrors = errors;

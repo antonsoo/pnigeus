@@ -94,9 +94,9 @@ self.addEventListener("activate", event => {
 });
 self.addEventListener("message", event => {
   if (event.data?.type !== "PNIGEUS_INSPECT" || !event.ports[0]) return;
-  event.waitUntil(caches.open(CACHE).then(cache => cache.keys()).then(keys => {
-    const saved = new Set(keys.map(request => new URL(request.url).pathname));
-    event.ports[0].postMessage({ type: "PNIGEUS_EDITION", edition: EDITION, complete: FILES.every(file => saved.has(file)) });
+  // Inspection must not recreate an evicted or obsolete edition's cache.
+  event.waitUntil(Promise.all(FILES.map(file => caches.match(file, { cacheName: CACHE }))).then(saved => {
+    event.ports[0].postMessage({ type: "PNIGEUS_EDITION", edition: EDITION, complete: saved.every(Boolean) });
   }).catch(() => event.ports[0].postMessage({ type: "PNIGEUS_EDITION", edition: EDITION, complete: false })));
 });
 self.addEventListener("fetch", event => {
@@ -104,9 +104,9 @@ self.addEventListener("fetch", event => {
   if (event.request.method !== "GET" || url.origin !== self.location.origin || !url.pathname.startsWith(BASE)) return;
   if (event.request.mode === "navigate") {
     const page = url.pathname === BASE || url.pathname === BASE + "index.html" ? BASE + "index.html" : url.pathname;
-    if (FILES.includes(page)) event.respondWith(fetch(event.request).catch(() => caches.open(CACHE).then(cache => cache.match(page))));
+    if (FILES.includes(page)) event.respondWith(fetch(event.request).catch(() => caches.match(page, { cacheName: CACHE })));
   } else if (FILES.includes(url.pathname)) {
-    event.respondWith(caches.open(CACHE).then(cache => cache.match(url.pathname)).then(cached => cached || fetch(event.request)));
+    event.respondWith(caches.match(url.pathname, { cacheName: CACHE }).then(cached => cached || fetch(event.request)));
   }
 });
 `,
