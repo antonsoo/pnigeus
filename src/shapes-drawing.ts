@@ -32,6 +32,7 @@ export function shapeSection(s: ShapeSettings, compact = false): string {
       : `M${tankLeft} ${n(y(reading.outside))} H${n(centre - outerHalf)} M${n(centre + outerHalf)} ${n(y(reading.outside))} H${tankRight}`;
   const insidePath = `M${n(centre - innerHalf)} ${n(y(reading.inside))} H${n(centre + innerHalf)}`;
   const empty = reading.volume < 1e-9;
+  const outletTop = Math.min(bottom - pixelRadius - 32, y(reading.outside) - 14);
   const capHeight = y(reading.inside) - y(g.radius);
   const airLabel = empty
     ? `<text x="${centre}" y="${bottom - pixelRadius - 20}" text-anchor="middle" class="section-caption">chamber empty</text>`
@@ -58,7 +59,7 @@ export function shapeSection(s: ShapeSettings, compact = false): string {
 <path d="M${brace} ${n(y(reading.outside))} V${n(y(reading.inside))} M${brace - 8} ${n(y(reading.outside))} H${brace + 8} M${brace - 8} ${n(y(reading.inside))} H${brace + 8}" class="section-head"/>
 ${compact ? "" : `<text x="${brace + 16}" y="${n((y(reading.outside) + y(reading.inside)) / 2 + 5)}" class="head-label">${(100 * reading.head).toFixed(1)} cm</text>`}
 ${airLabel}
-${empty ? "" : `<path d="M${centre} ${bottom - pixelRadius + 4} V${bottom - pixelRadius - 32} m-5 7 5-7 5 7" class="section-outlet"/><text x="${centre}" y="${bottom - pixelRadius - 43}" text-anchor="middle" class="section-caption">to the windchest</text>`}
+${empty ? "" : `<path d="M${centre} ${bottom - pixelRadius + 4} V${n(outletTop)} m-5 7 5-7 5 7" class="section-outlet"/><text x="${centre}" y="${n(outletTop - 11)}" text-anchor="middle" class="section-caption">to the windchest</text>`}
 <text x="${centre}" y="${bottom + (compact ? 42 : 44)}" text-anchor="middle" class="section-caption">open rim · ${s.radiusCm * 2} cm diameter</text>
 </svg>`;
 }
