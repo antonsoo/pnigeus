@@ -9,6 +9,9 @@ import { chromium, firefox } from "playwright";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const output = path.resolve(process.argv[2] ?? "/tmp/pnigeus-review/browser.json");
+const hosted = process.argv[3] ? new URL(process.argv[3]) : null;
+if (hosted && (hosted.protocol !== "https:" || !hosted.pathname.endsWith("/")))
+  throw new Error("Hosted review requires an HTTPS base URL ending in /");
 const directory = path.dirname(output);
 await mkdir(directory, { recursive: true });
 const mime = {
@@ -21,6 +24,7 @@ const mime = {
   ".txt": "text/plain",
 };
 async function server() {
+  if (hosted) return { url: hosted.href, close: async () => {} };
   const app = createServer(async (request, response) => {
     try {
       const url = new URL(request.url, "http://local");
@@ -163,6 +167,9 @@ async function builtFiles(directory, prefix = "") {
   return all.sort((a, b) => a.file.localeCompare(b.file));
 }
 const receipt = {
+  reviewedAt: new Date().toISOString(),
+  mode: hosted ? "hosted" : "local",
+  ...(hosted ? { url: hosted.href } : {}),
   build: await builtFiles(path.join(root, "dist")),
   workflows: [],
   negativeCases: [],
@@ -333,13 +340,14 @@ for (const [name, engine] of Object.entries({ chromium, firefox })) {
         }
         await native.close();
         await site.close();
-        // Origin sockets are now closed in addition to the browser being offline.
+        // Local reviews also close the origin; hosted reviews disable browser networking.
         await page.reload();
         await page.locator("#offline").filter({ hasText: "Ready offline" }).waitFor();
         await page.locator("#pump").click();
         assert.ok(Number(await page.locator("#pressure").textContent()) > 0);
         workflow.offlineReading = await saveDownload(page, "#study", `${id}-offline.html`);
-        workflow.offlineWithOriginClosed = true;
+        workflow.offlineWithOriginClosed = !hosted;
+        workflow.offlineWithNetworkDisabled = true;
         await context.setOffline(false);
         assert.deepEqual(errors, []);
         assert.deepEqual(externalRequests, []);
