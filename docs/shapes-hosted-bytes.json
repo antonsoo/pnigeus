@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "node": "v26.7.0",
+  "requestTimeoutMs": 10000,
+  "retryWindowMs": 180000,
+  "pollIntervalMs": 5000,
+  "concurrency": 6,
+  "baseURL": "https://antonsoo.github.io/pnigeus/",
+  "state": "verified",
+  "attempts": 5,
+  "startedAtUtc": "2026-10-22T21:46:33.926Z",
+  "checkedAtUtc": "2026-10-22T21:46:57.378Z",
+  "buildManifestSha256": "48d77f42047ed58b411714054828aec4c7da61f961d2f60d839616f88f25f44d",
+  "expectedFileCount": 16,
+  "checkedFileCount": 16,
+  "verifiedFileCount": 16,
+  "rootBefore": {
+    "path": "index.html",
+    "bytes": 1732,
+    "sha256": "5850008fdc092d170a56f402b016159db3d4ccff6b89663cb92751b3bebb4109",
+    "url": "https://antonsoo.github.io/pnigeus/",
+    "httpStatus": 200,
+    "observedBytes": 1732,
+    "observedSha256": "5850008fdc092d170a56f402b016159db3d4ccff6b89663cb92751b3bebb4109",
+    "state": "verified"
+  },
+  "rootAfter": {
+    "path": "index.html",
+    "bytes": 1732,
+    "sha256": "5850008fdc092d170a56f402b016159db3d4ccff6b89663cb92751b3bebb4109",
+    "url": "https://antonsoo.github.io/pnigeus/",
+    "httpStatus": 200,
+    "observedBytes": 1732,
+    "observedSha256": "5850008fdc092d170a56f402b016159db3d4ccff6b89663cb92751b3bebb4109",
+    "state": "verified"
+  },
+  "files": [
+    {
+      "path": "assets/main-BlPueDQw.js",
+      "bytes": 13293,
+      "sha256": "ad1ba182854be66af965bf2974ad3281adcdc464283358dd0963071d9c60a649",
+      "url": "https://antonsoo.github.io/pnigeus/assets/main-BlPueDQw.js",
+      "httpStatus": 200,
+      "observedBytes": 13293,
+      "observedSha256": "ad1ba182854be66af965bf2974ad3281adcdc464283358dd0963071d9c60a649",
+      "state": "verified"
+    },
+    {
+      "path": "assets/main-Bznl6PjT.css",
+      "bytes": 1280,
+      "sha256": "5873556065cfd9aaa724923fd1d6f20d6e871d0d5206c34f0460d95230db8f73",
+      "url": "https://antonsoo.github.io/pnigeus/assets/main-Bznl6PjT.css",
+      "httpStatus": 200,
+      "observedBytes": 1280,
+      "observedSha256": "5873556065cfd9aaa724923fd1d6f20d6e871d0d5206c34f0460d95230db8f73",
+      "state": "verified"
+    },
+    {
+      "path": "assets/offline-B0CFMBie.js",
+      "bytes": 26898,
+      "sha256": "812f3b093a7dcc4487c2aa1004291fef9863fe7626e5d64f20ff06aae8c87a68",
+      "url": "https://antonsoo.github.io/pnigeus/assets/offline-B0CFMBie.js",
+      "httpStatus": 200,
+      "observedBytes": 26898,
+      "observedSha256": "812f3b093a7dcc4487c2aa1004291fef9863fe7626e5d64f20ff06aae8c87a68",
+      "state": "verified"
+    },
+    {
+      "path": "assets/offline-C9A2EXqx.css",
+      "bytes": 10262,
+      "sha256": "4d1b068b6fe760a02a8452595b4e03b33e15950f4e8a098c625de1c15b756725",
+      "url": "https://antonsoo.github.io/pnigeus/assets/offline-C9A2EXqx.css",
+      "httpStatus": 200,
+      "observedBytes": 10262,
+      "observedSha256": "4d1b068b6fe760a02a8452595b4e03b33e15950f4e8a098c625de1c15b756725",
+      "state": "verified"
+    },
+    {
+      "path": "assets/shapes-DiOAloMA.js",
+      "bytes": 53742,
+      "sha256": "8b9d71b7f293a8e064e8361be890870ba6642e03e59c174107f1354a041eb43f",
+      "url": "https://antonsoo.github.io/pnigeus/assets/shapes-DiOAloMA.js",
+      "httpStatus": 200,
+      "observedBytes": 53742,
+      "observedSha256": "8b9d71b7f293a8e064e8361be890870ba6642e03e59c174107f1354a041eb43f",
+      "state": "verified"
+    },
+    {
+      "path": "assets/shapes-ph047G3t.css",
+      "bytes": 8078,
+      "sha256": "29aa3f216f000da66891549607574964675d38e4914dad05dab50c13f21b369b",
+      "url": "https://antonsoo.github.io/pnigeus/assets/shapes-ph047G3t.css",
+      "httpStatus": 200,
+      "observedBytes": 8078,
+      "observedSha256": "29aa3f216f000da66891549607574964675d38e4914dad05dab50c13f21b369b",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/IBMPlex-OFL.txt",
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "url": "https://antonsoo.github.io/pnigeus/fonts/IBMPlex-OFL.txt",
+      "httpStatus": 200,
+      "observedBytes": 4456,
+      "observedSha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/IBMPlexSans-Regular.woff2",
+      "bytes": 63020,
+      "sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+      "url": "https://antonsoo.github.io/pnigeus/fonts/IBMPlexSans-Regular.woff2",
+      "httpStatus": 200,
+      "observedBytes": 63020,
+      "observedSha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/IBMPlexSans-SemiBold.woff2",
+      "bytes": 67060,
+      "sha256": "f78048030eab62e860efa39a0df79e2e5581bf122eb95b9bc42c0b8a4988d205",
+      "url": "https://antonsoo.github.io/pnigeus/fonts/IBMPlexSans-SemiBold.woff2",
+      "httpStatus": 200,
+      "observedBytes": 67060,
+      "observedSha256": "f78048030eab62e860efa39a0df79e2e5581bf122eb95b9bc42c0b8a4988d205",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/NotoSerif-OFL.txt",
+      "bytes": 4396,
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+      "url": "https://antonsoo.github.io/pnigeus/fonts/NotoSerif-OFL.txt",
+      "httpStatus": 200,
+      "observedBytes": 4396,
+      "observedSha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/NotoSerif-Regular.ttf",
+      "bytes": 444064,
+      "sha256": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6",
+      "url": "https://antonsoo.github.io/pnigeus/fonts/NotoSerif-Regular.ttf",
+      "httpStatus": 200,
+      "observedBytes": 444064,
+      "observedSha256": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6",
+      "state": "verified"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1732,
+      "sha256": "5850008fdc092d170a56f402b016159db3d4ccff6b89663cb92751b3bebb4109",
+      "url": "https://antonsoo.github.io/pnigeus/index.html",
+      "httpStatus": 200,
+      "observedBytes": 1732,
+      "observedSha256": "5850008fdc092d170a56f402b016159db3d4ccff6b89663cb92751b3bebb4109",
+      "state": "verified"
+    },
+    {
+      "path": "shapes.html",
+      "bytes": 1769,
+      "sha256": "8617111a2751c9bae41e6c4c24f9986370b2fb370554ca9aae813041388c4ead",
+      "url": "https://antonsoo.github.io/pnigeus/shapes.html",
+      "httpStatus": 200,
+      "observedBytes": 1769,
+      "observedSha256": "8617111a2751c9bae41e6c4c24f9986370b2fb370554ca9aae813041388c4ead",
+      "state": "verified"
+    },
+    {
+      "path": "sources/hero-fig76.jpg",
+      "bytes": 115259,
+      "sha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+      "url": "https://antonsoo.github.io/pnigeus/sources/hero-fig76.jpg",
+      "httpStatus": 200,
+      "observedBytes": 115259,
+      "observedSha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+      "state": "verified"
+    },
+    {
+      "path": "sources/hero-schmidt-192.jpg",
+      "bytes": 441836,
+      "sha256": "b353ae798dfcf466b9a95d965adee39a9dbd179b4534a3b62f5b915916f9e10d",
+      "url": "https://antonsoo.github.io/pnigeus/sources/hero-schmidt-192.jpg",
+      "httpStatus": 200,
+      "observedBytes": 441836,
+      "observedSha256": "b353ae798dfcf466b9a95d965adee39a9dbd179b4534a3b62f5b915916f9e10d",
+      "state": "verified"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 4085,
+      "sha256": "e31eb56439aab3e4ca81ef7cc69f61a1e88aa40bc55bfa7763e138ad897f051b",
+      "url": "https://antonsoo.github.io/pnigeus/sw.js",
+      "httpStatus": 200,
+      "observedBytes": 4085,
+      "observedSha256": "e31eb56439aab3e4ca81ef7cc69f61a1e88aa40bc55bfa7763e138ad897f051b",
+      "state": "verified"
+    }
+  ],
+  "scope": "Compares canonical responses with this captured build inventory during the recorded pass. Extra hosted files, browser behavior, public source, registry releases and deployment provenance are not established."
+}

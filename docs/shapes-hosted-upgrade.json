@@ -1,0 +1,70 @@
+{
+  "startedAt": "2026-10-22T21:23:30.774Z",
+  "base": "https://antonsoo.github.io/pnigeus/",
+  "expectedOld": "00a80a0d1b7dd78eea4e918b212d2684a618104befa79a76c831832c084a053c",
+  "scope": "Actual public origin, existing browser tabs and service-worker controller transition across deployment. Offline checks disable browser networking; the public origin remains running.",
+  "workflows": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "oldEdition": "00a80a0d1b7dd78eea4e918b212d2684a618104befa79a76c831832c084a053c",
+      "newEdition": "02363524c4e953e9e08b8c2f874791778baf7bab30a1f918c21a4525725bcf3c",
+      "oldPageRejectedNewWorkerReadiness": true,
+      "reloadedNewPageReady": true,
+      "cachedFiles": [
+        "/pnigeus/assets/main-BlPueDQw.js",
+        "/pnigeus/assets/main-Bznl6PjT.css",
+        "/pnigeus/assets/offline-B0CFMBie.js",
+        "/pnigeus/assets/offline-C9A2EXqx.css",
+        "/pnigeus/assets/shapes-DiOAloMA.js",
+        "/pnigeus/assets/shapes-ph047G3t.css",
+        "/pnigeus/fonts/IBMPlex-OFL.txt",
+        "/pnigeus/fonts/IBMPlexSans-Regular.woff2",
+        "/pnigeus/fonts/IBMPlexSans-SemiBold.woff2",
+        "/pnigeus/fonts/NotoSerif-OFL.txt",
+        "/pnigeus/fonts/NotoSerif-Regular.ttf",
+        "/pnigeus/index.html",
+        "/pnigeus/shapes.html",
+        "/pnigeus/sources/hero-fig76.jpg",
+        "/pnigeus/sources/hero-schmidt-192.jpg"
+      ],
+      "obsoleteEditionCaches": 0,
+      "offlineBothWorkshops": true,
+      "offlineGreekReadingOpened": true,
+      "pageErrors": []
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "oldEdition": "00a80a0d1b7dd78eea4e918b212d2684a618104befa79a76c831832c084a053c",
+      "newEdition": "02363524c4e953e9e08b8c2f874791778baf7bab30a1f918c21a4525725bcf3c",
+      "oldPageRejectedNewWorkerReadiness": true,
+      "reloadedNewPageReady": true,
+      "cachedFiles": [
+        "/pnigeus/assets/main-BlPueDQw.js",
+        "/pnigeus/assets/main-Bznl6PjT.css",
+        "/pnigeus/assets/offline-B0CFMBie.js",
+        "/pnigeus/assets/offline-C9A2EXqx.css",
+        "/pnigeus/assets/shapes-DiOAloMA.js",
+        "/pnigeus/assets/shapes-ph047G3t.css",
+        "/pnigeus/fonts/IBMPlex-OFL.txt",
+        "/pnigeus/fonts/IBMPlexSans-Regular.woff2",
+        "/pnigeus/fonts/IBMPlexSans-SemiBold.woff2",
+        "/pnigeus/fonts/NotoSerif-OFL.txt",
+        "/pnigeus/fonts/NotoSerif-Regular.ttf",
+        "/pnigeus/index.html",
+        "/pnigeus/shapes.html",
+        "/pnigeus/sources/hero-fig76.jpg",
+        "/pnigeus/sources/hero-schmidt-192.jpg"
+      ],
+      "obsoleteEditionCaches": 0,
+      "offlineBothWorkshops": true,
+      "offlineGreekReadingOpened": true,
+      "pageErrors": []
+    }
+  ],
+  "expectedNew": "02363524c4e953e9e08b8c2f874791778baf7bab30a1f918c21a4525725bcf3c",
+  "completedAt": "2026-10-22T21:47:33.333Z"
+}

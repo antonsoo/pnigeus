@@ -140,10 +140,33 @@ For development, run `npm run dev`, then use
 `node scripts/shapes-browser.mjs /tmp/pnigeus-review/development-shapes.json http://127.0.0.1:4386/pnigeus/ development`
 and `node scripts/development-review.mjs` in another terminal.
 
-## Publication boundary
+## Public edition and existing-tab upgrade
 
-This review initially records the expanded local build. The [initial public
-review](publication.md) identifies the earlier ten-file pump edition separately.
-Publication of the new 16-file edition, hosted workflows and existing-tab
-upgrades will be recorded with their own receipts after deployment. These local
-checks establish neither hosted CI execution nor a registry release.
+The expanded edition is live at [the shape study](https://antonsoo.github.io/pnigeus/shapes.html).
+Public source: `35cb13d925d14a584a6d6aa5b769ad0e282c1c7c`. Pages: `5feb2905cc6cf3eb1fb87a28c723c407bc3b8dbf`.
+The [canonical byte review](shapes-hosted-bytes.json) matched all **16 files**
+and checked the root entry before and after the pass, without cache-busting
+query parameters.
+
+The [hosted shape workflows](shapes-hosted-browser.json) and
+[hosted pump workflows](shapes-hosted-pump-browser.json) repeated both engines
+at both widths. They checked controls, real downloads, native readings, source
+integrity and offline reloads. Their
+[shape geometry](shapes-hosted-rendered.json),
+[pump geometry](shapes-hosted-pump-rendered.json) and
+[pump audio](shapes-hosted-pump-audio.json) independently checked actual hosted
+output with the same results and bounds as the local review. Hosted offline
+checks disable browser networking; the public server remains available.
+
+The [existing-tab upgrade](shapes-hosted-upgrade.json) is a separate live-origin
+experiment. A Chromium tab and a Firefox tab loaded the earlier public
+edition and remained open across deployment. After the new worker claimed
+each old tab, its older page correctly stopped claiming offline readiness.
+Reloading the new page established the new edition and all 15 cached resources
+(the generated worker is not itself in that cache). The obsolete edition cache
+was absent. With networking disabled, both updated tabs used both workshops
+and opened a newly exported Greek reading with its complete page image.
+
+The source and Pages branches are public. No registry release or hosted CI
+execution is established. The [initial public review](publication.md) remains
+a record of the earlier ten-file edition.
