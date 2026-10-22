@@ -1,0 +1,49 @@
+{
+  "name": "@antonsoloviev/pnigeus",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pump air through an ancient water-organ regulator; inspect the two water levels and the source.",
+  "type": "module",
+  "author": "Anton Soloviev <anton@praviel.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antonsoo/pnigeus.git"
+  },
+  "homepage": "https://antonsoo.github.io/pnigeus/",
+  "keywords": [
+    "hydraulis",
+    "ancient-greek",
+    "vitruvius",
+    "hero-of-alexandria",
+    "hydrostatics",
+    "music-education"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4386 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4386 --strictPort",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build",
+    "verify:physics": "node --import tsx scripts/physics-cases.ts | python3 scripts/physics_oracle.py",
+    "test:browser": "node scripts/browser-review.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@biomejs/biome": "2.6.2",
+    "@types/node": "24.19.2",
+    "playwright": "1.63.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
