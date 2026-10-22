@@ -197,7 +197,7 @@ for (const [name, engine] of Object.entries({ chromium, firefox })) {
   });
   try {
     for (const width of [1440, 375]) {
-      const id = `${name}-${width}`;
+      const id = `shapes-${name}-${width}`;
       const site = await serve();
       const context = await browser.newContext({
         viewport: { width, height: 1040 },
@@ -457,7 +457,9 @@ for (const [name, engine] of Object.entries({ chromium, firefox })) {
       });
       const pending = page.waitForEvent("download");
       await page.locator("#shape-reading").click();
-      while (!held) await page.waitForTimeout(20);
+      const holdDeadline = Date.now() + 10000;
+      while (!held && Date.now() < holdDeadline) await page.waitForTimeout(20);
+      assert.equal(held, true, "The source fetch must be held before editing the settings");
       await page.locator("#radius").focus();
       await page.keyboard.press("Home");
       assert.equal(await page.locator("#radius").inputValue(), "10");
