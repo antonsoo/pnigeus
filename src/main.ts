@@ -28,7 +28,7 @@ let part = "head";
 const player = new Player();
 
 $("#app").innerHTML =
-  `<header><a class="wordmark" href="./">Pnigeus <span lang="grc">πνιγεύς</span></a><nav aria-label="On this page"><a href="#experiment">Experiment</a><a href="#reading">Reading</a><a href="#model">Model</a></nav></header>
+  `<header><a class="wordmark" href="./">Pnigeus <span lang="grc">πνιγεύς</span></a><nav aria-label="On this page"><a href="#experiment">Experiment</a><a href="#reading">Reading</a><a href="#model">Model</a><a href="shapes.html">Shape study</a></nav></header>
 <main><div class="intro"><h1>The water inside <br>a water organ</h1><p>Pump air. Open a pipe. Watch the water hold a reserve of wind. <br>This ancient instrument joins music to a remarkable piece of mechanics.</p></div>
 <section id="experiment" aria-label="Water-organ experiment"><div class="experiment-heading"><h2>Work the regulator</h2><p>The experiment is paused between actions. Try three pump strokes, open a pipe, then release.</p></div><p id="warning" role="status"></p>
 <div class="bench"><div class="plate"><div id="cutaway"></div><p id="water-levels" class="water-levels"></p><div class="part-picker" role="group" aria-label="Inspect a part">${[
@@ -58,7 +58,7 @@ $("#app").innerHTML =
 
 const partNotes: Record<string, string> = {
   head: "Pressure comes from the vertical difference between the two connected water surfaces. Neither surface’s height above the floor is the head.",
-  bell: "Air enters and leaves through the chamber’s roof. Pumping pushes inside water down and outside water up. The model has straight sides; the ancient descriptions give different shapes.",
+  bell: "Air enters and leaves through the chamber’s roof. Pumping pushes inside water down and outside water up. The pump model has straight sides. Hero names a hollow hemisphere; the shape study compares it with modern alternatives.",
   water:
     "The blue water is connected below the rim. It changes position without being consumed. The air above the outside surface stays at atmospheric pressure.",
   rim: "The chamber is open at the bottom. When inside water reaches this rim, any further delivered air escapes beneath it. Storage has a finite limit.",

@@ -106,6 +106,7 @@ export async function study(
     .replaceAll('loading="lazy"', "")
     .replaceAll('href="sources/hero-fig76.jpg"', `href="${dataUrl(image, "image/jpeg")}"`)
     .replaceAll('src="sources/hero-fig76.jpg"', `src="${dataUrl(image, "image/jpeg")}"`)
+    .replaceAll('href="shapes.html', 'href="https://antonsoo.github.io/pnigeus/shapes.html')
     .replace(/<button type="button" data-word="[^"]+">(.*?)<\/button>/g, "$1")
     .replace(/<div id="word-note".*?<\/div>/, "");
   const history = run.rows

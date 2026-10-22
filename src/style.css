@@ -118,6 +118,8 @@ header {
 }
 nav {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 1.6rem;
   font-size: 0.95rem;
 }
@@ -667,6 +669,7 @@ footer {
     font-size: 0.85rem;
   }
   nav {
+    max-width: 220px;
     gap: 0.8rem;
     font-size: 0.8rem;
     padding-top: 0.3rem;

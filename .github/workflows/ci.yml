@@ -19,6 +19,7 @@ jobs:
       - run: npm ci
       - run: npm run check
       - run: npm run verify:physics
+      - run: npm run verify:shapes
       - run: npx playwright install --with-deps chromium firefox
       - name: Verify the documented development server
         run: |
@@ -30,6 +31,10 @@ jobs:
             sleep 0.25
           done
           node scripts/development-review.mjs
+          node scripts/shapes-browser.mjs /tmp/pnigeus-review/shapes-development.json http://127.0.0.1:4386/pnigeus/ development
+          python3 scripts/shapes-oracle.py /tmp/pnigeus-review/shapes-development.json
       - run: npm run test:browser -- /tmp/pnigeus-review/browser.json
       - run: python3 scripts/physics_oracle.py /tmp/pnigeus-review/browser.json
       - run: python3 scripts/audio-oracle.py /tmp/pnigeus-review/browser.json
+      - run: npm run test:shapes -- /tmp/pnigeus-review/shapes.json
+      - run: python3 scripts/shapes-oracle.py /tmp/pnigeus-review/shapes.json

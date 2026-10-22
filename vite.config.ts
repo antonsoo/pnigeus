@@ -22,6 +22,7 @@ export default defineConfig(async ({ command }) => {
     ...(await filesIn("src")),
     ...(await filesIn("public")),
     "index.html",
+    "shapes.html",
     "vite.config.ts",
     "tsconfig.json",
     "package.json",
@@ -35,6 +36,11 @@ export default defineConfig(async ({ command }) => {
   const edition = command === "build" ? inputHash.digest("hex") : "development";
   return {
     base,
+    build: {
+      rolldownOptions: {
+        input: { main: path.resolve("index.html"), shapes: path.resolve("shapes.html") },
+      },
+    },
     define: {
       __PNIGEUS_EDITION__: JSON.stringify(edition),
       __ASSET_HASHES__: JSON.stringify(

@@ -45,9 +45,10 @@ supply this model’s dimensions, hertz, outlet coefficient or numerical pressur
   are normalized. The English translation and grammatical explanations are new.
 
 Vitruvius compares the chamber to an inverted funnel; Hero’s description uses
-a hemisphere. The drawing and algebra here deliberately use a constant-section
-chamber to make a bounded, inspectable modern experiment. Those shapes must not
-be silently identified with one another.
+a hemisphere. These wordings need not establish different forms: Roman funnels
+could be rounded, as discussed by Hagel below. The pump workshop deliberately
+uses a constant-section chamber. The shape study adds a hemisphere and two
+modern comparison forms; its cone is not labelled as Vitruvius’s design.
 
 ## Greek vocabulary
 
@@ -84,3 +85,38 @@ Font files and their notices match the attributed files already used in the
 Pyknon checkout. They are served locally. Standalone readings embed the fonts
 and include both complete notices. The application checks their edition hashes
 before writing a standalone reading.
+
+## Hero’s Greek construction instruction
+
+- Work and location: _Pneumatics_ I.42, opening instruction.
+- Edition: Wilhelm Schmidt (ed.), _Herons von Alexandria Druckwerke und
+  Automatentheater_, vol. I (Leipzig: Teubner, 1899), printed p. 192.
+- [Digitized edition](https://archive.org/details/heronsvonalexandhero/page/n268/mode/1up),
+  [downloaded page](https://archive.org/download/heronsvonalexandhero/page/n267.jpg).
+  The image download endpoint and BookReader leaf address use different indices;
+  the retained page itself visibly prints **192**, chapter **XLII**.
+- File: `public/sources/hero-schmidt-192.jpg`, downloaded without alteration
+  on 2026-10-22; 441836 bytes, 1650 × 2473 pixels, SHA-256
+  `b353ae798dfcf466b9a95d965adee39a9dbd179b4534a3b62f5b915916f9e10d`.
+- The 1899 edition is public domain in the United States. The eight-word clause
+  was checked visually against this facsimile. The typed reading rejoins a
+  printed word across lines and removes an older-edition page marker.
+- Cross-check: [OpenGreekAndLatin / First1KGreek TEI](https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0559/tlg001/tlg0559.tlg001.1st1K-grc1.xml),
+  Harvard College Library (2017), CC BY-SA 4.0. Its complete text and encoding
+  are not redistributed. The short public-domain Greek clause is transcribed
+  from the facsimile; the English translation and grammar notes are new.
+
+## Modern investigation of regulator shape
+
+Stefan Hagel, “Inside the Hydra: Taking the Ancient Water Organ Seriously,”
+_Greek and Roman Musical Studies_ 11 (2023), 52–81.
+[DOI:10.1163/22129758-bja10055](https://doi.org/10.1163/22129758-bja10055).
+[Author’s publication list](https://homepage.univie.ac.at/stefan.hagel/);
+[author-uploaded paper](https://www.researchgate.net/publication/369186170_Inside_the_Hydra_Taking_the_Ancient_Water_Organ_Seriously).
+
+The exhibit cites the paper’s discussion of rounded funnels (pp. 55–60), its
+80 cm geometric example (p. 63), and its distinction between geometric volume
+and compression (p. 65, note 21). The paper’s dimensional and operating
+interpretation is scholarly reconstruction, not an ancient pressure measurement.
+No paper figure is redistributed; all interactive diagrams and calculations
+are original. [Source checking details](docs/shapes-source-verification.json).

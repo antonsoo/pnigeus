@@ -26,7 +26,7 @@ export async function offline(status: HTMLElement): Promise<void> {
         saved?.type === "PNIGEUS_EDITION" &&
         saved.edition === __PNIGEUS_EDITION__ &&
         saved.complete === true
-          ? "Ready offline · experiment, reading, source drawing and fonts saved."
+          ? "Ready offline · pump and shape studies, Latin and Greek readings, source images and fonts saved."
           : "This page’s offline edition is not ready. It will be checked when the worker changes; reload online if needed.";
     } catch {
       if (request === generation) status.textContent = unavailable;

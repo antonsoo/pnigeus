@@ -1,6 +1,6 @@
 {
   "name": "@antonsoloviev/pnigeus",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Pump air through an ancient water-organ regulator; inspect the two water levels and the source.",
   "type": "module",
@@ -32,7 +32,9 @@
     "test": "node --import tsx --test tests/*.test.ts",
     "check": "npm run lint && npm run typecheck && npm test && npm run build",
     "verify:physics": "node --import tsx scripts/physics-cases.ts | python3 scripts/physics_oracle.py",
-    "test:browser": "node scripts/browser-review.mjs"
+    "test:browser": "node scripts/browser-review.mjs",
+    "verify:shapes": "node --import tsx scripts/shapes-cases.ts | python3 scripts/shapes-oracle.py",
+    "test:shapes": "node scripts/shapes-browser.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

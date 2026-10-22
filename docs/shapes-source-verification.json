@@ -1,0 +1,34 @@
+{
+  "checkedOn": "2026-10-22",
+  "work": "Hero, Pneumatics I.42",
+  "edition": "Wilhelm Schmidt (ed.), Herons von Alexandria Druckwerke und Automatentheater, vol. I, Teubner, 1899",
+  "printedPage": 192,
+  "scan": {
+    "url": "https://archive.org/download/heronsvonalexandhero/page/n267.jpg",
+    "editionUrl": "https://archive.org/details/heronsvonalexandhero/page/n268/mode/1up",
+    "file": "public/sources/hero-schmidt-192.jpg",
+    "bytes": 441836,
+    "sha256": "b353ae798dfcf466b9a95d965adee39a9dbd179b4534a3b62f5b915916f9e10d",
+    "dimensions": [1650, 2473],
+    "visuallyInspected": true
+  },
+  "transcription": "ἐν δὲ τῷ ὕδατι κοῖλον ἡμισφαίριον κατεστραμμένον ἔστω",
+  "wordCount": 8,
+  "normalization": "Rejoins the printed line break in katestrammenon and removes the older-page vertical marker inside koilon; accent code points normalized to NFC for comparison.",
+  "digitalCrossCheck": {
+    "url": "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg0559/tlg001/tlg0559.tlg001.1st1K-grc1.xml",
+    "sha256": "0a5d7e2ea2f2a39ad97439d01755f7b2721c0f76b29e36c4f686eed1f726f25c",
+    "normalizedClauseMatched": true,
+    "license": "CC BY-SA 4.0, Harvard College Library 2017; used for cross-check, not redistributed. The exhibit transcribes the public-domain facsimile."
+  },
+  "interpretation": {
+    "doi": "10.1163/22129758-bja10055",
+    "author": "Stefan Hagel",
+    "year": 2023,
+    "pages": "55–60, 63, 65 note 21",
+    "role": "Modern geometric interpretation; not an ancient dimensional measurement.",
+    "access": "Bibliography and abstract checked against the publisher, author publication list and author-uploaded ResearchGate copy. Relevant paper passages read in the public transcription of the CC BY 4.0 paper at the access URL. Original figures are not redistributed.",
+    "accessUrl": "https://www.scribd.com/document/1056880717/Articulo-Musica-en-Roma-Inside-the-Hydra-Stefan-Hagel",
+    "authorUpload": "https://www.researchgate.net/publication/369186170_Inside_the_Hydra_Taking_the_Ancient_Water_Organ_Seriously"
+  }
+}
