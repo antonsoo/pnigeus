@@ -142,6 +142,11 @@ On a new machine, first install Playwright’s browsers with
 only its standard library are needed for the independent checks. The browser
 script serves the existing build itself; do not rebuild `dist/` during its run.
 
+With `npm run dev` running in another terminal, check the documented development
+workflow with `node scripts/development-review.mjs`. It verifies actual CSS and
+SVG styling, keyboard actions and standalone reading downloads in both engines
+at both widths.
+
 The physics checker imports no application code. It derives the gas volume
 from pressure and water conservation, then integrates a pressure-coordinate
 ODE with RK4. The app instead inverts an exact displacement-coordinate time

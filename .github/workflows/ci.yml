@@ -20,6 +20,16 @@ jobs:
       - run: npm run check
       - run: npm run verify:physics
       - run: npx playwright install --with-deps chromium firefox
+      - name: Verify the documented development server
+        run: |
+          npm run dev > /tmp/pnigeus-dev.log 2>&1 &
+          pnigeus_dev_pid=$!
+          trap 'kill "$pnigeus_dev_pid"' EXIT
+          for attempt in {1..60}; do
+            if curl --fail --silent http://127.0.0.1:4386/pnigeus/ > /dev/null; then break; fi
+            sleep 0.25
+          done
+          node scripts/development-review.mjs
       - run: npm run test:browser -- /tmp/pnigeus-review/browser.json
       - run: python3 scripts/physics_oracle.py /tmp/pnigeus-review/browser.json
       - run: python3 scripts/audio-oracle.py /tmp/pnigeus-review/browser.json
