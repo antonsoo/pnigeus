@@ -127,14 +127,8 @@ outputs go outside the checkout. `npm run dev` and `npm run preview` use port
 
 ## Publication boundary
 
-This work created and committed a local repository. It did not create a GitHub
-repository, push source, publish a registry package, run hosted CI or deploy a
-site. The README names the intended future repository and Pages addresses.
-The checked-in workflows are prepared for that future publication. The app is
-private in npm metadata because it is a static exhibit, not a registry package.
-
-Suggested GitHub description:
-“An ancient water-organ experiment with moving water levels, Latin readings and inspectable physics.”
-
-Suggested topics: `hydraulis`, `ancient-greek`, `vitruvius`, `hero-of-alexandria`,
-`hydrostatics`, `music-education`, `interactive-learning`.
+This document records the initial local review. The subsequent
+[publication review](publication.md) separately establishes the public source,
+Pages bytes and hosted browser workflows. The app remains private in npm
+metadata because it is a static exhibit, not a registry package. No hosted CI
+execution or registry release is established by these reviews.

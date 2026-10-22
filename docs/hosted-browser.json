@@ -1,0 +1,1935 @@
+{
+  "reviewedAt": "2026-10-22T20:50:05.401Z",
+  "mode": "hosted",
+  "url": "https://antonsoo.github.io/pnigeus/",
+  "build": [
+    {
+      "file": "assets/index-BYu9oFl3.css",
+      "sha256": "4ed9b8fc9ead5e8e159c58364e8a86fe6ea16588df8c51c407e407b0f09368f4"
+    },
+    {
+      "file": "assets/index-DKwbAqNH.js",
+      "sha256": "856ed70232e06489c803845e989d530d13bfe9f4496153b727cdcce33a178420"
+    },
+    {
+      "file": "fonts/IBMPlex-OFL.txt",
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    },
+    {
+      "file": "fonts/IBMPlexSans-Regular.woff2",
+      "sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a"
+    },
+    {
+      "file": "fonts/IBMPlexSans-SemiBold.woff2",
+      "sha256": "f78048030eab62e860efa39a0df79e2e5581bf122eb95b9bc42c0b8a4988d205"
+    },
+    {
+      "file": "fonts/NotoSerif-OFL.txt",
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    },
+    {
+      "file": "fonts/NotoSerif-Regular.ttf",
+      "sha256": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6"
+    },
+    {
+      "file": "index.html",
+      "sha256": "18dbcd664303a84a5545c9adf443bcb20d58673353c69bb91b9c03f4f148a815"
+    },
+    {
+      "file": "sources/hero-fig76.jpg",
+      "sha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133"
+    },
+    {
+      "file": "sw.js",
+      "sha256": "3f17f705de0478a24cd7ecaece9ff2842dc61888b359a1bae96daef6a5331695"
+    }
+  ],
+  "workflows": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "observations": [
+        {
+          "label": "stored",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 853.5972311639083,
+            "inside": 0.2274644220024245,
+            "outside": 0.3145071155995151,
+            "head": 0.0870426935970906,
+            "volume": 11.701423119903021,
+            "reserve": 3
+          },
+          "svgInsideY": 383.521,
+          "svgOutsideY": 331.296
+        },
+        {
+          "label": "small-tank",
+          "tank": 3,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 1058.389102220198,
+            "inside": 0.22804956485512734,
+            "outside": 0.3359752175724363,
+            "head": 0.10792565271730897,
+            "volume": 11.678017405794908,
+            "reserve": 3
+          },
+          "svgInsideY": 383.17,
+          "svgOutsideY": 318.415
+        },
+        {
+          "label": "large-tank",
+          "tank": 12,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 778.3052751102689,
+            "inside": 0.22724870346301607,
+            "outside": 0.3066137542306349,
+            "head": 0.07936505076761885,
+            "volume": 11.710051861479357,
+            "reserve": 3
+          },
+          "svgInsideY": 383.651,
+          "svgOutsideY": 336.032
+        },
+        {
+          "label": "one-pipe",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 10.235290068724158,
+            "dryStock": 8.8,
+            "supplied": 3,
+            "waterOut": 1.5647099312758428,
+            "dryOut": 3,
+            "vented": 0,
+            "time": 5,
+            "mask": 1
+          },
+          "reading": {
+            "pressure": 410.1225666836049,
+            "inside": 0.2651492807870505,
+            "outside": 0.30697014384258986,
+            "head": 0.04182086305553934,
+            "volume": 10.19402876851798,
+            "reserve": 1.4352900687241572
+          },
+          "svgInsideY": 360.91,
+          "svgOutsideY": 335.818
+        },
+        {
+          "label": "four-pipes",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 8.8,
+            "dryStock": 8.8,
+            "supplied": 4,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 0,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 0,
+            "inside": 0.3,
+            "outside": 0.3,
+            "head": 0,
+            "volume": 8.8,
+            "reserve": 0
+          },
+          "svgInsideY": 340,
+          "svgOutsideY": 340
+        },
+        {
+          "label": "venting",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 19.779775535751295,
+            "dryStock": 22.8,
+            "supplied": 18,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 3.020224464248706,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 3059.6747999999993,
+            "inside": 0.040000000000000036,
+            "outside": 0.352,
+            "head": 0.31199999999999994,
+            "volume": 19.2,
+            "reserve": 10.979775535751294
+          },
+          "svgInsideY": 496,
+          "svgOutsideY": 308.8
+        }
+      ],
+      "audio": [
+        {
+          "label": "one-pipe",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            }
+          ],
+          "seconds": 5
+        },
+        {
+          "label": "four-pipes",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "seconds": 5
+        }
+      ],
+      "accessibilityViolations": 0,
+      "finalCommands": [
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "keys",
+          "mask": 1
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "keys",
+          "mask": 3
+        },
+        {
+          "type": "keys",
+          "mask": 7
+        },
+        {
+          "type": "keys",
+          "mask": 15
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        }
+      ],
+      "tank": 6,
+      "offlineWithOriginClosed": false,
+      "offlineWithNetworkDisabled": true,
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "observations": [
+        {
+          "label": "stored",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 853.5972311639083,
+            "inside": 0.2274644220024245,
+            "outside": 0.3145071155995151,
+            "head": 0.0870426935970906,
+            "volume": 11.701423119903021,
+            "reserve": 3
+          },
+          "svgInsideY": 383.521,
+          "svgOutsideY": 331.296
+        },
+        {
+          "label": "small-tank",
+          "tank": 3,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 1058.389102220198,
+            "inside": 0.22804956485512734,
+            "outside": 0.3359752175724363,
+            "head": 0.10792565271730897,
+            "volume": 11.678017405794908,
+            "reserve": 3
+          },
+          "svgInsideY": 383.17,
+          "svgOutsideY": 318.415
+        },
+        {
+          "label": "large-tank",
+          "tank": 12,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 778.3052751102689,
+            "inside": 0.22724870346301607,
+            "outside": 0.3066137542306349,
+            "head": 0.07936505076761885,
+            "volume": 11.710051861479357,
+            "reserve": 3
+          },
+          "svgInsideY": 383.651,
+          "svgOutsideY": 336.032
+        },
+        {
+          "label": "one-pipe",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 10.235290068724158,
+            "dryStock": 8.8,
+            "supplied": 3,
+            "waterOut": 1.5647099312758428,
+            "dryOut": 3,
+            "vented": 0,
+            "time": 5,
+            "mask": 1
+          },
+          "reading": {
+            "pressure": 410.1225666836049,
+            "inside": 0.2651492807870505,
+            "outside": 0.30697014384258986,
+            "head": 0.04182086305553934,
+            "volume": 10.19402876851798,
+            "reserve": 1.4352900687241572
+          },
+          "svgInsideY": 360.91,
+          "svgOutsideY": 335.818
+        },
+        {
+          "label": "four-pipes",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 8.8,
+            "dryStock": 8.8,
+            "supplied": 4,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 0,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 0,
+            "inside": 0.3,
+            "outside": 0.3,
+            "head": 0,
+            "volume": 8.8,
+            "reserve": 0
+          },
+          "svgInsideY": 340,
+          "svgOutsideY": 340
+        },
+        {
+          "label": "venting",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 19.779775535751295,
+            "dryStock": 22.8,
+            "supplied": 18,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 3.020224464248706,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 3059.6747999999993,
+            "inside": 0.040000000000000036,
+            "outside": 0.352,
+            "head": 0.31199999999999994,
+            "volume": 19.2,
+            "reserve": 10.979775535751294
+          },
+          "svgInsideY": 496,
+          "svgOutsideY": 308.8
+        }
+      ],
+      "audio": [
+        {
+          "label": "one-pipe",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            }
+          ],
+          "seconds": 5
+        },
+        {
+          "label": "four-pipes",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "seconds": 5
+        }
+      ],
+      "accessibilityViolations": 0,
+      "finalCommands": [
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "keys",
+          "mask": 1
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "keys",
+          "mask": 3
+        },
+        {
+          "type": "keys",
+          "mask": 7
+        },
+        {
+          "type": "keys",
+          "mask": 15
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        }
+      ],
+      "tank": 6,
+      "offlineWithOriginClosed": false,
+      "offlineWithNetworkDisabled": true,
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "observations": [
+        {
+          "label": "stored",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 853.5972311639083,
+            "inside": 0.2274644220024245,
+            "outside": 0.3145071155995151,
+            "head": 0.0870426935970906,
+            "volume": 11.701423119903021,
+            "reserve": 3
+          },
+          "svgInsideY": 383.521,
+          "svgOutsideY": 331.296
+        },
+        {
+          "label": "small-tank",
+          "tank": 3,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 1058.389102220198,
+            "inside": 0.22804956485512734,
+            "outside": 0.3359752175724363,
+            "head": 0.10792565271730897,
+            "volume": 11.678017405794908,
+            "reserve": 3
+          },
+          "svgInsideY": 383.17,
+          "svgOutsideY": 318.415
+        },
+        {
+          "label": "large-tank",
+          "tank": 12,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 778.3052751102689,
+            "inside": 0.22724870346301607,
+            "outside": 0.3066137542306349,
+            "head": 0.07936505076761885,
+            "volume": 11.710051861479357,
+            "reserve": 3
+          },
+          "svgInsideY": 383.651,
+          "svgOutsideY": 336.032
+        },
+        {
+          "label": "one-pipe",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 10.235290068724158,
+            "dryStock": 8.8,
+            "supplied": 3,
+            "waterOut": 1.5647099312758428,
+            "dryOut": 3,
+            "vented": 0,
+            "time": 5,
+            "mask": 1
+          },
+          "reading": {
+            "pressure": 410.1225666836049,
+            "inside": 0.2651492807870505,
+            "outside": 0.30697014384258986,
+            "head": 0.04182086305553934,
+            "volume": 10.19402876851798,
+            "reserve": 1.4352900687241572
+          },
+          "svgInsideY": 360.91,
+          "svgOutsideY": 335.818
+        },
+        {
+          "label": "four-pipes",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 8.8,
+            "dryStock": 8.8,
+            "supplied": 4,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 0,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 0,
+            "inside": 0.3,
+            "outside": 0.3,
+            "head": 0,
+            "volume": 8.8,
+            "reserve": 0
+          },
+          "svgInsideY": 340,
+          "svgOutsideY": 340
+        },
+        {
+          "label": "venting",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 19.779775535751295,
+            "dryStock": 22.8,
+            "supplied": 18,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 3.020224464248706,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 3059.6747999999993,
+            "inside": 0.040000000000000036,
+            "outside": 0.352,
+            "head": 0.31199999999999994,
+            "volume": 19.2,
+            "reserve": 10.979775535751294
+          },
+          "svgInsideY": 496,
+          "svgOutsideY": 308.8
+        }
+      ],
+      "audio": [
+        {
+          "label": "one-pipe",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            }
+          ],
+          "seconds": 5
+        },
+        {
+          "label": "four-pipes",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "seconds": 5
+        }
+      ],
+      "accessibilityViolations": 0,
+      "finalCommands": [
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "keys",
+          "mask": 1
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "keys",
+          "mask": 3
+        },
+        {
+          "type": "keys",
+          "mask": 7
+        },
+        {
+          "type": "keys",
+          "mask": 15
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        }
+      ],
+      "tank": 6,
+      "offlineWithOriginClosed": false,
+      "offlineWithNetworkDisabled": true,
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "observations": [
+        {
+          "label": "stored",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 853.5972311639083,
+            "inside": 0.2274644220024245,
+            "outside": 0.3145071155995151,
+            "head": 0.0870426935970906,
+            "volume": 11.701423119903021,
+            "reserve": 3
+          },
+          "svgInsideY": 383.521,
+          "svgOutsideY": 331.296
+        },
+        {
+          "label": "small-tank",
+          "tank": 3,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 1058.389102220198,
+            "inside": 0.22804956485512734,
+            "outside": 0.3359752175724363,
+            "head": 0.10792565271730897,
+            "volume": 11.678017405794908,
+            "reserve": 3
+          },
+          "svgInsideY": 383.17,
+          "svgOutsideY": 318.415
+        },
+        {
+          "label": "large-tank",
+          "tank": 12,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 778.3052751102689,
+            "inside": 0.22724870346301607,
+            "outside": 0.3066137542306349,
+            "head": 0.07936505076761885,
+            "volume": 11.710051861479357,
+            "reserve": 3
+          },
+          "svgInsideY": 383.651,
+          "svgOutsideY": 336.032
+        },
+        {
+          "label": "one-pipe",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 10.235290068724158,
+            "dryStock": 8.8,
+            "supplied": 3,
+            "waterOut": 1.5647099312758428,
+            "dryOut": 3,
+            "vented": 0,
+            "time": 5,
+            "mask": 1
+          },
+          "reading": {
+            "pressure": 410.1225666836049,
+            "inside": 0.2651492807870505,
+            "outside": 0.30697014384258986,
+            "head": 0.04182086305553934,
+            "volume": 10.19402876851798,
+            "reserve": 1.4352900687241572
+          },
+          "svgInsideY": 360.91,
+          "svgOutsideY": 335.818
+        },
+        {
+          "label": "four-pipes",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 8.8,
+            "dryStock": 8.8,
+            "supplied": 4,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 0,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 0,
+            "inside": 0.3,
+            "outside": 0.3,
+            "head": 0,
+            "volume": 8.8,
+            "reserve": 0
+          },
+          "svgInsideY": 340,
+          "svgOutsideY": 340
+        },
+        {
+          "label": "venting",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 19.779775535751295,
+            "dryStock": 22.8,
+            "supplied": 18,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 3.020224464248706,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 3059.6747999999993,
+            "inside": 0.040000000000000036,
+            "outside": 0.352,
+            "head": 0.31199999999999994,
+            "volume": 19.2,
+            "reserve": 10.979775535751294
+          },
+          "svgInsideY": 496,
+          "svgOutsideY": 308.8
+        }
+      ],
+      "audio": [
+        {
+          "label": "one-pipe",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            }
+          ],
+          "seconds": 5
+        },
+        {
+          "label": "four-pipes",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "seconds": 5
+        }
+      ],
+      "accessibilityViolations": 0,
+      "finalCommands": [
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "keys",
+          "mask": 1
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "keys",
+          "mask": 3
+        },
+        {
+          "type": "keys",
+          "mask": 7
+        },
+        {
+          "type": "keys",
+          "mask": 15
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        }
+      ],
+      "tank": 6,
+      "offlineWithOriginClosed": false,
+      "offlineWithNetworkDisabled": true,
+      "pageErrors": [],
+      "externalRequests": []
+    }
+  ],
+  "negativeCases": [
+    {
+      "engine": "chromium",
+      "substitutedSourceRefused": true,
+      "recovered": true,
+      "duplicateStateReset": true
+    },
+    {
+      "engine": "firefox",
+      "substitutedSourceRefused": true,
+      "recovered": true,
+      "duplicateStateReset": true
+    }
+  ],
+  "sourceRevision": "4f085d1558de0b01c520231d926649a0c636de54",
+  "reviewerRevision": "e611240cc0bce56a28869538c924688c8f7d9034",
+  "pagesRevision": "d62149ad38a136e48337afacfbc581b969e03b59",
+  "rawArtifacts": "Recreated by the documented browser command; numeric observations and workflow results retained here."
+}

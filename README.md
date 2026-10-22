@@ -3,6 +3,7 @@
 **Work the air regulator inside an ancient water organ.**
 
 [![Code: MIT](https://img.shields.io/badge/code-MIT-193648)](LICENSE)
+[![Live demo](https://img.shields.io/badge/live-experiment-275f7c)](https://antonsoo.github.io/pnigeus/)
 
 A “water organ” can be misunderstood as a machine that sends water through
 musical pipes. Hero and Vitruvius describe something more interesting: a pump
@@ -12,8 +13,9 @@ with an experiment, an original cutaway, a Latin reading and the source drawing.
 
 ![Three pump strokes stored behind two different water levels](docs/assets/workshop-1440.png)
 
-This checkout is prepared for publication at
-`https://antonsoo.github.io/pnigeus/`; it has not been deployed by this work.
+[Open the live experiment](https://antonsoo.github.io/pnigeus/).
+The [publication review](docs/publication.md) records matching hosted bytes and
+real browser workflows on the public site.
 The [saved illustrated reading](examples/one-pipe-reading.html), its
 [printable PDF](examples/one-pipe-reading.pdf), and a
 [five-second sound example](examples/one-pipe-release.wav) can be inspected locally.
@@ -146,6 +148,17 @@ With `npm run dev` running in another terminal, check the documented development
 workflow with `node scripts/development-review.mjs`. It verifies actual CSS and
 SVG styling, keyboard actions and standalone reading downloads in both engines
 at both widths.
+
+For the public site, the same browser reviewer accepts an HTTPS base URL:
+
+```sh
+node scripts/browser-review.mjs /tmp/pnigeus-review/hosted.json https://antonsoo.github.io/pnigeus/
+python3 scripts/physics_oracle.py /tmp/pnigeus-review/hosted.json
+python3 scripts/audio-oracle.py /tmp/pnigeus-review/hosted.json
+```
+
+Hosted offline checks disable browser networking; local checks additionally
+close the origin server.
 
 The physics checker imports no application code. It derives the gas volume
 from pressure and water conservation, then integrates a pressure-coordinate
