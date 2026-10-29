@@ -259,5 +259,5 @@ Corrections should identify the text, edition and passage, or the physical
 assumption they change. Keep source evidence separate from model choices.
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Code, diagrams and new English explanations: [MIT](LICENSE), © 2026 Anton Soloviev.
+Code, diagrams and new English explanations: [MIT](LICENSE), © 2026 Anthony Mercer.
 The historical illustration and fonts retain their [separate notices](THIRD_PARTY.md).

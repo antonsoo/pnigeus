@@ -4,7 +4,7 @@
   "private": true,
   "description": "Pump air through an ancient water-organ regulator; inspect the two water levels and the source.",
   "type": "module",
-  "author": "Anton Soloviev <anton@praviel.com>",
+  "author": "Anthony Mercer <anthony@praviel.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
