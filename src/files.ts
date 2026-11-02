@@ -126,5 +126,5 @@ export async function study(
     .map((note) => `<p>${escapeHtml(note.text)}</p>`)
     .join("")}${modelReading.replaceAll("<details>", "<details open>")}
   <h2>Font notices</h2><pre class="license">${escapeHtml(new TextDecoder().decode(sansLicense))}</pre><pre class="license">${escapeHtml(new TextDecoder().decode(serifLicense))}</pre>
-  <p>Original code, diagrams and English explanations: MIT, © 2026 Anton Soloviev. The 1851 source illustration is public domain in the United States. Edition ${__PNIGEUS_EDITION__}.</p></html>`;
+  <p>Original code, diagrams and English explanations: PolyForm Noncommercial, © 2026 Anthony Mercer. The 1851 source illustration is public domain in the United States. Edition ${__PNIGEUS_EDITION__}.</p></html>`;
 }

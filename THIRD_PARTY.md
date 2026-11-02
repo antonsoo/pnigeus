@@ -1,7 +1,7 @@
 # Sources and rights
 
 The original application code, original cutaway and chart, and new English
-explanations and translations are MIT licensed. The following materials have
+explanations and translations are licensed under PolyForm Noncommercial. The following materials have
 their own provenance. No third-party audio, ancient-performance recording or
 modern instrument photograph is redistributed.
 

@@ -2,7 +2,7 @@
 
 **Work the air regulator inside an ancient water organ.**
 
-[![Code: MIT](https://img.shields.io/badge/code-MIT-193648)](LICENSE)
+[![Code: PolyForm Noncommercial](https://img.shields.io/badge/code-PolyForm%20Noncommercial-193648)](LICENSE)
 [![Live demo](https://img.shields.io/badge/live-experiment-275f7c)](https://antonsoo.github.io/pnigeus/)
 
 A “water organ” can be misunderstood as a machine that sends water through
@@ -255,9 +255,11 @@ External scholarly editions remain online links even when this exhibit is cached
 
 ## Contributing and license
 
+New versions are released under the [PolyForm Noncommercial License 1.0.0](LICENSE). It is free for any noncommercial purpose, including personal study, teaching and research, and for use by charities, schools, universities, research organizations and government institutions. Commercial use needs written permission from Anthony Mercer (anthony@praviel.com). Versions up to commit [`c6addf6`](https://github.com/antonsoo/pnigeus/tree/c6addf6) (2026-11-01) were released under the MIT License, and copies of those versions keep it.
+
 Corrections should identify the text, edition and passage, or the physical
 assumption they change. Keep source evidence separate from model choices.
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Code, diagrams and new English explanations: [MIT](LICENSE), © 2026 Anthony Mercer.
+Code, diagrams and new English explanations: [PolyForm Noncommercial 1.0.0](LICENSE), © 2026 Anthony Mercer.
 The historical illustration and fonts retain their [separate notices](THIRD_PARTY.md).

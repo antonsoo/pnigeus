@@ -5,7 +5,7 @@
   "description": "Pump air through an ancient water-organ regulator; inspect the two water levels and the source.",
   "type": "module",
   "author": "Anthony Mercer <anthony@praviel.com>",
-  "license": "MIT",
+  "license": "PolyForm-Noncommercial-1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/antonsoo/pnigeus.git"
