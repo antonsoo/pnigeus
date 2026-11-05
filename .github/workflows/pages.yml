@@ -23,14 +23,16 @@ jobs:
         env:
           SOURCE_REVISION: ${{ github.sha }}
         run: |
-          publication_dir="$(mktemp -d)"
+          git fetch origin gh-pages
+          publication_dir="$RUNNER_TEMP/pnigeus-pages"
+          git worktree add --detach "$publication_dir" origin/gh-pages
           cp -a dist/. "$publication_dir/"
-          cd "$publication_dir"
-          touch .nojekyll
-          git init -b gh-pages
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "deploy: ${SOURCE_REVISION}"
-          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
-          git push --force origin HEAD:gh-pages
+          touch "$publication_dir/.nojekyll"
+          git -C "$publication_dir" config user.name "github-actions[bot]"
+          git -C "$publication_dir" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$publication_dir" add -A
+          if ! git -C "$publication_dir" diff --cached --quiet; then
+            git -C "$publication_dir" commit -m "deploy: ${SOURCE_REVISION}"
+            git -C "$publication_dir" push origin HEAD:gh-pages
+          fi
+          # Retain previous hashed assets for legacy cached entry pages.
