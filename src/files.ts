@@ -63,14 +63,18 @@ export function dataUrl(bytes: Uint8Array<ArrayBuffer>, mime: string): string {
     binary += String.fromCharCode(...bytes.subarray(i, i + 8192));
   return `data:${mime};base64,${btoa(binary)}`;
 }
-export async function checkedAsset(path: string): Promise<Uint8Array<ArrayBuffer>> {
-  const response = await fetch(`${import.meta.env.BASE_URL}${path}`);
+export async function checkedAsset(
+  path: string,
+  signal?: AbortSignal,
+): Promise<Uint8Array<ArrayBuffer>> {
+  const response = await fetch(`${import.meta.env.BASE_URL}${path}`, signal ? { signal } : {});
   if (!response.ok)
     throw new Error("A reading asset could not be loaded. Keep this page open and try again.");
   const bytes = new Uint8Array(await response.arrayBuffer());
   const digest = [...new Uint8Array(await crypto.subtle.digest("SHA-256", bytes))]
     .map((x) => x.toString(16).padStart(2, "0"))
     .join("");
+  signal?.throwIfAborted();
   if (digest !== __ASSET_HASHES__[path])
     throw new Error(
       "The source drawing or font did not match this edition. Reload online before saving the reading.",
@@ -81,16 +85,17 @@ export async function study(
   tank: Tank,
   commands: readonly Command[],
   dry: boolean,
+  signal?: AbortSignal,
 ): Promise<string> {
   // Capture immutable settings before asynchronous asset loading.
   const run = replay(tank, commands);
   const query = shareQuery(tank, commands) + (dry ? "&compare=1" : "");
   const [image, sans, serif, sansLicense, serifLicense] = await Promise.all([
-    checkedAsset("sources/hero-fig76.jpg"),
-    checkedAsset("fonts/IBMPlexSans-Regular.woff2"),
-    checkedAsset("fonts/NotoSerif-Regular.ttf"),
-    checkedAsset("fonts/IBMPlex-OFL.txt"),
-    checkedAsset("fonts/NotoSerif-OFL.txt"),
+    checkedAsset("sources/hero-fig76.jpg", signal),
+    checkedAsset("fonts/IBMPlexSans-Regular.woff2", signal),
+    checkedAsset("fonts/NotoSerif-Regular.ttf", signal),
+    checkedAsset("fonts/IBMPlex-OFL.txt", signal),
+    checkedAsset("fonts/NotoSerif-OFL.txt", signal),
   ]);
   const r = waterReading(run.state.waterStock, tank);
   const last = run.rows.findLast((row) => row.command.type === "wait");
@@ -117,7 +122,7 @@ export async function study(
     .join("");
   return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pnigeus — saved experiment</title><style>
   @font-face{font-family:Workshop;src:url('${dataUrl(sans, "font/woff2")}')}@font-face{font-family:Reading;src:url('${dataUrl(serif, "font/ttf")}')}
-  body{font-family:Workshop,sans-serif;color:#193648;background:#fafbf9;max-width:1000px;margin:2rem auto;padding:0 1rem;line-height:1.65}h1,h2,.latin{font-family:Reading,serif}h1{font-size:2.8rem}h2{margin-top:3rem}a{color:#235779}svg{width:100%;height:auto}img{max-width:100%;height:auto}.source-figure{max-width:550px;margin:1rem 0}figcaption{font-size:.9rem}.words dt{font-family:Reading,serif;font-size:1.25rem;margin-top:1rem}.words dd{margin:0}.words span{font-family:Workshop,sans-serif;font-size:1rem}.latin{font-size:1.4rem}.source-tag{font-size:.9rem}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#e8eff3;padding:1rem;font-size:.9rem}table{width:100%;border-collapse:collapse;font-size:.85rem}td,th{border-bottom:1px solid #c8d4dc;text-align:left;padding:.4rem}.table-wrap{overflow-x:auto}.license{font-size:.7rem}audio{max-width:100%}${drawingCss}@media print{body{margin:0;max-width:none}h2{break-after:avoid}svg,figure{break-inside:avoid}audio{display:none}a{overflow-wrap:anywhere}.cutaway{max-height:440px}details{display:block}summary{font-weight:bold}}</style>
+  body{font-family:Workshop,sans-serif;color:#193648;background:#fafbf9;max-width:1000px;margin:2rem auto;padding:0 1rem;line-height:1.65}h1,h2,.latin{font-family:Reading,serif}h1{font-size:2.8rem}h2{margin-top:3rem}a{color:#235779}svg{width:100%;height:auto}img{max-width:100%;height:auto}.source-figure{max-width:550px;margin:1rem 0}figcaption{font-size:.9rem}.words dt{font-family:Reading,serif;font-size:1.25rem;margin-top:1rem}.words dd{margin:0}.words span{font-family:Workshop,sans-serif;font-size:1rem}.latin{font-size:1.4rem}.source-tag{font-size:.9rem}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#e8eff3;padding:1rem;font-size:.9rem}table{width:100%;border-collapse:collapse;font-size:.85rem}td,th{border-bottom:1px solid #c8d4dc;text-align:left;padding:.4rem}.table-wrap{overflow-x:auto}.license{font-size:.7rem}audio{max-width:100%}${drawingCss}@media print{body{margin:0;max-width:none}h2,h3{break-after:avoid}svg,figure{break-inside:avoid}audio{display:none}a{overflow-wrap:anywhere}.cutaway{max-height:440px}details{display:block}summary{font-weight:bold}}</style>
   <h1>The water inside a water organ</h1><p>Pnigeus · saved modern experiment · tank area ${tank} × chamber area · experiment time ${run.state.time} s.</p><p>Gauge pressure ${r.pressure.toFixed(3)} Pa; head ${(100 * r.head).toFixed(3)} cm. Supplied ${run.state.supplied.toFixed(3)} ambient-equivalent litres, released ${run.state.waterOut.toFixed(3)}, vented ${run.state.vented.toFixed(3)}. The chamber still holds ${r.volume.toFixed(3)} actual litres of air.</p>
   ${cutaway(run.state, tank)}${trace(tank, commands, dry)}<p>Solid blue: water chamber. ${dry ? "Dashed brown: the separate sealed dry chamber, on the same pressure scale." : "The dry comparison is hidden in this graph; its numerical results remain in the action table."}</p>
   <p><a href="https://antonsoo.github.io/pnigeus/${escapeHtml(query)}#experiment">Reopen this exact action sequence</a>. The reading, image, fonts and audio below are embedded and need no connection. Linked external editions require a connection.</p>${audio}

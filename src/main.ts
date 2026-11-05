@@ -28,7 +28,7 @@ let part = "head";
 const player = new Player();
 
 $("#app").innerHTML =
-  `<header><a class="wordmark" href="./">Pnigeus <span lang="grc">πνιγεύς</span></a><nav aria-label="On this page"><a href="#experiment">Experiment</a><a href="#reading">Reading</a><a href="#model">Model</a><a href="shapes.html">Shape study</a></nav></header>
+  `<header><a class="wordmark" href="./">Pnigeus <span lang="grc">πνιγεύς</span></a><nav aria-label="On this page"><a href="#experiment">Experiment</a><a href="#reading">Reading</a><a href="#model">Model</a><a href="shapes.html">Shape study</a><a href="timing.html">Pump timing</a></nav></header>
 <main><div class="intro"><h1>The water inside <br>a water organ</h1><p>Pump air. Open a pipe. Watch the water hold a reserve of wind. <br>This ancient instrument joins music to a remarkable piece of mechanics.</p></div>
 <section id="experiment" aria-label="Water-organ experiment"><div class="experiment-heading"><h2>Work the regulator</h2><p>The experiment is paused between actions. Try three pump strokes, open a pipe, then release.</p></div><p id="warning" role="status"></p>
 <div class="bench"><div class="plate"><div id="cutaway"></div><p id="water-levels" class="water-levels"></p><div class="part-picker" role="group" aria-label="Inspect a part">${[

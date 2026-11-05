@@ -4,6 +4,13 @@ export async function offline(status: HTMLElement): Promise<void> {
     return;
   }
   const unavailable = "Offline saving was unavailable. Keep this tab open or save a study.";
+  const reload = document.createElement("button");
+  reload.id = "offline-reload";
+  reload.type = "button";
+  reload.textContent = "Reload to use the offline copy";
+  reload.hidden = true;
+  reload.addEventListener("click", () => location.reload());
+  status.insertAdjacentElement("afterend", reload);
   let generation = 0;
   async function inspect(worker: ServiceWorker | null): Promise<void> {
     if (!worker) return;
@@ -22,12 +29,19 @@ export async function offline(status: HTMLElement): Promise<void> {
       });
       // A reply from a superseded worker must not replace a newer inspection.
       if (request !== generation) return;
-      status.textContent =
+      const complete =
         saved?.type === "PNIGEUS_EDITION" &&
         saved.edition === __PNIGEUS_EDITION__ &&
-        saved.complete === true
-          ? "Ready offline · pump and shape studies, Latin and Greek readings, source images and fonts saved."
-          : "This page’s offline edition is not ready. It will be checked when the worker changes; reload online if needed.";
+        saved.complete === true;
+      // An activated worker can answer while this document is still uncontrolled
+      // (observed during cold Firefox navigation). Saved bytes alone are not readiness.
+      const controlled = navigator.serviceWorker.controller === worker;
+      reload.hidden = !complete || controlled;
+      status.textContent = complete
+        ? controlled
+          ? "Ready offline · pump, shape and timing studies, Latin and Greek readings, source images and fonts saved."
+          : "The edition is saved, but this page is not yet controlled for offline use. Save your reading, then reload this page to use the offline copy."
+        : "This page’s offline edition is not ready. It will be checked when the worker changes; reload online if needed.";
     } catch {
       if (request === generation) status.textContent = unavailable;
     } finally {

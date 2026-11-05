@@ -20,6 +20,7 @@ jobs:
       - run: npm run check
       - run: npm run verify:physics
       - run: npm run verify:shapes
+      - run: npm run verify:timing
       - run: npx playwright install --with-deps chromium firefox
       - name: Verify the documented development server
         run: |
@@ -38,3 +39,5 @@ jobs:
       - run: python3 scripts/audio-oracle.py /tmp/pnigeus-review/browser.json
       - run: npm run test:shapes -- /tmp/pnigeus-review/shapes.json
       - run: python3 scripts/shapes-oracle.py /tmp/pnigeus-review/shapes.json
+      - run: npm run test:timing -- /tmp/pnigeus-review/timing
+      - run: python3 scripts/timing-oracle.py --browser < /tmp/pnigeus-review/timing/browser-cases.jsonl

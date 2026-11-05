@@ -1,0 +1,267 @@
+#timing,
+#timing-source {
+  scroll-margin-top: 1rem;
+}
+.timing-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  color: #526c7b;
+  margin-bottom: 0.4rem;
+}
+.timing-bench {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--paper);
+  margin-top: 1.8rem;
+}
+.timing-console {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+.timing-settings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+.timing-settings label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+}
+.timing-budget {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1rem;
+  margin: 1.2rem 0;
+}
+.timing-budget strong {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.timing-budget span {
+  font-size: 0.8rem;
+  max-width: 47ch;
+}
+.timing-slots {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin-top: 0.4rem;
+}
+.timing-slot {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-left: 1px solid var(--rule);
+  padding: 0.6rem 0.5rem;
+}
+.timing-slot:last-child {
+  border-right: 1px solid var(--rule);
+}
+.timing-slot > span {
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+.timing-slot small {
+  display: block;
+  font-size: 0.75rem;
+  color: #425e70;
+}
+.timing-slot select {
+  width: 5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1rem 0 0.2rem;
+}
+.timing-slot output {
+  font-size: 0.75rem;
+  margin-top: 0.7rem;
+  text-align: center;
+}
+.timing-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.3rem 0 0;
+}
+.timing-presets button {
+  font-size: 0.8rem;
+}
+.timing-instruments {
+  padding: 1.5rem 2rem;
+  background: #f2f6f5;
+}
+.timing-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+.timing-results p {
+  margin: 0;
+  border-left: 3px solid #adbdb9;
+  padding-left: 1rem;
+}
+.timing-results p:nth-child(2) {
+  border-color: #346e90;
+}
+.timing-results strong {
+  display: block;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  line-height: 1.3;
+}
+.timing-results span {
+  font-size: 0.82rem;
+}
+#timing-verdict {
+  font-size: 0.9rem;
+  margin: 1rem 0 0.6rem;
+}
+.timing-plot {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.timing-plot text {
+  font-family: Workshop, sans-serif;
+  font-size: 14px;
+  fill: #193648;
+}
+.timing-plot.compact text {
+  font-size: 16px;
+}
+.timing-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  font-size: 0.8rem;
+  margin: 0.3rem 0;
+}
+.timing-legend [hidden] {
+  display: none;
+}
+.timing-comparison {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.timing-comparison p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+#timing-air {
+  font-size: 0.85rem;
+  padding-block: 0.8rem;
+}
+#timing-table caption {
+  text-align: left;
+  padding-block: 0.7rem;
+  font-size: 0.85rem;
+}
+.timing-inquiry {
+  margin: 2rem 0;
+  border-left: 3px solid #936415;
+  padding: 0.5rem 0 0.5rem 1.2rem;
+}
+.timing-inquiry p {
+  font-size: 0.9rem;
+}
+#timing-search-result:empty,
+#timing-status:empty,
+#timing-export-status:empty,
+#timing-warning:empty {
+  display: none;
+}
+#timing-warning {
+  padding: 1rem;
+  background: #fae9d9;
+}
+.timing-note {
+  display: block;
+  font-weight: 600;
+}
+.timing-note textarea {
+  font: inherit;
+  display: block;
+  width: 100%;
+  max-width: 55rem;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid #91a7b5;
+  resize: vertical;
+  font-weight: 400;
+}
+#timing-link {
+  display: block;
+  overflow-wrap: anywhere;
+  font-size: 0.85rem;
+}
+#timing-link[hidden] {
+  display: none;
+}
+@media (max-width: 700px) {
+  .timing-console,
+  .timing-instruments {
+    padding: 1rem;
+  }
+  .timing-settings {
+    display: grid;
+    gap: 0.6rem;
+  }
+  .timing-settings label {
+    justify-content: space-between;
+    font-size: 0.8rem;
+  }
+  .timing-settings select {
+    font-size: 0.8rem;
+  }
+  .timing-budget {
+    display: block;
+  }
+  .timing-budget span {
+    display: block;
+    margin-top: 0.4rem;
+  }
+  .timing-slots {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.8rem 0;
+  }
+  .timing-slot:nth-child(3) {
+    border-right: 1px solid var(--rule);
+  }
+  .timing-slot select {
+    margin-top: 0.6rem;
+  }
+  .timing-results {
+    gap: 0.5rem;
+  }
+  .timing-results p {
+    padding-left: 0.5rem;
+  }
+  .timing-results span {
+    font-size: 0.7rem;
+    display: block;
+    line-height: 1.3;
+  }
+  .timing-comparison {
+    display: block;
+  }
+  .timing-comparison .button-row {
+    flex-wrap: wrap;
+  }
+  .timing-comparison button {
+    font-size: 0.8rem;
+  }
+}

@@ -34,7 +34,9 @@
     "verify:physics": "node --import tsx scripts/physics-cases.ts | python3 scripts/physics_oracle.py",
     "test:browser": "node scripts/browser-review.mjs",
     "verify:shapes": "node --import tsx scripts/shapes-cases.ts | python3 scripts/shapes-oracle.py",
-    "test:shapes": "node scripts/shapes-browser.mjs"
+    "test:shapes": "node scripts/shapes-browser.mjs",
+    "verify:timing": "node --import tsx scripts/timing-cases.ts | python3 scripts/timing-oracle.py",
+    "test:timing": "node scripts/timing-browser.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

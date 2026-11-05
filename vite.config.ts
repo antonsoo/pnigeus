@@ -23,6 +23,7 @@ export default defineConfig(async ({ command }) => {
     ...(await filesIn("public")),
     "index.html",
     "shapes.html",
+    "timing.html",
     "vite.config.ts",
     "tsconfig.json",
     "package.json",
@@ -38,7 +39,11 @@ export default defineConfig(async ({ command }) => {
     base,
     build: {
       rolldownOptions: {
-        input: { main: path.resolve("index.html"), shapes: path.resolve("shapes.html") },
+        input: {
+          main: path.resolve("index.html"),
+          shapes: path.resolve("shapes.html"),
+          timing: path.resolve("timing.html"),
+        },
       },
     },
     define: {
