@@ -41,3 +41,8 @@ jobs:
       - run: python3 scripts/shapes-oracle.py /tmp/pnigeus-review/shapes.json
       - run: npm run test:timing -- /tmp/pnigeus-review/timing
       - run: python3 scripts/timing-oracle.py --browser < /tmp/pnigeus-review/timing/browser-cases.jsonl
+      - run: npm run test:notebooks -- /tmp/pnigeus-review/notebooks
+      - run: python3 scripts/timing-oracle.py --browser < /tmp/pnigeus-review/notebooks/browser-cases.jsonl
+      - run: npm run test:transfers -- /tmp/pnigeus-review/transfers
+      - run: node scripts/edition-fixture.mjs /tmp/pnigeus-review/edition-c
+      - run: npm run test:offline -- /tmp/pnigeus-review/offline /tmp/pnigeus-review/edition-c/dist

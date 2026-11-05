@@ -1,0 +1,12 @@
+{
+  "boundary": "local final-build combined audit, before diagnostic sampling was added",
+  "engine": "firefox",
+  "phase": "waiting for Ready offline after a 16 KiB/s repair of the missing NotoSerif font",
+  "timeoutMilliseconds": 120000,
+  "observed": "page.waitForFunction timed out at scripts/offline-audit.mjs:177; no cache/status snapshot was retained by that earlier reviewer version",
+  "subsequentChecks": [
+    "complete Firefox-only audit passed",
+    "complete Chromium and Firefox audit repeated with per-second slow-repair samples; both passed"
+  ],
+  "cause": "not established; no production timing guarantee is inferred from these checks"
+}

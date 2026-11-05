@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://www.gutenberg.org/cache/epub/77400/images/fig76.jpg",
+    "file": "public/sources/hero-fig76.jpg",
+    "bytes": 115259,
+    "sha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+    "sameBytes": true
+  },
+  {
+    "url": "https://archive.org/download/heronsvonalexandhero/page/n267.jpg",
+    "file": "public/sources/hero-schmidt-192.jpg",
+    "bytes": 441836,
+    "sha256": "b353ae798dfcf466b9a95d965adee39a9dbd179b4534a3b62f5b915916f9e10d",
+    "sameBytes": true
+  }
+]

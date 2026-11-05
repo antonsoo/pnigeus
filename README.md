@@ -114,18 +114,25 @@ allocation gives **12 seconds**, with the same air. Earlier excess pressure
 drives faster outflow under the chosen outlet law. Water buffers pressure;
 it does not hold it constant.
 
-The controls allow unspent strokes. On request, the search checks all **792**
-allocations of exactly seven strokes. Four meet the full window for those
-settings; some other pipe/tank settings have none. This finite-domain result
-does not establish what arbitrary pumping actions could do, or when real pipes
-would sound. Timing, target and all numerical inputs are modern choices.
+The search makes the air allowance changeable. **Exactly seven** checks 792
+allocations; **zero to seven** checks 1,716. With one open pipe and tank ratio 6,
+none of the exactly-seven allocations keeps the full window. Allowing unused air
+finds 22 complete timings, and just **three extra strokes** suffice. This changes
+the constraint, not the physics. A finite-domain failure does not establish what
+arbitrary pumping actions could do, or when real pipes would sound. Timing,
+target and all numerical inputs are modern choices.
 
 Run `npm run dev` and open **http://127.0.0.1:4386/pnigeus/timing.html**.
 Both existing workshops also link to it. Keep “All at the start,” then load
 “Two, then one per slot.” Move a first-slot stroke later, or check the search
 and inspect a best timing. Save an interval CSV, complete action CSV or
 script-free illustrated reading with both accounts, explanation and source.
-Saving can be cancelled even while a source response body is stalled.
+Save an editable JSON notebook to reopen both timings, the search rule and your
+explanation. Its physical and exercise assumptions are checked before import;
+a different model cannot silently recompute your work. Opening keeps the previous
+notebook available for switching back, including edits made on either side.
+The illustrated reading contains a native notebook download too. Saving can be
+cancelled even while a source response body is stalled.
 
 [Source boundary and derivation](docs/timing-model.md) ·
 [Browser and artifact review](docs/timing-review.md) ·
@@ -141,8 +148,9 @@ npm run verify:timing
 npm run test:timing
 ```
 
-The independent pressure-coordinate RK4 solver checks all **9,504** allocations
-across twelve pipe/tank settings, including feasible counts and best durations.
+The independent pressure-coordinate RK4 solver checks all **20,592** allocations
+across twelve pipe/tank settings, including feasible counts, minimum complete stroke counts and best durations
+under both search rules.
 The browser review operates both engines at desktop and 375px, keeps comparisons,
 edits by keyboard, checks actual curves and CSV, opens the native reading without
 scripts, and shuts down the origin before offline use.
@@ -163,7 +171,13 @@ scripts, and shuts down the origin before offline use.
   the available wind; live playback and PCM16 WAV use the same finite samples.
 - Continue offline after the footer confirms the complete edition. The source
   drawing and fonts are checked against edition hashes before export. The
-  service worker verifies the complete build before activating it.
+  service worker verifies the complete build before activating it. “Check offline
+  copy” rechecks all saved bytes; “Save offline copy again” restores damage while
+  retaining the open experiment. Updates wait until old Pnigeus tabs close.
+
+The [2026-11-04 audit](docs/audit.md) records a reproduced corrupt-cache defect,
+the repair, slow transfers, editable notebooks and the expanded timing question.
+Earlier review artifacts are historical snapshots of their named revisions.
 
 ## How the model works
 

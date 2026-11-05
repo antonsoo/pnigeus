@@ -1,0 +1,2035 @@
+{
+  "reviewedAt": "2026-11-05T07:47:23.664Z",
+  "mode": "local",
+  "build": [
+    {
+      "file": "assets/main-Bznl6PjT.css",
+      "sha256": "5873556065cfd9aaa724923fd1d6f20d6e871d0d5206c34f0460d95230db8f73"
+    },
+    {
+      "file": "assets/main-QzZ4oSXO.js",
+      "sha256": "b8643bf68afbfd657071081831bee48f35972ff098d7add879a07d1224f11779"
+    },
+    {
+      "file": "assets/offline-Bo1n_7Gq.css",
+      "sha256": "2aedb71c863ba693715597fe33ecad416e14ae5664783eb8cf25733714ae6e77"
+    },
+    {
+      "file": "assets/offline-CLMar2_Y.js",
+      "sha256": "687ea56133230e1fd23bcec464bab292b062d0f6d6d2fea972c79b6c390ded8f"
+    },
+    {
+      "file": "assets/shapes-D19gtFRI.js",
+      "sha256": "3379b7954865c2600da758e3b3e291f6895400e8de603aa55bdfbb2a2e631962"
+    },
+    {
+      "file": "assets/shapes-ph047G3t.css",
+      "sha256": "29aa3f216f000da66891549607574964675d38e4914dad05dab50c13f21b369b"
+    },
+    {
+      "file": "assets/timing-D6fd4X4I.js",
+      "sha256": "fa12c6de20f61782ef5f67063e0c232e0cc0871ea6bea8b6b341730d60734a64"
+    },
+    {
+      "file": "assets/timing-zSVyLjeA.css",
+      "sha256": "966418915719d3e5baebde3502f969b97483b66c0b9fc9f6f75cfa437f401e4c"
+    },
+    {
+      "file": "fonts/IBMPlex-OFL.txt",
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    },
+    {
+      "file": "fonts/IBMPlexSans-Regular.woff2",
+      "sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a"
+    },
+    {
+      "file": "fonts/IBMPlexSans-SemiBold.woff2",
+      "sha256": "f78048030eab62e860efa39a0df79e2e5581bf122eb95b9bc42c0b8a4988d205"
+    },
+    {
+      "file": "fonts/NotoSerif-OFL.txt",
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    },
+    {
+      "file": "fonts/NotoSerif-Regular.ttf",
+      "sha256": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6"
+    },
+    {
+      "file": "index.html",
+      "sha256": "20a33ef7a90ce896848361ed51aa8b1aa41fb98ea496952556c5dd3d6cdc9f13"
+    },
+    {
+      "file": "shapes.html",
+      "sha256": "361b2e4db1d3e2444336d4326aabab0677d2f9b43fcaa624a379a1ab9f76dd79"
+    },
+    {
+      "file": "sources/hero-fig76.jpg",
+      "sha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133"
+    },
+    {
+      "file": "sources/hero-schmidt-192.jpg",
+      "sha256": "b353ae798dfcf466b9a95d965adee39a9dbd179b4534a3b62f5b915916f9e10d"
+    },
+    {
+      "file": "sw.js",
+      "sha256": "32689d818368e613b85dab7320947d3f48222b12bb0af01435ded033405c9808"
+    },
+    {
+      "file": "timing.html",
+      "sha256": "5534bbe22f8c15a60d2808fb1e0436e229d156a57de578166a14600ef4489289"
+    }
+  ],
+  "workflows": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "observations": [
+        {
+          "label": "stored",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 853.5972311639083,
+            "inside": 0.2274644220024245,
+            "outside": 0.3145071155995151,
+            "head": 0.0870426935970906,
+            "volume": 11.701423119903021,
+            "reserve": 3
+          },
+          "svgInsideY": 383.521,
+          "svgOutsideY": 331.296,
+          "csv": "/tmp/claude-1000/pnigeus-audit/chromium-1440-stored.csv"
+        },
+        {
+          "label": "small-tank",
+          "tank": 3,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 1058.389102220198,
+            "inside": 0.22804956485512734,
+            "outside": 0.3359752175724363,
+            "head": 0.10792565271730897,
+            "volume": 11.678017405794908,
+            "reserve": 3
+          },
+          "svgInsideY": 383.17,
+          "svgOutsideY": 318.415,
+          "csv": "/tmp/claude-1000/pnigeus-audit/chromium-1440-small-tank.csv"
+        },
+        {
+          "label": "large-tank",
+          "tank": 12,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 778.3052751102689,
+            "inside": 0.22724870346301607,
+            "outside": 0.3066137542306349,
+            "head": 0.07936505076761885,
+            "volume": 11.710051861479357,
+            "reserve": 3
+          },
+          "svgInsideY": 383.651,
+          "svgOutsideY": 336.032,
+          "csv": "/tmp/claude-1000/pnigeus-audit/chromium-1440-large-tank.csv"
+        },
+        {
+          "label": "one-pipe",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 10.235290068724158,
+            "dryStock": 8.8,
+            "supplied": 3,
+            "waterOut": 1.5647099312758428,
+            "dryOut": 3,
+            "vented": 0,
+            "time": 5,
+            "mask": 1
+          },
+          "reading": {
+            "pressure": 410.1225666836049,
+            "inside": 0.2651492807870505,
+            "outside": 0.30697014384258986,
+            "head": 0.04182086305553934,
+            "volume": 10.19402876851798,
+            "reserve": 1.4352900687241572
+          },
+          "svgInsideY": 360.91,
+          "svgOutsideY": 335.818,
+          "csv": "/tmp/claude-1000/pnigeus-audit/chromium-1440-one-pipe.csv"
+        },
+        {
+          "label": "four-pipes",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 8.8,
+            "dryStock": 8.8,
+            "supplied": 4,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 0,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 0,
+            "inside": 0.3,
+            "outside": 0.3,
+            "head": 0,
+            "volume": 8.8,
+            "reserve": 0
+          },
+          "svgInsideY": 340,
+          "svgOutsideY": 340,
+          "csv": "/tmp/claude-1000/pnigeus-audit/chromium-1440-four-pipes.csv"
+        },
+        {
+          "label": "venting",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 19.779775535751295,
+            "dryStock": 22.8,
+            "supplied": 18,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 3.020224464248706,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 3059.6747999999993,
+            "inside": 0.040000000000000036,
+            "outside": 0.352,
+            "head": 0.31199999999999994,
+            "volume": 19.2,
+            "reserve": 10.979775535751294
+          },
+          "svgInsideY": 496,
+          "svgOutsideY": 308.8,
+          "csv": "/tmp/claude-1000/pnigeus-audit/chromium-1440-venting.csv"
+        }
+      ],
+      "audio": [
+        {
+          "label": "one-pipe",
+          "wav": "/tmp/claude-1000/pnigeus-audit/chromium-1440-one-pipe.wav",
+          "live": "/tmp/claude-1000/pnigeus-audit/chromium-1440-one-pipe.f32",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            }
+          ],
+          "seconds": 5
+        },
+        {
+          "label": "four-pipes",
+          "wav": "/tmp/claude-1000/pnigeus-audit/chromium-1440-four-pipes.wav",
+          "live": "/tmp/claude-1000/pnigeus-audit/chromium-1440-four-pipes.f32",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "seconds": 5
+        }
+      ],
+      "screenshots": [
+        "/tmp/claude-1000/pnigeus-audit/chromium-1440-workshop.png",
+        "/tmp/claude-1000/pnigeus-audit/chromium-1440-reading.png"
+      ],
+      "accessibilityViolations": 0,
+      "csv": "/tmp/claude-1000/pnigeus-audit/chromium-1440-final.csv",
+      "finalCommands": [
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "keys",
+          "mask": 1
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "keys",
+          "mask": 3
+        },
+        {
+          "type": "keys",
+          "mask": 7
+        },
+        {
+          "type": "keys",
+          "mask": 15
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        }
+      ],
+      "tank": 6,
+      "study": "/tmp/claude-1000/pnigeus-audit/chromium-1440-reading.html",
+      "pdf": "/tmp/claude-1000/pnigeus-audit/one-pipe-reading.pdf",
+      "offlineReading": "/tmp/claude-1000/pnigeus-audit/chromium-1440-offline.html",
+      "offlineWithOriginClosed": true,
+      "offlineWithNetworkDisabled": true,
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "observations": [
+        {
+          "label": "stored",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 853.5972311639083,
+            "inside": 0.2274644220024245,
+            "outside": 0.3145071155995151,
+            "head": 0.0870426935970906,
+            "volume": 11.701423119903021,
+            "reserve": 3
+          },
+          "svgInsideY": 383.521,
+          "svgOutsideY": 331.296,
+          "csv": "/tmp/claude-1000/pnigeus-audit/chromium-375-stored.csv"
+        },
+        {
+          "label": "small-tank",
+          "tank": 3,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 1058.389102220198,
+            "inside": 0.22804956485512734,
+            "outside": 0.3359752175724363,
+            "head": 0.10792565271730897,
+            "volume": 11.678017405794908,
+            "reserve": 3
+          },
+          "svgInsideY": 383.17,
+          "svgOutsideY": 318.415,
+          "csv": "/tmp/claude-1000/pnigeus-audit/chromium-375-small-tank.csv"
+        },
+        {
+          "label": "large-tank",
+          "tank": 12,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 778.3052751102689,
+            "inside": 0.22724870346301607,
+            "outside": 0.3066137542306349,
+            "head": 0.07936505076761885,
+            "volume": 11.710051861479357,
+            "reserve": 3
+          },
+          "svgInsideY": 383.651,
+          "svgOutsideY": 336.032,
+          "csv": "/tmp/claude-1000/pnigeus-audit/chromium-375-large-tank.csv"
+        },
+        {
+          "label": "one-pipe",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 10.235290068724158,
+            "dryStock": 8.8,
+            "supplied": 3,
+            "waterOut": 1.5647099312758428,
+            "dryOut": 3,
+            "vented": 0,
+            "time": 5,
+            "mask": 1
+          },
+          "reading": {
+            "pressure": 410.1225666836049,
+            "inside": 0.2651492807870505,
+            "outside": 0.30697014384258986,
+            "head": 0.04182086305553934,
+            "volume": 10.19402876851798,
+            "reserve": 1.4352900687241572
+          },
+          "svgInsideY": 360.91,
+          "svgOutsideY": 335.818,
+          "csv": "/tmp/claude-1000/pnigeus-audit/chromium-375-one-pipe.csv"
+        },
+        {
+          "label": "four-pipes",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 8.8,
+            "dryStock": 8.8,
+            "supplied": 4,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 0,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 0,
+            "inside": 0.3,
+            "outside": 0.3,
+            "head": 0,
+            "volume": 8.8,
+            "reserve": 0
+          },
+          "svgInsideY": 340,
+          "svgOutsideY": 340,
+          "csv": "/tmp/claude-1000/pnigeus-audit/chromium-375-four-pipes.csv"
+        },
+        {
+          "label": "venting",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 19.779775535751295,
+            "dryStock": 22.8,
+            "supplied": 18,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 3.020224464248706,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 3059.6747999999993,
+            "inside": 0.040000000000000036,
+            "outside": 0.352,
+            "head": 0.31199999999999994,
+            "volume": 19.2,
+            "reserve": 10.979775535751294
+          },
+          "svgInsideY": 496,
+          "svgOutsideY": 308.8,
+          "csv": "/tmp/claude-1000/pnigeus-audit/chromium-375-venting.csv"
+        }
+      ],
+      "audio": [
+        {
+          "label": "one-pipe",
+          "wav": "/tmp/claude-1000/pnigeus-audit/chromium-375-one-pipe.wav",
+          "live": "/tmp/claude-1000/pnigeus-audit/chromium-375-one-pipe.f32",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            }
+          ],
+          "seconds": 5
+        },
+        {
+          "label": "four-pipes",
+          "wav": "/tmp/claude-1000/pnigeus-audit/chromium-375-four-pipes.wav",
+          "live": "/tmp/claude-1000/pnigeus-audit/chromium-375-four-pipes.f32",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "seconds": 5
+        }
+      ],
+      "screenshots": [
+        "/tmp/claude-1000/pnigeus-audit/chromium-375-workshop.png",
+        "/tmp/claude-1000/pnigeus-audit/chromium-375-reading.png"
+      ],
+      "accessibilityViolations": 0,
+      "csv": "/tmp/claude-1000/pnigeus-audit/chromium-375-final.csv",
+      "finalCommands": [
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "keys",
+          "mask": 1
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "keys",
+          "mask": 3
+        },
+        {
+          "type": "keys",
+          "mask": 7
+        },
+        {
+          "type": "keys",
+          "mask": 15
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        }
+      ],
+      "tank": 6,
+      "study": "/tmp/claude-1000/pnigeus-audit/chromium-375-reading.html",
+      "offlineReading": "/tmp/claude-1000/pnigeus-audit/chromium-375-offline.html",
+      "offlineWithOriginClosed": true,
+      "offlineWithNetworkDisabled": true,
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "observations": [
+        {
+          "label": "stored",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 853.5972311639083,
+            "inside": 0.2274644220024245,
+            "outside": 0.3145071155995151,
+            "head": 0.0870426935970906,
+            "volume": 11.701423119903021,
+            "reserve": 3
+          },
+          "svgInsideY": 383.521,
+          "svgOutsideY": 331.296,
+          "csv": "/tmp/claude-1000/pnigeus-audit/firefox-1440-stored.csv"
+        },
+        {
+          "label": "small-tank",
+          "tank": 3,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 1058.389102220198,
+            "inside": 0.22804956485512734,
+            "outside": 0.3359752175724363,
+            "head": 0.10792565271730897,
+            "volume": 11.678017405794908,
+            "reserve": 3
+          },
+          "svgInsideY": 383.17,
+          "svgOutsideY": 318.415,
+          "csv": "/tmp/claude-1000/pnigeus-audit/firefox-1440-small-tank.csv"
+        },
+        {
+          "label": "large-tank",
+          "tank": 12,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 778.3052751102689,
+            "inside": 0.22724870346301607,
+            "outside": 0.3066137542306349,
+            "head": 0.07936505076761885,
+            "volume": 11.710051861479357,
+            "reserve": 3
+          },
+          "svgInsideY": 383.651,
+          "svgOutsideY": 336.032,
+          "csv": "/tmp/claude-1000/pnigeus-audit/firefox-1440-large-tank.csv"
+        },
+        {
+          "label": "one-pipe",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 10.235290068724158,
+            "dryStock": 8.8,
+            "supplied": 3,
+            "waterOut": 1.5647099312758428,
+            "dryOut": 3,
+            "vented": 0,
+            "time": 5,
+            "mask": 1
+          },
+          "reading": {
+            "pressure": 410.1225666836049,
+            "inside": 0.2651492807870505,
+            "outside": 0.30697014384258986,
+            "head": 0.04182086305553934,
+            "volume": 10.19402876851798,
+            "reserve": 1.4352900687241572
+          },
+          "svgInsideY": 360.91,
+          "svgOutsideY": 335.818,
+          "csv": "/tmp/claude-1000/pnigeus-audit/firefox-1440-one-pipe.csv"
+        },
+        {
+          "label": "four-pipes",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 8.8,
+            "dryStock": 8.8,
+            "supplied": 4,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 0,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 0,
+            "inside": 0.3,
+            "outside": 0.3,
+            "head": 0,
+            "volume": 8.8,
+            "reserve": 0
+          },
+          "svgInsideY": 340,
+          "svgOutsideY": 340,
+          "csv": "/tmp/claude-1000/pnigeus-audit/firefox-1440-four-pipes.csv"
+        },
+        {
+          "label": "venting",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 19.779775535751295,
+            "dryStock": 22.8,
+            "supplied": 18,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 3.020224464248706,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 3059.6747999999993,
+            "inside": 0.040000000000000036,
+            "outside": 0.352,
+            "head": 0.31199999999999994,
+            "volume": 19.2,
+            "reserve": 10.979775535751294
+          },
+          "svgInsideY": 496,
+          "svgOutsideY": 308.8,
+          "csv": "/tmp/claude-1000/pnigeus-audit/firefox-1440-venting.csv"
+        }
+      ],
+      "audio": [
+        {
+          "label": "one-pipe",
+          "wav": "/tmp/claude-1000/pnigeus-audit/firefox-1440-one-pipe.wav",
+          "live": "/tmp/claude-1000/pnigeus-audit/firefox-1440-one-pipe.f32",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            }
+          ],
+          "seconds": 5
+        },
+        {
+          "label": "four-pipes",
+          "wav": "/tmp/claude-1000/pnigeus-audit/firefox-1440-four-pipes.wav",
+          "live": "/tmp/claude-1000/pnigeus-audit/firefox-1440-four-pipes.f32",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "seconds": 5
+        }
+      ],
+      "screenshots": [
+        "/tmp/claude-1000/pnigeus-audit/firefox-1440-workshop.png",
+        "/tmp/claude-1000/pnigeus-audit/firefox-1440-reading.png"
+      ],
+      "accessibilityViolations": 0,
+      "csv": "/tmp/claude-1000/pnigeus-audit/firefox-1440-final.csv",
+      "finalCommands": [
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "keys",
+          "mask": 1
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "keys",
+          "mask": 3
+        },
+        {
+          "type": "keys",
+          "mask": 7
+        },
+        {
+          "type": "keys",
+          "mask": 15
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        }
+      ],
+      "tank": 6,
+      "study": "/tmp/claude-1000/pnigeus-audit/firefox-1440-reading.html",
+      "offlineReading": "/tmp/claude-1000/pnigeus-audit/firefox-1440-offline.html",
+      "offlineWithOriginClosed": true,
+      "offlineWithNetworkDisabled": true,
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "observations": [
+        {
+          "label": "stored",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 853.5972311639083,
+            "inside": 0.2274644220024245,
+            "outside": 0.3145071155995151,
+            "head": 0.0870426935970906,
+            "volume": 11.701423119903021,
+            "reserve": 3
+          },
+          "svgInsideY": 383.521,
+          "svgOutsideY": 331.296,
+          "csv": "/tmp/claude-1000/pnigeus-audit/firefox-375-stored.csv"
+        },
+        {
+          "label": "small-tank",
+          "tank": 3,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 1058.389102220198,
+            "inside": 0.22804956485512734,
+            "outside": 0.3359752175724363,
+            "head": 0.10792565271730897,
+            "volume": 11.678017405794908,
+            "reserve": 3
+          },
+          "svgInsideY": 383.17,
+          "svgOutsideY": 318.415,
+          "csv": "/tmp/claude-1000/pnigeus-audit/firefox-375-small-tank.csv"
+        },
+        {
+          "label": "large-tank",
+          "tank": 12,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 11.8,
+            "dryStock": 11.8,
+            "supplied": 3,
+            "waterOut": 0,
+            "dryOut": 0,
+            "vented": 0,
+            "time": 0,
+            "mask": 0
+          },
+          "reading": {
+            "pressure": 778.3052751102689,
+            "inside": 0.22724870346301607,
+            "outside": 0.3066137542306349,
+            "head": 0.07936505076761885,
+            "volume": 11.710051861479357,
+            "reserve": 3
+          },
+          "svgInsideY": 383.651,
+          "svgOutsideY": 336.032,
+          "csv": "/tmp/claude-1000/pnigeus-audit/firefox-375-large-tank.csv"
+        },
+        {
+          "label": "one-pipe",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 10.235290068724158,
+            "dryStock": 8.8,
+            "supplied": 3,
+            "waterOut": 1.5647099312758428,
+            "dryOut": 3,
+            "vented": 0,
+            "time": 5,
+            "mask": 1
+          },
+          "reading": {
+            "pressure": 410.1225666836049,
+            "inside": 0.2651492807870505,
+            "outside": 0.30697014384258986,
+            "head": 0.04182086305553934,
+            "volume": 10.19402876851798,
+            "reserve": 1.4352900687241572
+          },
+          "svgInsideY": 360.91,
+          "svgOutsideY": 335.818,
+          "csv": "/tmp/claude-1000/pnigeus-audit/firefox-375-one-pipe.csv"
+        },
+        {
+          "label": "four-pipes",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            }
+          ],
+          "state": {
+            "waterStock": 8.8,
+            "dryStock": 8.8,
+            "supplied": 4,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 0,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 0,
+            "inside": 0.3,
+            "outside": 0.3,
+            "head": 0,
+            "volume": 8.8,
+            "reserve": 0
+          },
+          "svgInsideY": 340,
+          "svgOutsideY": 340,
+          "csv": "/tmp/claude-1000/pnigeus-audit/firefox-375-four-pipes.csv"
+        },
+        {
+          "label": "venting",
+          "tank": 6,
+          "commands": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "state": {
+            "waterStock": 19.779775535751295,
+            "dryStock": 22.8,
+            "supplied": 18,
+            "waterOut": 4,
+            "dryOut": 4,
+            "vented": 3.020224464248706,
+            "time": 10,
+            "mask": 15
+          },
+          "reading": {
+            "pressure": 3059.6747999999993,
+            "inside": 0.040000000000000036,
+            "outside": 0.352,
+            "head": 0.31199999999999994,
+            "volume": 19.2,
+            "reserve": 10.979775535751294
+          },
+          "svgInsideY": 496,
+          "svgOutsideY": 308.8,
+          "csv": "/tmp/claude-1000/pnigeus-audit/firefox-375-venting.csv"
+        }
+      ],
+      "audio": [
+        {
+          "label": "one-pipe",
+          "wav": "/tmp/claude-1000/pnigeus-audit/firefox-375-one-pipe.wav",
+          "live": "/tmp/claude-1000/pnigeus-audit/firefox-375-one-pipe.f32",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            }
+          ],
+          "seconds": 5
+        },
+        {
+          "label": "four-pipes",
+          "wav": "/tmp/claude-1000/pnigeus-audit/firefox-375-four-pipes.wav",
+          "live": "/tmp/claude-1000/pnigeus-audit/firefox-375-four-pipes.f32",
+          "tank": 6,
+          "commandsBefore": [
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "pump"
+            },
+            {
+              "type": "keys",
+              "mask": 1
+            },
+            {
+              "type": "wait",
+              "seconds": 5
+            },
+            {
+              "type": "keys",
+              "mask": 3
+            },
+            {
+              "type": "keys",
+              "mask": 7
+            },
+            {
+              "type": "keys",
+              "mask": 15
+            },
+            {
+              "type": "pump"
+            }
+          ],
+          "seconds": 5
+        }
+      ],
+      "screenshots": [
+        "/tmp/claude-1000/pnigeus-audit/firefox-375-workshop.png",
+        "/tmp/claude-1000/pnigeus-audit/firefox-375-reading.png"
+      ],
+      "accessibilityViolations": 0,
+      "csv": "/tmp/claude-1000/pnigeus-audit/firefox-375-final.csv",
+      "finalCommands": [
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "keys",
+          "mask": 1
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "keys",
+          "mask": 3
+        },
+        {
+          "type": "keys",
+          "mask": 7
+        },
+        {
+          "type": "keys",
+          "mask": 15
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "wait",
+          "seconds": 5
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        },
+        {
+          "type": "pump"
+        }
+      ],
+      "tank": 6,
+      "study": "/tmp/claude-1000/pnigeus-audit/firefox-375-reading.html",
+      "offlineReading": "/tmp/claude-1000/pnigeus-audit/firefox-375-offline.html",
+      "offlineWithOriginClosed": true,
+      "offlineWithNetworkDisabled": true,
+      "pageErrors": [],
+      "externalRequests": []
+    }
+  ],
+  "negativeCases": [
+    {
+      "engine": "chromium",
+      "substitutedSourceRefused": true,
+      "recovered": true,
+      "duplicateStateReset": true
+    },
+    {
+      "engine": "firefox",
+      "substitutedSourceRefused": true,
+      "recovered": true,
+      "duplicateStateReset": true
+    }
+  ]
+}

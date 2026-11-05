@@ -21,21 +21,21 @@ stock, pressure window or outlet coefficient. The timing room uses the existing
 establish sound, pipe voicing, loudness or acceptable pitch change. No ancient
 musical performance is reconstructed.
 
-| Item                   | Chosen constraint                                |
-| ---------------------- | ------------------------------------------------ |
-| Before the clock       | Three one-litre strokes, pipes closed            |
-| Delivery instants      | 0, 2, 4, 6, 8, 10 seconds                        |
-| Available exercise air | Up to seven additional ambient-equivalent litres |
-| Delivery               | Instantaneous, whole one-litre strokes           |
-| Pipe demand            | 1–4 gates stay open for 12 seconds               |
-| Tank area              | 3, 6 or 12 times chamber area                    |
-| Pressure target        | 400–1100 Pa gauge, inclusive                     |
-| Search domain          | Exactly seven strokes across six instants        |
-| Objective              | Maximum duration inside that pressure band       |
+| Item                   | Chosen constraint                                    |
+| ---------------------- | ---------------------------------------------------- |
+| Before the clock       | Three one-litre strokes, pipes closed                |
+| Delivery instants      | 0, 2, 4, 6, 8, 10 seconds                            |
+| Available exercise air | Up to seven additional ambient-equivalent litres     |
+| Delivery               | Instantaneous, whole one-litre strokes               |
+| Pipe demand            | 1–4 gates stay open for 12 seconds                   |
+| Tank area              | 3, 6 or 12 times chamber area                        |
+| Pressure target        | 400–1100 Pa gauge, inclusive                         |
+| Search domain          | Exactly seven, or zero to seven, across six instants |
+| Objective              | Maximum duration inside that pressure band           |
 
-Controls permit unspent strokes; the account states the number left. The search
-explicitly spends all seven: its question holds total air fixed. Zero complete
-timings is restricted to that finite domain. Arbitrary delivery times, partial
+Controls permit unspent strokes; the account states the number left. The search rule either
+holds total air fixed at seven or allows zero through seven. Zero complete
+timings is restricted to the selected finite domain. Arbitrary delivery times, partial
 litres, changing gates, finite strokes and human effort are outside the search.
 
 ```text
@@ -52,8 +52,12 @@ fixed gates     [                open throughout                ]
 A kept timing has its own strokes, tank and pipe count. Current edits leave it
 fixed. Browser Back restores the current timing; the kept account and explanation
 remain in the tab. Reload loses those drafts, as the page states. The illustrated
-reading retains both accounts and the explanation. Its link reopens the current
-settings only.
+reading retains both accounts and the explanation. Its link reopens the current settings and search rule only. The editable
+notebook download (also inside the script-free reading) restores both accounts,
+the explanation and the search rule. A versioned parameter record must match
+before recomputation. Invalid files leave the work alone. Opening retains the
+previous notebook; switching saves the edits made on either side. If work changes
+while a file is being read, opening awaits an explicit choice.
 
 ## Crossing time, not plotted samples
 
@@ -93,8 +97,16 @@ rounded display.
 
 There are `C(12, 5) = 792` seven-stroke compositions. Every composition is
 evaluated. The search reports complete timings, maximum time and one best
-timing. It does not claim uniqueness. Scores within 1e-9 seconds tie; earlier
-slot counts are enumerated from zero upward.
+timing. Summing budgets zero through seven gives `C(13, 6) = 1716`
+compositions. Scores within 1e-9 seconds tie; ties prefer fewer strokes, then the
+first allocation. Budgets and slot counts are enumerated from zero upward.
+No unique optimum is claimed.
+
+With one open pipe and tank ratio 6, the exactly-seven domain has no complete
+timing (best duration: 10 s). The zero-to-seven domain has 22 complete timings;
+the minimum uses three extra strokes. One is `0 / 0 / 1 / 0 / 1 / 1`, giving all
+12 seconds with six supplied litres including the starting three. The result
+shows why “impossible” must name the assumptions it holds fixed.
 
 ## Worked comparison
 

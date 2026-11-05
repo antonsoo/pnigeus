@@ -36,7 +36,10 @@
     "verify:shapes": "node --import tsx scripts/shapes-cases.ts | python3 scripts/shapes-oracle.py",
     "test:shapes": "node scripts/shapes-browser.mjs",
     "verify:timing": "node --import tsx scripts/timing-cases.ts | python3 scripts/timing-oracle.py",
-    "test:timing": "node scripts/timing-browser.mjs"
+    "test:timing": "node scripts/timing-browser.mjs",
+    "test:notebooks": "node scripts/notebook-browser.mjs",
+    "test:transfers": "node scripts/transfer-audit.mjs",
+    "test:offline": "node scripts/offline-audit.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

@@ -26,6 +26,9 @@ for (const tank of TANKS)
       }
       for (let n = 0; n <= remaining; n++) visit([...prefix, n], remaining - n);
     };
-    visit([], 7);
-    console.log(JSON.stringify({ type: "search", tank, pipes, ...searchTimings(tank, pipes) }));
+    for (let budget = 0; budget <= 7; budget++) visit([], budget);
+    for (const mode of ["exact", "at-most"] as const)
+      console.log(
+        JSON.stringify({ type: "search", tank, pipes, ...searchTimings(tank, pipes, mode) }),
+      );
   }

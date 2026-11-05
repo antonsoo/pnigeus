@@ -99,40 +99,62 @@ export function timingRun(s: TimingSettings) {
   };
 }
 
-/** All weak compositions of seven deliveries into the six allowed instants. */
-export function searchTimings(tank: Tank, pipes: number) {
-  const candidates: ReturnType<typeof timingRun>[] = [];
-  const schedules: number[][] = [];
+export type SearchMode = "exact" | "at-most";
+
+/** Enumerate permitted deliveries; score time first, then prefer fewer strokes. */
+export function searchTimings(tank: Tank, pipes: number, mode: SearchMode = "exact") {
+  if (mode !== "exact" && mode !== "at-most")
+    throw new RangeError("Choose the equal-air or unspent-air search.");
+  let count = 0;
+  let full = 0;
+  let bestSeconds = -1;
+  let bestUsed = Infinity;
+  let minimumCompleteStrokes: number | null = null;
+  let best: TimingSettings = { tank, pipes, strokes: [0, 0, 0, 0, 0, 0] };
   function visit(prefix: number[], remaining: number): void {
     if (prefix.length === TIMING.slots - 1) {
-      const strokes = [...prefix, remaining];
-      candidates.push(timingRun({ tank, pipes, strokes }));
-      schedules.push(strokes);
+      const candidate = { tank, pipes, strokes: [...prefix, remaining] };
+      const run = timingRun(candidate);
+      count++;
+      if (run.complete) {
+        full++;
+        minimumCompleteStrokes = Math.min(minimumCompleteStrokes ?? Infinity, run.used);
+      }
+      if (
+        run.within > bestSeconds + 1e-9 ||
+        (Math.abs(run.within - bestSeconds) <= 1e-9 && run.used < bestUsed)
+      ) {
+        best = candidate;
+        bestSeconds = run.within;
+        bestUsed = run.used;
+      }
       return;
     }
     for (let n = 0; n <= remaining; n++) visit([...prefix, n], remaining - n);
   }
-  visit([], TIMING.budget);
-  let best = 0;
-  for (let i = 1; i < candidates.length; i++)
-    if ((candidates[i]?.within ?? 0) > (candidates[best]?.within ?? 0) + 1e-9) best = i;
-  return {
-    count: candidates.length,
-    full: candidates.filter((run) => run.complete).length,
-    best: { tank, pipes, strokes: schedules[best] ?? [] } satisfies TimingSettings,
-    bestSeconds: candidates[best]?.within ?? 0,
-  };
+  for (let budget = mode === "exact" ? TIMING.budget : 0; budget <= TIMING.budget; budget++)
+    visit([], budget);
+  return { mode, count, full, best, bestSeconds, bestUsed, minimumCompleteStrokes };
 }
 
-export function timingQuery(s: TimingSettings): string {
+export function timingQuery(s: TimingSettings, mode: SearchMode = "exact"): string {
   validateTiming(s);
-  return `?tank=${s.tank}&pipes=${s.pipes}&strokes=${s.strokes.join(".")}`;
+  return `?tank=${s.tank}&pipes=${s.pipes}&strokes=${s.strokes.join(".")}${mode === "at-most" ? "&allow=unspent" : ""}`;
 }
-export function parseTiming(search: string): { settings: TimingSettings; warning: string } {
+export function parseTiming(search: string): {
+  settings: TimingSettings;
+  searchMode: SearchMode;
+  warning: string;
+} {
   const q = new URLSearchParams(search);
   try {
-    if (search.length > 300 || ["tank", "pipes", "strokes"].some((key) => q.getAll(key).length > 1))
+    if (
+      search.length > 300 ||
+      ["tank", "pipes", "strokes", "allow"].some((key) => q.getAll(key).length > 1)
+    )
       throw new Error("Ambiguous query");
+    if (q.has("allow") && q.get("allow") !== "unspent") throw new Error("Unknown budget rule");
+    const searchMode: SearchMode = q.get("allow") === "unspent" ? "at-most" : "exact";
     const tank = q.get("tank") ?? "6";
     const pipes = q.get("pipes") ?? "2";
     const strokes = q.get("strokes") ?? "7.0.0.0.0.0";
@@ -144,10 +166,11 @@ export function parseTiming(search: string): { settings: TimingSettings; warning
       strokes: strokes.split(".").map(Number),
     };
     validateTiming(settings);
-    return { settings, warning: "" };
+    return { settings, searchMode, warning: "" };
   } catch {
     return {
       settings: { ...DEFAULT_TIMING, strokes: [...DEFAULT_TIMING.strokes] },
+      searchMode: "exact",
       warning:
         "The shared timing is invalid or ambiguous. The seven-strokes-at-once example is shown.",
     };

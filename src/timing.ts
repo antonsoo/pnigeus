@@ -1,7 +1,15 @@
+import {
+  copyNotebook,
+  NOTEBOOK_BYTES,
+  notebookJson,
+  readNotebook,
+  type TimingNotebook,
+} from "./core/notebook";
 import { geometry, TANKS, type Tank } from "./core/regulator";
 import {
   DEFAULT_TIMING,
   parseTiming,
+  type SearchMode,
   searchTimings,
   TIMING,
   type TimingSettings,
@@ -20,6 +28,11 @@ const $ = <T extends HTMLElement = HTMLElement>(selector: string): T => {
 };
 const parsed = parseTiming(location.search);
 let current = parsed.settings;
+let searchMode: SearchMode = parsed.searchMode;
+let revision = 0;
+let importGeneration = 0;
+let previous: TimingNotebook | null = null;
+let pending: TimingNotebook | null = null;
 let kept: TimingSettings | null = null;
 let search: ReturnType<typeof searchTimings> | null = null;
 let saving: AbortController | null = null;
@@ -37,14 +50,15 @@ $("#app").innerHTML =
 <div class="timing-instruments"><div class="timing-results" aria-label="Time in pressure ranges"><p><strong id="timing-below"></strong><span>seconds below 400 Pa</span></p><p><strong id="timing-within"></strong><span>seconds within target</span></p><p><strong id="timing-above"></strong><span>seconds above 1100 Pa</span></p></div><p id="timing-verdict"></p><div id="timing-plot"></div><p class="timing-legend"><span>Solid blue: current timing.</span> <span>Green: chosen pressure target.</span> <span id="kept-legend" hidden>Dashed brown: kept comparison.</span></p><p class="hint">The graph samples the curves. Time in each range uses the threshold crossings, so a short excursion still counts. The three starting strokes precede this clock.</p></div></div>
 <div class="timing-comparison"><div><h3>Keep one. Change the other.</h3><p id="timing-kept">Keep a timing before moving its strokes. The comparison stays fixed while you edit.</p></div><div class="button-row"><button id="timing-keep" type="button">Keep this timing</button><button id="timing-forget" type="button" disabled>Clear comparison</button></div></div>
 <p id="timing-air"></p><details><summary>Inspect every interval and crossing</summary><div id="timing-table"></div></details>
-<div class="timing-inquiry"><h3>Is this target possible?</h3><p>First try moving a stroke from a high-pressure interval to a later low one. Then check every allowed allocation of <strong>exactly seven strokes</strong>, for the current pipe count and tank. This searches six delivery instants, not every physically possible pumping action.</p><button id="timing-search" type="button">Check all allowed timings</button><p id="timing-search-result" role="status"></p><button id="timing-load-best" type="button" hidden>Load one best timing</button></div>
-<label class="timing-note" for="timing-note">Explain the comparison<textarea id="timing-note" rows="3" maxlength="4000" placeholder="Why can the same supplied air leave a different pressure history?"></textarea></label><p class="hint">The explanation and kept comparison stay in this tab until reload. Save the illustrated reading to retain them. Shared links contain the current settings.</p>
-<div class="export-row"><button id="timing-share" type="button">Show timing link</button><button id="timing-csv" type="button">Save interval CSV</button><button id="timing-events" type="button">Save full action CSV</button><button id="timing-reading" type="button">Save illustrated reading</button><button id="timing-cancel" type="button" hidden>Cancel saving</button></div><p id="timing-export-status" role="status"></p><a id="timing-link" hidden></a><p id="timing-status" role="status" aria-live="polite"></p></section>
+<div class="timing-inquiry"><h3>Is this target possible?</h3><p>First try moving a stroke from a high-pressure interval to a later low one. Then change the rule: must all seven strokes be spent, or may some air remain unused? Try one open pipe under each rule. The search covers the current pipe count and tank. This searches six delivery instants, not every physically possible pumping action.</p><label for="timing-rule">Air allowance<select id="timing-rule"><option value="exact">Use all seven extra strokes</option><option value="at-most">Allow zero to seven extra strokes</option></select></label><button id="timing-search" type="button">Check all allowed timings</button><p id="timing-search-result" role="status"></p><button id="timing-load-best" type="button" hidden>Load one best timing</button></div>
+<label class="timing-note" for="timing-note">Explain the comparison<textarea id="timing-note" rows="3" maxlength="4000" placeholder="Why can the same supplied air leave a different pressure history?"></textarea></label><p class="hint">Save an editable notebook to reopen both timings, the search rule and your explanation. Illustrated readings also retain the source pages. Shared links contain the current settings and search rule.</p>
+<div class="export-row"><button id="notebook-save" type="button">Save editable notebook</button><label for="notebook-open">Open notebook <input id="notebook-open" type="file" accept=".json,application/json"/></label><button id="notebook-previous" type="button" hidden>Switch to previous notebook</button></div><p id="notebook-status" role="status"></p><div id="notebook-conflict" hidden><p>You edited this notebook while the file was opening. Both choices preserve this work for switching back.</p><button id="notebook-accept" type="button">Open file and keep this work</button><button id="notebook-reject" type="button">Keep current work</button></div><div class="export-row"><button id="timing-share" type="button">Show timing link</button><button id="timing-csv" type="button">Save interval CSV</button><button id="timing-events" type="button">Save full action CSV</button><button id="timing-reading" type="button">Save illustrated reading</button><button id="timing-cancel" type="button" hidden>Cancel saving</button></div><p id="timing-export-status" role="status"></p><a id="timing-link" hidden></a><p id="timing-status" role="status" aria-live="polite"></p></section>
 <section class="source-section" id="timing-source"><h2>What belongs to the ancient mechanism?</h2><p>Hero’s <cite>Pneumatics</cite>, section 76, describes a hand-operated piston sending air into the submerged chamber, then through a transverse tube to whichever pipes have their openings aligned. His description supplies this arrangement. It gives neither our seven-stroke allowance nor our pressure window.</p><p><a href="./#reading">Inspect the retained explanatory drawing and read Vitruvius’s Latin</a> · <a href="shapes.html#greek">Read Hero’s Greek chamber instruction beside the printed page</a> · <a href="https://www.gutenberg.org/cache/epub/77400/pg77400-images.html#Page_105">Read the complete 1851 translation, pp. 105–107</a>.</p><h3>Why does timing change the result?</h3><p>In this model the open pipes take air at a rate proportional to the square root of gauge pressure. An early excess raises that rate; leaving a delivery until later can preserve air for later demand. The water chamber buffers pressure but does not keep it constant. The separate stock, outlet and vent totals close the account.</p><pre>same delivered air ≠ same outlet rate through time
 1 litre now → higher pressure now → faster model outflow now</pre><p>All geometry uses the pump workshop’s straight-sided chamber, not Hero’s hemisphere. Air stays at constant temperature and water settles instantly. Slots, starting stock, the target band, one-litre strokes and the outlet law are modern choices. No ancient pumping cadence, tolerable pitch drift or actual pipe response is reconstructed. The search optimizes only time inside this chosen band; it does not minimize human effort.</p><p><a href="./#model">Inspect the complete physical assumptions and equations</a> · <a href="https://github.com/antonsoo/pnigeus/blob/main/docs/timing-model.md">Derivation and reviewable scope</a>.</p></section></main>
 <footer><p id="offline" role="status">Saving the complete edition for offline use…</p><p><a href="https://github.com/antonsoo/pnigeus">Source repository</a> · Original model and drawings: PolyForm Noncommercial © 2026 Anthony Mercer. Historical source drawing: public domain.</p></footer>`;
 
 function update(message = ""): void {
+  $<HTMLSelectElement>("#timing-rule").value = searchMode;
   const run = timingRun(current);
   const remaining = TIMING.budget - run.used;
   $<HTMLSelectElement>("#timing-pipes").value = String(current.pipes);
@@ -73,12 +87,12 @@ function update(message = ""): void {
   if (kept) {
     const saved = timingRun(kept);
     $("#timing-kept").textContent =
-      `Kept: ${kept.strokes.join(" / ")} strokes; ${kept.pipes} pipes; tank ×${kept.tank}. ${saved.within.toFixed(3)} s within target. Current minus kept: ${(run.within - saved.within).toFixed(3)} s. Kept until reload or replaced.`;
+      `Kept: ${kept.strokes.join(" / ")} strokes; ${kept.pipes} pipes; tank ×${kept.tank}. ${saved.within.toFixed(3)} s within target. Current minus kept: ${(run.within - saved.within).toFixed(3)} s. Retained in editable notebooks and illustrated readings.`;
   } else
     $("#timing-kept").textContent =
       "Keep a timing before moving its strokes. The comparison stays fixed while you edit.";
   $("#timing-search-result").textContent = search
-    ? `${search.count} allocations checked with ${current.pipes} pipes and tank ×${current.tank}. ${search.full} stay in target for all twelve seconds. Best time within target: ${search.bestSeconds.toFixed(6)} s. Ties use the first allocation found; no unique optimum is claimed.`
+    ? `${search.count} allocations checked with ${current.pipes} pipes and tank ×${current.tank}. ${search.full} stay in target for all twelve seconds. Best time within target: ${search.bestSeconds.toFixed(6)} s. ${search.minimumCompleteStrokes === null ? "No complete timing under this rule." : `Fewest extra strokes for a complete timing: ${search.minimumCompleteStrokes}.`} Rule: ${searchMode === "exact" ? "exactly seven" : "zero to seven"}. Equal times prefer fewer strokes, then the first allocation; no unique optimum is claimed.`
     : "";
   $("#timing-load-best").hidden = !search;
   if (message) $("#timing-status").textContent = message;
@@ -88,7 +102,8 @@ function change(next: TimingSettings, message: string): void {
   timingRun(next);
   if (next.tank !== current.tank || next.pipes !== current.pipes) search = null;
   current = clone(next);
-  history.pushState(null, "", `${timingQuery(current)}#timing`);
+  revision++;
+  history.pushState(null, "", `${timingQuery(current, searchMode)}#timing`);
   $("#timing-warning").textContent = "";
   $("#timing-link").hidden = true;
   update(message);
@@ -133,15 +148,17 @@ for (const button of document.querySelectorAll<HTMLButtonElement>("[data-timing-
     );
   });
 $("#timing-keep").addEventListener("click", () => {
+  revision++;
   kept = clone(current);
   update("Current timing kept for comparison. Later edits leave it fixed.");
 });
 $("#timing-forget").addEventListener("click", () => {
+  revision++;
   kept = null;
   update("Comparison cleared.");
 });
 $("#timing-search").addEventListener("click", () => {
-  search = searchTimings(current.tank, current.pipes);
+  search = searchTimings(current.tank, current.pipes, searchMode);
   update();
 });
 $("#timing-load-best").addEventListener("click", () => {
@@ -163,7 +180,7 @@ $("#timing-events").addEventListener("click", () =>
 );
 $("#timing-share").addEventListener("click", () => {
   const link = $<HTMLAnchorElement>("#timing-link");
-  link.href = `https://antonsoo.github.io/pnigeus/timing.html${timingQuery(current)}#timing`;
+  link.href = `https://antonsoo.github.io/pnigeus/timing.html${timingQuery(current, searchMode)}#timing`;
   link.textContent = link.href;
   link.hidden = false;
 });
@@ -180,6 +197,7 @@ $("#timing-reading").addEventListener("click", () => {
     kept ? clone(kept) : null,
     $<HTMLTextAreaElement>("#timing-note").value,
     controller.signal,
+    searchMode,
   )
     .then((html) => {
       download("pnigeus-timing-reading.html", "text/html;charset=utf-8", html);
@@ -205,11 +223,106 @@ window.addEventListener("popstate", () => {
   const parsed = parseTiming(location.search);
   if (parsed.settings.tank !== current.tank || parsed.settings.pipes !== current.pipes)
     search = null;
+  if (searchMode !== parsed.searchMode) search = null;
+  searchMode = parsed.searchMode;
   current = parsed.settings;
+  revision++;
   $("#timing-warning").textContent = parsed.warning;
   $("#timing-link").hidden = true;
   update("Timing restored from the address. The kept comparison stays fixed.");
 });
+
+const capture = (): TimingNotebook =>
+  copyNotebook({
+    current,
+    kept,
+    explanation: $<HTMLTextAreaElement>("#timing-note").value,
+    searchMode,
+  });
+function openNotebook(book: TimingNotebook): void {
+  previous = capture();
+  const next = copyNotebook(book);
+  current = next.current;
+  kept = next.kept;
+  searchMode = next.searchMode;
+  $<HTMLTextAreaElement>("#timing-note").value = next.explanation;
+  revision++;
+  search = null;
+  pending = null;
+  $("#notebook-conflict").hidden = true;
+  $("#notebook-previous").hidden = false;
+  $("#timing-link").hidden = true;
+  $("#timing-warning").textContent = "";
+  history.pushState(null, "", `${timingQuery(current, searchMode)}#timing`);
+  $("#notebook-status").textContent =
+    "Notebook opened. Use Switch to previous notebook to recover the other work.";
+  update("Notebook opened. Previous work is available with Switch to previous notebook.");
+}
+$("#timing-note").addEventListener("input", () => revision++);
+$("#timing-rule").addEventListener("change", () => {
+  searchMode = $<HTMLSelectElement>("#timing-rule").value as SearchMode;
+  revision++;
+  search = null;
+  history.pushState(null, "", `${timingQuery(current, searchMode)}#timing`);
+  $("#timing-link").hidden = true;
+  update("Air allowance changed. Check the timings again under this rule.");
+});
+$("#notebook-save").addEventListener("click", () => {
+  download(
+    "pnigeus-timing-notebook.json",
+    "application/json;charset=utf-8",
+    notebookJson(capture(), __PNIGEUS_EDITION__),
+  );
+  $("#notebook-status").textContent =
+    "Editable notebook saved with both timings and your explanation.";
+});
+$("#notebook-open").addEventListener("change", () => {
+  const input = $<HTMLInputElement>("#notebook-open");
+  const file = input.files?.[0];
+  input.value = "";
+  if (!file) return;
+  const started = revision;
+  const generation = ++importGeneration;
+  pending = null;
+  $("#notebook-conflict").hidden = true;
+  if (file.size > NOTEBOOK_BYTES) {
+    $("#notebook-status").textContent =
+      "Choose a notebook under 32 KiB. Your current work is unchanged.";
+    return;
+  }
+  void file
+    .text()
+    .then((text) => {
+      if (generation !== importGeneration) return;
+      const book = readNotebook(text);
+      if (revision !== started) {
+        pending = book;
+        $("#notebook-conflict").hidden = false;
+        $("#notebook-status").textContent = "File checked; waiting for your choice.";
+      } else {
+        openNotebook(book);
+        $("#notebook-status").textContent =
+          "Notebook opened. Both accounts were recomputed with the recorded model assumptions.";
+      }
+    })
+    .catch((error: unknown) => {
+      if (generation !== importGeneration) return;
+      $("#notebook-status").textContent =
+        `${error instanceof Error ? error.message : "Could not read the file."} Current work is unchanged.`;
+    });
+});
+$("#notebook-accept").addEventListener("click", () => {
+  if (pending) openNotebook(pending);
+});
+$("#notebook-reject").addEventListener("click", () => {
+  pending = null;
+  $("#notebook-conflict").hidden = true;
+  $("#notebook-status").textContent = "Current work kept.";
+});
+$("#notebook-previous").addEventListener("click", () => {
+  if (previous) openNotebook(previous);
+});
+
 compact.addEventListener("change", () => update());
 $("#timing-warning").textContent = parsed.warning;
 update();

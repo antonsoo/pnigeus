@@ -78,3 +78,19 @@ test("a shared timing is all-or-nothing and round-trips all choices", () => {
     assert.deepEqual(parsed.settings, DEFAULT_TIMING);
   }
 });
+
+test("unused air changes feasibility, not the physical calculation", () => {
+  const exact = searchTimings(6, 1);
+  const flexible = searchTimings(6, 1, "at-most");
+  assert.equal(exact.full, 0);
+  assert.equal(flexible.count, 1716);
+  assert.equal(flexible.full, 22);
+  assert.equal(flexible.minimumCompleteStrokes, 3);
+  assert.equal(flexible.bestUsed, 3);
+  assert.equal(timingRun(flexible.best).complete, true);
+  assert.equal(parseTiming(timingQuery(flexible.best, "at-most")).searchMode, "at-most");
+  for (const query of ["?allow=unknown", "?allow=unspent&allow=unspent"]) {
+    assert.ok(parseTiming(query).warning);
+    assert.equal(parseTiming(query).searchMode, "exact");
+  }
+});

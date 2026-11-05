@@ -2,6 +2,16 @@
 
 ## Unreleased — 2026-11-04
 
+- Optional unused-air search: 1,716 timings, minimum complete stroke counts and
+  a one-pipe example where spending less changes feasibility.
+- Editable timing notebooks preserve both accounts, explanation, model parameters
+  and search rule; native downloads inside illustrated readings, guarded imports
+  and switching back to previous work.
+- Recheck and repair damaged offline editions, notify other tabs, retain verified
+  edition files during waiting updates, and avoid overwriting open work.
+- Bounded streaming source transfers, offline transfer progress, idle failure,
+  grouped cancellation and save cancellation in all three rooms.
+
 - Pump timing investigation: place seven strokes over twelve seconds, change
   demand and tank area, retain an earlier account and inspect shared-axis curves.
 - Integrated time below/inside/above an explicitly modern pressure window;

@@ -1,0 +1,31 @@
+{
+  "boundary": "local real-origin audit; changed-source edition C is a synthetic fixture",
+  "edition": "19b5e497bff303e266e0c7cca9beb74c0630b4958c585bbfea529008461937c9",
+  "nextEdition": "231f28ae74e441252a87845aa9ebf360f5c88df2d23fb33b80aaa8d66852e730",
+  "workflows": [
+    {
+      "engine": "chromium",
+      "sameLengthCorruptionAndMissingSource": true,
+      "onlyDamagedFilesFetched": ["sources/hero-fig76.jpg", "sources/hero-schmidt-192.jpg"],
+      "offlineCorruptionRefusedAndOtherTabInvalidated": true,
+      "totalEvictionRepairedWithoutChangingOtherTab": true,
+      "activeSlowRepairMilliseconds": 28276,
+      "waitingUpdatePreservesOldTabsAndVerifiedExport": true,
+      "newEditionActivatesAfterOldTabsClose": true,
+      "oldCacheRemovedAfterActivation": true,
+      "offlineAfterChangedSourceUpdate": true
+    },
+    {
+      "engine": "firefox",
+      "sameLengthCorruptionAndMissingSource": true,
+      "onlyDamagedFilesFetched": ["sources/hero-schmidt-192.jpg", "sources/hero-fig76.jpg"],
+      "offlineCorruptionRefusedAndOtherTabInvalidated": true,
+      "totalEvictionRepairedWithoutChangingOtherTab": true,
+      "activeSlowRepairMilliseconds": 27526,
+      "waitingUpdatePreservesOldTabsAndVerifiedExport": true,
+      "newEditionActivatesAfterOldTabsClose": true,
+      "oldCacheRemovedAfterActivation": true,
+      "offlineAfterChangedSourceUpdate": true
+    }
+  ]
+}

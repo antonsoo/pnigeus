@@ -1,0 +1,182 @@
+{
+  "status": "passed",
+  "workflows": 4,
+  "observations": 28,
+  "csv_rows": 6972,
+  "comparisons": 97780,
+  "maximum_absolute_errors": {
+    "physical": 1.2789769243681803e-13,
+    "svg": 0.0007812867521295175
+  },
+  "method": "Independent pressure-coordinate water solver and cross-section quadrature.\n\nNo application imports or closed-form cap primitives. Simpson integration of\nquadratic cross-sections, split at rim and roof, provides geometric volumes.\nThe app instead solves outside height from inside height and inverts pressure.\n",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "label": "published-endpoint",
+      "rows": 249
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "label": "full",
+      "rows": 249
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "label": "cone",
+      "rows": 249
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "label": "half-size",
+      "rows": 249
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "label": "shallow-wide",
+      "rows": 249
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "label": "cylinder-keyboard",
+      "rows": 249
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "label": "empty-limit",
+      "rows": 249
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "label": "published-endpoint",
+      "rows": 249
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "label": "full",
+      "rows": 249
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "label": "cone",
+      "rows": 249
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "label": "half-size",
+      "rows": 249
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "label": "shallow-wide",
+      "rows": 249
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "label": "cylinder-keyboard",
+      "rows": 249
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "label": "empty-limit",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "label": "published-endpoint",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "label": "full",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "label": "cone",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "label": "half-size",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "label": "shallow-wide",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "label": "cylinder-keyboard",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "label": "empty-limit",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "label": "published-endpoint",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "label": "full",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "label": "cone",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "label": "half-size",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "label": "shallow-wide",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "label": "cylinder-keyboard",
+      "rows": 249
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "label": "empty-limit",
+      "rows": 249
+    }
+  ]
+}

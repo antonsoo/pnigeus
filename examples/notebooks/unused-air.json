@@ -1,0 +1,54 @@
+{
+  "format": "pnigeus-timing-notebook",
+  "version": 1,
+  "edition": "19b5e497bff303e266e0c7cca9beb74c0630b4958c585bbfea529008461937c9",
+  "parameters": {
+    "regulator": {
+      "atmosphere": 101325,
+      "density": 1000,
+      "gravity": 9.80665,
+      "bellArea": 0.04,
+      "roof": 0.52,
+      "rim": 0.04,
+      "restLevel": 0.3,
+      "strokeLitres": 1,
+      "pipeLitresPerSecond": 0.4,
+      "referencePressure": 1000
+    },
+    "exercise": {
+      "slots": 6,
+      "seconds": 2,
+      "budget": 7,
+      "prefill": 3,
+      "low": 400,
+      "high": 1100
+    }
+  },
+  "current": {
+    "tank": 6,
+    "pipes": 1,
+    "strokes": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ]
+  },
+  "kept": {
+    "tank": 6,
+    "pipes": 1,
+    "strokes": [
+      7,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "explanation": "<img src=x onerror=\"alert(1)\"> Less air; full time. ἀήρ",
+  "searchMode": "at-most",
+  "notice": "Model and software: PolyForm Noncommercial 1.0.0, Copyright 2026 Anthony Mercer. Learner explanations remain their authors' work."
+}

@@ -95,10 +95,15 @@ def check_case(record):
     within = sum(row["within"] for row in rows)
     full = all(row["peak"] <= 1100 + 1e-7 and row["trough"] >= 400 - 1e-7 for row in rows)
     assert full == record["complete"], settings
-    group = GROUPS.setdefault((settings["tank"], settings["pipes"]), {"count": 0, "full": 0, "best": 0})
-    group["count"] += 1
-    group["full"] += full
-    group["best"] = max(group["best"], within)
+    used = sum(settings["strokes"])
+    for mode in (["at-most", "exact"] if used == 7 else ["at-most"]):
+        group = GROUPS.setdefault((settings["tank"], settings["pipes"], mode),
+                                  {"count": 0, "full": 0, "best": 0, "minimumCompleteStrokes": None})
+        group["count"] += 1
+        group["full"] += full
+        group["best"] = max(group["best"], within)
+        if full:
+            group["minimumCompleteStrokes"] = min(group["minimumCompleteStrokes"] if group["minimumCompleteStrokes"] is not None else used, used)
     CASES += 1
 
 
@@ -107,18 +112,19 @@ for line in sys.stdin:
     if record["type"] == "case":
         check_case(record)
     else:
-        group = GROUPS[(record["tank"], record["pipes"])]
-        assert group["count"] == record["count"] == 792
+        group = GROUPS[(record["tank"], record["pipes"], record["mode"])]
+        assert group["count"] == record["count"] == (792 if record["mode"] == "exact" else 1716)
+        assert group["minimumCompleteStrokes"] == record["minimumCompleteStrokes"]
         assert group["full"] == record["full"]
         assert abs(group["best"] - record["bestSeconds"]) < 6e-5
 
 if "--browser" in sys.argv:
     assert CASES == 4, ("expected both browsers at both widths", CASES)
 else:
-    assert CASES == 9504 and len(GROUPS) == 12, ("incomplete model stream", CASES, len(GROUPS))
+    assert CASES == 20592 and len(GROUPS) == 24, ("incomplete model stream", CASES, len(GROUPS))
 
 print(json.dumps({"method": "pressure-coordinate RK4, dt=0.02 s, linear root-pressure crossings",
                   "cases": CASES, "intervals": CASES * 6,
                   "maximum_pressure_error_pa": MAX_PRESSURE_ERROR,
                   "maximum_interval_time_error_s": MAX_TIME_ERROR,
-                  "searches": [{"tank": key[0], "pipes": key[1], **value} for key, value in GROUPS.items()]}, indent=2))
+                  "searches": [{"tank": key[0], "pipes": key[1], "mode": key[2], **value} for key, value in GROUPS.items()]}, indent=2))

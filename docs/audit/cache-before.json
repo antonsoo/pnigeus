@@ -1,0 +1,16 @@
+[
+  {
+    "browser": "chromium",
+    "corruptCacheStillReady": "Ready offline \u00b7 pump, shape and timing studies, Latin and Greek readings, source images and fonts saved.",
+    "reloadStillReady": "Ready offline \u00b7 pump, shape and timing studies, Latin and Greek readings, source images and fonts saved.",
+    "exportRefusedBeforeAndAfterReload": "The source drawing or font did not match this edition. Reload online before saving the reading.",
+    "repairControlCount": 0
+  },
+  {
+    "browser": "firefox",
+    "corruptCacheStillReady": "Ready offline \u00b7 pump, shape and timing studies, Latin and Greek readings, source images and fonts saved.",
+    "reloadStillReady": "Ready offline \u00b7 pump, shape and timing studies, Latin and Greek readings, source images and fonts saved.",
+    "exportRefusedBeforeAndAfterReload": "The source drawing or font did not match this edition. Reload online before saving the reading.",
+    "repairControlCount": 0
+  }
+]

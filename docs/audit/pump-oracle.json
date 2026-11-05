@@ -1,0 +1,10 @@
+{
+  "browser_workflows": 4,
+  "comparisons": 708,
+  "max_absolute_errors": {
+    "numeric": 6.821210263296962e-13,
+    "svg_pixels": 0.00043152776964916484
+  },
+  "method": "independent pressure-coordinate RK4, dt <= 0.002 s; bisection from water conservation and PV",
+  "status": "passed"
+}

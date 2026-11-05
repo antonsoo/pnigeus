@@ -1,0 +1,46 @@
+[
+  {
+    "name": "chromium",
+    "width": 1440,
+    "exactVersusUnused": true,
+    "nativeNotebook": true,
+    "importPreservesPreviousEdits": true,
+    "invalidImportUnchanged": true,
+    "delayedImportRequiresChoice": true,
+    "offlineWithStoppedOrigin": true,
+    "accessibility": true
+  },
+  {
+    "name": "chromium",
+    "width": 375,
+    "exactVersusUnused": true,
+    "nativeNotebook": true,
+    "importPreservesPreviousEdits": true,
+    "invalidImportUnchanged": true,
+    "delayedImportRequiresChoice": true,
+    "offlineWithStoppedOrigin": true,
+    "accessibility": true
+  },
+  {
+    "name": "firefox",
+    "width": 1440,
+    "exactVersusUnused": true,
+    "nativeNotebook": true,
+    "importPreservesPreviousEdits": true,
+    "invalidImportUnchanged": true,
+    "delayedImportRequiresChoice": true,
+    "offlineWithStoppedOrigin": true,
+    "accessibility": true
+  },
+  {
+    "name": "firefox",
+    "width": 375,
+    "exactVersusUnused": true,
+    "nativeNotebook": true,
+    "importPreservesPreviousEdits": true,
+    "invalidImportUnchanged": true,
+    "delayedImportRequiresChoice": true,
+    "offlineWithStoppedOrigin": true,
+    "accessibility": true
+  }
+]
