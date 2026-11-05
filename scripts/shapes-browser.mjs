@@ -227,7 +227,7 @@ for (const [name, engine] of Object.entries({ chromium, firefox })) {
         if (!development)
           await page
             .locator("#offline")
-            .filter({ hasText: "Ready offline" })
+            .filter({ hasText: /^Ready offline/ })
             .waitFor({ timeout: 20000 });
         assert.equal(
           await page.locator("body").evaluate((e) => getComputedStyle(e).fontFamily),
@@ -365,7 +365,10 @@ for (const [name, engine] of Object.entries({ chromium, firefox })) {
         if (!development) {
           await site.close();
           await page.reload();
-          await page.locator("#offline").filter({ hasText: "Ready offline" }).waitFor();
+          await page
+            .locator("#offline")
+            .filter({ hasText: /^Ready offline/ })
+            .waitFor();
           await page.locator("#half-radius").click();
           assert.equal(await page.locator("#radius").inputValue(), "20");
           workflow.offlineReading = await download(page, "#shape-reading", `${id}-offline.html`);

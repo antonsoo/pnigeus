@@ -50,7 +50,10 @@ try {
     page.on("pageerror", (e) => errors.push(e.message));
     fixtures.push({ name, browser, context, page, errors });
     await page.goto(base);
-    await page.locator("#offline").filter({ hasText: "Ready offline" }).waitFor({ timeout: 30000 });
+    await page
+      .locator("#offline")
+      .filter({ hasText: /^Ready offline/ })
+      .waitFor({ timeout: 30000 });
     await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller));
     const old = await inspect(page);
     assert.equal(old.edition, expectedOld);
@@ -74,18 +77,46 @@ try {
     await page.evaluate(async () => {
       await (await navigator.serviceWorker.getRegistration()).update();
     });
-    // The old page must reject readiness from a new edition until reloaded.
-    await page.locator("#offline").filter({ hasText: "not ready" }).waitFor({ timeout: 30000 });
-    const changed = await inspect(page);
-    assert.equal(changed.edition, expectedNew);
-    assert.equal(changed.complete, true);
-    await page.reload();
-    await page.locator("#offline").filter({ hasText: "Ready offline" }).waitFor({ timeout: 30000 });
-    await page.getByRole("link", { name: "Shape study", exact: true }).waitFor();
-    const current = await inspect(page);
+    await page.waitForFunction(
+      async () => (await navigator.serviceWorker.getRegistration())?.waiting?.state === "installed",
+      null,
+      { timeout: 90000 },
+    );
+    const unchanged = await inspect(page);
+    assert.equal(unchanged.edition, expectedOld);
+    assert.equal(unchanged.complete, true);
+    // The old build remains usable; do not navigate its legacy network-first HTML.
+    for (let i = 0; i < 3; i++) await page.locator("#pump").click();
+    assert.equal(await page.locator("#pressure").textContent(), "854");
+    const oldDownload = page.waitForEvent("download");
+    await page.locator("#study").click();
+    await (await oldDownload).saveAs(path.join(path.dirname(output), `${name}-old-reading.html`));
+    await page.close();
+    // Wait outside the controlled scope, allowing default activation.
+    const supervisor = await context.newPage();
+    await supervisor.goto("https://antonsoo.github.io/");
+    await supervisor.waitForFunction(
+      async () => {
+        const registration = await navigator.serviceWorker.getRegistration("/pnigeus/");
+        return registration?.active?.state === "activated" && !registration.waiting;
+      },
+      null,
+      { timeout: 30000 },
+    );
+    const next = await context.newPage();
+    next.on("pageerror", (e) => errors.push(e.message));
+    await next.goto(base);
+    await supervisor.close();
+    fixtures.find((f) => f.name === name).page = next;
+    await next
+      .locator("#offline")
+      .filter({ hasText: /^Ready offline/ })
+      .waitFor({ timeout: 30000 });
+    await next.getByRole("link", { name: "Shape study", exact: true }).waitFor();
+    const current = await inspect(next);
     assert.equal(current.edition, expectedNew);
     assert.equal(current.complete, true);
-    const inventory = await page.evaluate(async (edition) => {
+    const inventory = await next.evaluate(async (edition) => {
       const names = (await caches.keys()).filter((name) => name.startsWith("pnigeus-"));
       const keys = await (await caches.open(`pnigeus-${edition}`)).keys();
       return { names, paths: keys.map((r) => new URL(r.url).pathname).sort() };
@@ -93,14 +124,17 @@ try {
     assert.deepEqual(inventory.names, [`pnigeus-${expectedNew}`]);
     assert.deepEqual(inventory.paths, [...expectedFiles].sort());
     await context.setOffline(true);
-    await page.reload();
-    await page.locator("#offline").filter({ hasText: "Ready offline" }).waitFor();
-    await page.getByRole("link", { name: "Shape study", exact: true }).click();
-    assert.equal(await page.locator("#shape-pressure").textContent(), "4481");
-    await page.locator("#half-radius").click();
-    assert.equal(await page.locator("#radius").inputValue(), "20");
-    const pending = page.waitForEvent("download");
-    await page.locator("#shape-reading").click();
+    await next.reload();
+    await next
+      .locator("#offline")
+      .filter({ hasText: /^Ready offline/ })
+      .waitFor();
+    await next.getByRole("link", { name: "Shape study", exact: true }).click();
+    assert.equal(await next.locator("#shape-pressure").textContent(), "4481");
+    await next.locator("#half-radius").click();
+    assert.equal(await next.locator("#radius").inputValue(), "20");
+    const pending = next.waitForEvent("download");
+    await next.locator("#shape-reading").click();
     const reading = path.join(path.dirname(output), `${name}-upgraded-reading.html`);
     await (await pending).saveAs(reading);
     const native = await context.newPage();
@@ -111,9 +145,9 @@ try {
       true,
     );
     await native.close();
-    await page.getByRole("link", { name: "Return to the pump and listening workshop" }).click();
-    for (let i = 0; i < 3; i++) await page.locator("#pump").click();
-    assert.equal(await page.locator("#pressure").textContent(), "854");
+    await next.getByRole("link", { name: "Return to the pump and listening workshop" }).click();
+    for (let i = 0; i < 3; i++) await next.locator("#pump").click();
+    assert.equal(await next.locator("#pressure").textContent(), "854");
     assert.deepEqual(errors, []);
     receipt.workflows.push({
       engine: name,
@@ -121,7 +155,7 @@ try {
       width: 375,
       oldEdition: expectedOld,
       newEdition: expectedNew,
-      oldPageRejectedNewWorkerReadiness: true,
+      newWorkerWaitedForOldTab: true,
       reloadedNewPageReady: true,
       cachedFiles: inventory.paths,
       obsoleteEditionCaches: 0,
@@ -130,7 +164,7 @@ try {
       pageErrors: errors,
     });
     console.log(
-      `${name}: real controller upgrade, honest old-page status, complete new cache and offline studies passed.`,
+      `${name}: waiting update, preserved old export, complete new cache and offline studies passed.`,
     );
   }
   receipt.completedAt = new Date().toISOString();

@@ -1,3 +1,4 @@
+import { verifiedBytes } from "./asset-transfer.js";
 import { modelReading, sourceReading, wordNotes } from "./content";
 import { releasePcm, wave } from "./core/audio";
 import {
@@ -67,19 +68,36 @@ export async function checkedAsset(
   path: string,
   signal?: AbortSignal,
 ): Promise<Uint8Array<ArrayBuffer>> {
-  const response = await fetch(`${import.meta.env.BASE_URL}${path}`, signal ? { signal } : {});
-  if (!response.ok)
-    throw new Error("A reading asset could not be loaded. Keep this page open and try again.");
-  const bytes = new Uint8Array(await response.arrayBuffer());
-  const digest = [...new Uint8Array(await crypto.subtle.digest("SHA-256", bytes))]
-    .map((x) => x.toString(16).padStart(2, "0"))
-    .join("");
-  signal?.throwIfAborted();
-  if (digest !== __ASSET_HASHES__[path])
-    throw new Error(
-      "The source drawing or font did not match this edition. Reload online before saving the reading.",
-    );
+  const identity = __ASSET_IDENTITIES__[path];
+  if (!identity) throw new Error("This asset does not belong to this edition.");
+  const { bytes } = await verifiedBytes(`${import.meta.env.BASE_URL}${path}`, identity, {
+    // Controlled requests use the worker's verified edition, including offline
+    // Firefox. Before takeover, a separate network request avoids joining an
+    // unrelated lazy image request that can outlive a cancelled export.
+    cache: navigator.serviceWorker?.controller ? "default" : "no-store",
+    ...(signal ? { signal } : {}),
+  });
   return bytes;
+}
+export async function checkedAssets<const Paths extends readonly string[]>(
+  paths: Paths,
+  signal?: AbortSignal,
+): Promise<{ [K in keyof Paths]: Uint8Array<ArrayBuffer> }> {
+  const group = new AbortController();
+  const cancel = () => group.abort(signal?.reason);
+  signal?.throwIfAborted();
+  signal?.addEventListener("abort", cancel, { once: true });
+  try {
+    // Mapping preserves path count and order, including the tuple's positions.
+    return (await Promise.all(paths.map((path) => checkedAsset(path, group.signal)))) as {
+      [K in keyof Paths]: Uint8Array<ArrayBuffer>;
+    };
+  } catch (error) {
+    group.abort(error);
+    throw error;
+  } finally {
+    signal?.removeEventListener("abort", cancel);
+  }
 }
 export async function study(
   tank: Tank,
@@ -90,13 +108,16 @@ export async function study(
   // Capture immutable settings before asynchronous asset loading.
   const run = replay(tank, commands);
   const query = shareQuery(tank, commands) + (dry ? "&compare=1" : "");
-  const [image, sans, serif, sansLicense, serifLicense] = await Promise.all([
-    checkedAsset("sources/hero-fig76.jpg", signal),
-    checkedAsset("fonts/IBMPlexSans-Regular.woff2", signal),
-    checkedAsset("fonts/NotoSerif-Regular.ttf", signal),
-    checkedAsset("fonts/IBMPlex-OFL.txt", signal),
-    checkedAsset("fonts/NotoSerif-OFL.txt", signal),
-  ]);
+  const [image, sans, serif, sansLicense, serifLicense] = await checkedAssets(
+    [
+      "sources/hero-fig76.jpg",
+      "fonts/IBMPlexSans-Regular.woff2",
+      "fonts/NotoSerif-Regular.ttf",
+      "fonts/IBMPlex-OFL.txt",
+      "fonts/NotoSerif-OFL.txt",
+    ],
+    signal,
+  );
   const r = waterReading(run.state.waterStock, tank);
   const last = run.rows.findLast((row) => row.command.type === "wait");
   const audio =

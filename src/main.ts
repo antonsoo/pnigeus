@@ -26,6 +26,7 @@ let tank: Tank = parsed.tank;
 let commands: Command[] = parsed.commands;
 let part = "head";
 const player = new Player();
+let saving: AbortController | null = null;
 
 $("#app").innerHTML =
   `<header><a class="wordmark" href="./">Pnigeus <span lang="grc">πνιγεύς</span></a><nav aria-label="On this page"><a href="#experiment">Experiment</a><a href="#reading">Reading</a><a href="#model">Model</a><a href="shapes.html">Shape study</a><a href="timing.html">Pump timing</a></nav></header>
@@ -50,7 +51,7 @@ $("#app").innerHTML =
 <div class="current-readings" aria-label="Current measurements"><p><strong id="pressure">0</strong><span>Pa above atmosphere</span></p><p><strong id="head">0</strong><span>cm between water levels</span></p></div><p id="supply-note"></p><div class="small-actions"><button id="undo" type="button">Undo last action</button><button id="reset" type="button">Reset</button></div><p id="status" role="status" aria-live="polite"></p></div></div>
 <div class="under-bench"><div class="history-plot"><div class="plot-heading"><h3>Pressure through the experiment</h3><label><input id="dry" type="checkbox"/> Compare a sealed dry chamber</label></div><div id="trace"></div><p id="chart-note">Solid blue: water chamber. Pump strokes add air at a single experiment time.</p></div><div class="ledger"><h3>Where did the air go?</h3><dl id="ledger"></dl><p class="hint">All stock and flow totals use ambient-equivalent litres. Actual compressed volume is listed separately.</p></div></div>
 <div class="audio-bar"><div><h3>Hear the last release</h3><p id="audio-note">Release air to make a finite sound example.</p></div><div class="button-row"><button id="play" type="button">Play</button><button id="stop" type="button">Stop</button><button id="wav" type="button">Save WAV</button></div></div>
-<div class="export-row"><button id="share" type="button">Copy experiment link</button><button id="csv" type="button">Save measurements CSV</button><button id="study" type="button">Save illustrated reading</button></div><p id="export-status" role="status"></p><p id="share-fallback" hidden></p>
+<div class="export-row"><button id="share" type="button">Copy experiment link</button><button id="csv" type="button">Save measurements CSV</button><button id="study" type="button">Save illustrated reading</button><button id="study-cancel" type="button" hidden>Cancel saving</button></div><p id="export-status" role="status"></p><p id="share-fallback" hidden></p>
 <details class="history"><summary id="history-summary">Action history</summary><div class="table-wrap"><table><thead><tr><th>Action</th><th>Command</th><th>Time, s</th><th>Water, Pa</th><th>Dry, Pa</th></tr></thead><tbody id="history"></tbody></table></div></details>
 <div class="try-row"><span>Try a prepared experiment:</span><button data-example="store" type="button">Store three strokes</button><button data-example="sound" type="button">One pipe for five seconds</button><button data-example="vent" type="button">Find the rim limit</button></div></section>
 <section class="source-section">${sourceReading}</section><section class="model-section">${modelReading}</section>
@@ -236,6 +237,9 @@ $("#share").addEventListener("click", () => {
   }
 });
 $("#study").addEventListener("click", () => {
+  const controller = new AbortController();
+  saving = controller;
+  $("#study-cancel").hidden = false;
   const savedTank = tank;
   const savedCommands = [...commands];
   const dry = $<HTMLInputElement>("#dry").checked;
@@ -243,20 +247,27 @@ $("#study").addEventListener("click", () => {
   button.disabled = true;
   $("#export-status").textContent =
     "Preparing the illustrated reading, source drawing, fonts and last release audio…";
-  void study(savedTank, savedCommands, dry)
+  void study(savedTank, savedCommands, dry, controller.signal)
     .then((html) => {
       download("pnigeus-reading.html", "text/html;charset=utf-8", html);
       $("#export-status").textContent =
         "Illustrated reading saved. Open it offline or print it to PDF.";
     })
     .catch((error: unknown) => {
-      $("#export-status").textContent =
-        error instanceof Error ? error.message : "The reading could not be prepared. Try again.";
+      $("#export-status").textContent = controller.signal.aborted
+        ? "Saving cancelled. Your experiment remains available."
+        : error instanceof Error
+          ? error.message
+          : "The reading could not be prepared. Try again.";
     })
     .finally(() => {
       button.disabled = false;
+      if (document.activeElement === $("#study-cancel")) button.focus();
+      $("#study-cancel").hidden = true;
+      saving = null;
     });
 });
+$("#study-cancel").addEventListener("click", () => saving?.abort());
 window.addEventListener("popstate", () => {
   player.stop();
   const s = parseSession(location.search);
@@ -273,7 +284,10 @@ document.addEventListener("visibilitychange", () => {
     update();
   }
 });
-window.addEventListener("pagehide", () => player.stop());
+window.addEventListener("pagehide", () => {
+  player.stop();
+  saving?.abort();
+});
 matchMedia("(max-width: 700px)").addEventListener("change", () => update());
 update();
 void offline($("#offline"));

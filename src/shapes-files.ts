@@ -8,7 +8,7 @@ import {
   shapeCurve,
   shapesQuery,
 } from "./core/shapes";
-import { checkedAsset, dataUrl, escapeHtml } from "./files";
+import { checkedAssets, dataUrl, escapeHtml } from "./files";
 import shapesCss from "./shapes.css?inline";
 import { greekNotes, shapeBoundaries } from "./shapes-content";
 import { reservePlot, shapeSection } from "./shapes-drawing";
@@ -60,21 +60,24 @@ export function comparisonTable(s: ShapeSettings, interactive = true): string {
     },
   ).join("")}</tbody></table>`;
 }
-export async function shapesReading(s: ShapeSettings): Promise<string> {
+export async function shapesReading(s: ShapeSettings, signal?: AbortSignal): Promise<string> {
   const c = shapeComparison(s);
   const current = s.phase === "full" ? c.geometry.full : c.after;
   const pressureText =
     current.volume < 1e-9
       ? `Empty chamber: no wind is available. The last pocket’s limiting pressure is ${current.pressure.toFixed(3)} Pa`
       : `Current gauge pressure ${current.pressure.toFixed(3)} Pa`;
-  const [scan, sans, bold, serif, sansNotice, serifNotice] = await Promise.all([
-    checkedAsset("sources/hero-schmidt-192.jpg"),
-    checkedAsset("fonts/IBMPlexSans-Regular.woff2"),
-    checkedAsset("fonts/IBMPlexSans-SemiBold.woff2"),
-    checkedAsset("fonts/NotoSerif-Regular.ttf"),
-    checkedAsset("fonts/IBMPlex-OFL.txt"),
-    checkedAsset("fonts/NotoSerif-OFL.txt"),
-  ]);
+  const [scan, sans, bold, serif, sansNotice, serifNotice] = await checkedAssets(
+    [
+      "sources/hero-schmidt-192.jpg",
+      "fonts/IBMPlexSans-Regular.woff2",
+      "fonts/IBMPlexSans-SemiBold.woff2",
+      "fonts/NotoSerif-Regular.ttf",
+      "fonts/IBMPlex-OFL.txt",
+      "fonts/NotoSerif-OFL.txt",
+    ],
+    signal,
+  );
   const fonts = `@font-face{font-family:Workshop;src:url('${dataUrl(sans, "font/woff2")}');font-weight:400}@font-face{font-family:Workshop;src:url('${dataUrl(bold, "font/woff2")}');font-weight:600}@font-face{font-family:Reading;src:url('${dataUrl(serif, "font/ttf")}')}`;
   return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pnigeus — saved shape study</title><style>${fonts}${baseCss.replace(/@font-face\s*\{[^}]+\}/g, "")}${shapesCss}
 body{max-width:1100px;margin:2rem auto;padding:0 1.2rem;background:#fafbf9}main,footer{width:100%;margin:0}h1{font-size:2.7rem}.saved-section{max-width:760px;margin:1rem auto}.saved-section svg{display:block;width:100%;height:auto}.saved-scan{max-width:760px;margin:1rem auto}.saved-scan img{width:100%;height:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere}.license{font-size:.7rem}table{font-size:.9rem}button{display:none}.shape-comparison th small{display:block}@media print{body{margin:0;max-width:none}h2,h3{break-after:avoid}.saved-section{max-width:600px;break-inside:avoid}.saved-section:first-of-type{max-width:500px}figure,table{break-inside:avoid}.shape-model{margin-top:2rem}a{overflow-wrap:anywhere}.license{font-size:.6rem}}</style><body class="shapes-page"><main>

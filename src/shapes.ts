@@ -33,6 +33,7 @@ const $ = <T extends HTMLElement = HTMLElement>(selector: string): T => {
 const parsed = parseShapes(location.search);
 let settings: ShapeSettings = parsed.settings;
 let sourceFull = false;
+let saving: AbortController | null = null;
 let word: GreekWord = "hemisphere";
 const media = matchMedia("(max-width: 1000px)");
 
@@ -48,7 +49,7 @@ $("#app").innerHTML =
 <div class="shape-inspection"><h3>Inspect a form</h3><div class="form-selector" role="group" aria-label="Form in section drawing">${FORMS.map((form) => `<button type="button" class="form-choice" data-form-choice="${form}">${formNames[form]}</button>`).join("")}</div></div>
 <div class="table-wrap shape-table" tabindex="0" role="region" aria-label="Chamber comparison table; scroll horizontally on a small screen">${comparisonTable(settings)}</div><p class="table-scroll-hint">Scroll the table sideways for supplied gas and space lost.</p><p id="table-help" class="table-help">Actual chamber volume and ambient-equivalent gas are different quantities. The gas column includes isothermal compression. Each endpoint uses its own form’s full pressure.</p>
 <div class="reserve-layout"><div><div id="reserve-plot"></div><ul class="curve-legend">${FORMS.map((form) => `<li><svg viewBox="0 0 24 12" aria-hidden="true"><path d="M1 6 H23" class="reserve-curve ${form}" stroke="${formColours[form]}"/></svg>${formNames[form]}</li>`).join("")}</ul><p class="hint">Dots mark the chosen pressure endpoints. All curves start full. Their different full pressures are part of this comparison.</p></div><div class="reserve-aside"><h3>Half the radius. One eighth the space.</h3><p id="scaling-note"></p><div class="radius-actions"><button id="half-radius" type="button">Halve the radius</button><button id="published-case" type="button">Open the 80 cm study case</button></div><p class="hint">The 80 cm case follows a geometric example discussed by Hagel (2023). Its dimensions and operating interpretation are a scholarly reconstruction.</p></div></div>
-<div class="export-row"><button id="shape-share" type="button">Copy study link</button><button id="shape-csv" type="button">Save curves and comparison CSV</button><button id="shape-reading" type="button">Save illustrated Greek reading</button></div><p id="shape-export-status" role="status"></p><p id="shape-share-fallback" hidden></p></section>
+<div class="export-row"><button id="shape-share" type="button">Copy study link</button><button id="shape-csv" type="button">Save curves and comparison CSV</button><button id="shape-reading" type="button">Save illustrated Greek reading</button><button id="shape-cancel" type="button" hidden>Cancel saving</button></div><p id="shape-export-status" role="status"></p><p id="shape-share-fallback" hidden></p></section>
 ${greekReading}${shapeBoundaries}</main><footer><p id="offline" role="status">Saving the complete edition for offline use…</p><p><a href="./#experiment">Return to the pump and listening workshop</a> · <a href="https://github.com/antonsoo/pnigeus">Source repository</a> · Code: PolyForm Noncommercial © 2026 Anthony Mercer</p></footer>`;
 
 function update(): void {
@@ -186,6 +187,9 @@ $("#shape-csv").addEventListener("click", () => {
 $("#shape-reading").addEventListener("click", async () => {
   const button = $<HTMLButtonElement>("#shape-reading");
   const snapshot = { ...settings };
+  const controller = new AbortController();
+  saving = controller;
+  $("#shape-cancel").hidden = false;
   button.disabled = true;
   $("#shape-export-status").textContent =
     "Checking the complete Greek page and fonts before saving…";
@@ -193,17 +197,25 @@ $("#shape-reading").addEventListener("click", async () => {
     download(
       "pnigeus-shape-reading.html",
       "text/html;charset=utf-8",
-      await shapesReading(snapshot),
+      await shapesReading(snapshot, controller.signal),
     );
     $("#shape-export-status").textContent =
       "Saved the illustrated reading with its Greek page, diagrams, grammar and fonts embedded. It opens offline.";
   } catch (error) {
-    $("#shape-export-status").textContent =
-      error instanceof Error ? error.message : "The reading could not be saved. Please try again.";
+    $("#shape-export-status").textContent = controller.signal.aborted
+      ? "Saving cancelled. Your study remains available."
+      : error instanceof Error
+        ? error.message
+        : "The reading could not be saved. Please try again.";
   } finally {
     button.disabled = false;
+    if (document.activeElement === $("#shape-cancel")) button.focus();
+    $("#shape-cancel").hidden = true;
+    saving = null;
   }
 });
+$("#shape-cancel").addEventListener("click", () => saving?.abort());
+window.addEventListener("pagehide", () => saving?.abort());
 $("#shape-share").addEventListener("click", async () => {
   const url = new URL(
     `shapes.html${shapesQuery(settings)}#shape-workshop`,

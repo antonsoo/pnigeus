@@ -225,7 +225,7 @@ for (const [name, engine] of Object.entries({ chromium, firefox })) {
         await page.evaluate(() => document.fonts.ready);
         await page
           .locator("#offline")
-          .filter({ hasText: "Ready offline" })
+          .filter({ hasText: /^Ready offline/ })
           .waitFor({ timeout: 20000 });
         await page.locator("#pump").focus();
         for (let i = 0; i < 3; i++) await page.keyboard.press("Enter");
@@ -342,7 +342,10 @@ for (const [name, engine] of Object.entries({ chromium, firefox })) {
         await site.close();
         // Local reviews also close the origin; hosted reviews disable browser networking.
         await page.reload();
-        await page.locator("#offline").filter({ hasText: "Ready offline" }).waitFor();
+        await page
+          .locator("#offline")
+          .filter({ hasText: /^Ready offline/ })
+          .waitFor();
         await page.locator("#pump").click();
         assert.ok(Number(await page.locator("#pressure").textContent()) > 0);
         workflow.offlineReading = await saveDownload(page, "#study", `${id}-offline.html`);
