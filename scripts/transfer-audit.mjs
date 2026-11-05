@@ -85,12 +85,14 @@ for (const [engine, launcher] of [
       await page.goto(`${site.base}${route}`);
       site.fault(source, { stall: true });
       await page.locator(save).click();
-      await page.locator(cancel).click();
+      await page.locator(cancel).focus();
+      await page.keyboard.press("Enter");
       await page.waitForFunction(
         (status) => document.querySelector(status).textContent.includes("cancelled"),
         status,
       );
       assert.equal(await page.locator(save).isEnabled(), true);
+      assert.equal(await page.locator(save).evaluate((e) => document.activeElement === e), true);
       site.fault(source, null);
       const retry = page.waitForEvent("download");
       await page.locator(save).click();

@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "node": "v26.7.0",
+  "requestTimeoutMs": 10000,
+  "retryWindowMs": 180000,
+  "pollIntervalMs": 5000,
+  "concurrency": 6,
+  "baseURL": "https://antonsoo.github.io/pnigeus/",
+  "state": "verified",
+  "attempts": 1,
+  "startedAtUtc": "2026-11-05T07:58:38.968Z",
+  "checkedAtUtc": "2026-11-05T07:58:40.573Z",
+  "buildManifestSha256": "99e414211123e856edb9c8a60d6a019ba293230b0972c3efeec80d51a998c166",
+  "expectedFileCount": 19,
+  "checkedFileCount": 19,
+  "verifiedFileCount": 19,
+  "rootBefore": {
+    "path": "index.html",
+    "bytes": 1732,
+    "sha256": "20a33ef7a90ce896848361ed51aa8b1aa41fb98ea496952556c5dd3d6cdc9f13",
+    "url": "https://antonsoo.github.io/pnigeus/",
+    "httpStatus": 200,
+    "observedBytes": 1732,
+    "observedSha256": "20a33ef7a90ce896848361ed51aa8b1aa41fb98ea496952556c5dd3d6cdc9f13",
+    "state": "verified"
+  },
+  "rootAfter": {
+    "path": "index.html",
+    "bytes": 1732,
+    "sha256": "20a33ef7a90ce896848361ed51aa8b1aa41fb98ea496952556c5dd3d6cdc9f13",
+    "url": "https://antonsoo.github.io/pnigeus/",
+    "httpStatus": 200,
+    "observedBytes": 1732,
+    "observedSha256": "20a33ef7a90ce896848361ed51aa8b1aa41fb98ea496952556c5dd3d6cdc9f13",
+    "state": "verified"
+  },
+  "files": [
+    {
+      "path": "assets/main-Bznl6PjT.css",
+      "bytes": 1280,
+      "sha256": "5873556065cfd9aaa724923fd1d6f20d6e871d0d5206c34f0460d95230db8f73",
+      "url": "https://antonsoo.github.io/pnigeus/assets/main-Bznl6PjT.css",
+      "httpStatus": 200,
+      "observedBytes": 1280,
+      "observedSha256": "5873556065cfd9aaa724923fd1d6f20d6e871d0d5206c34f0460d95230db8f73",
+      "state": "verified"
+    },
+    {
+      "path": "assets/main-QzZ4oSXO.js",
+      "bytes": 13734,
+      "sha256": "b8643bf68afbfd657071081831bee48f35972ff098d7add879a07d1224f11779",
+      "url": "https://antonsoo.github.io/pnigeus/assets/main-QzZ4oSXO.js",
+      "httpStatus": 200,
+      "observedBytes": 13734,
+      "observedSha256": "b8643bf68afbfd657071081831bee48f35972ff098d7add879a07d1224f11779",
+      "state": "verified"
+    },
+    {
+      "path": "assets/offline-Bo1n_7Gq.css",
+      "bytes": 10382,
+      "sha256": "2aedb71c863ba693715597fe33ecad416e14ae5664783eb8cf25733714ae6e77",
+      "url": "https://antonsoo.github.io/pnigeus/assets/offline-Bo1n_7Gq.css",
+      "httpStatus": 200,
+      "observedBytes": 10382,
+      "observedSha256": "2aedb71c863ba693715597fe33ecad416e14ae5664783eb8cf25733714ae6e77",
+      "state": "verified"
+    },
+    {
+      "path": "assets/offline-CLMar2_Y.js",
+      "bytes": 31838,
+      "sha256": "687ea56133230e1fd23bcec464bab292b062d0f6d6d2fea972c79b6c390ded8f",
+      "url": "https://antonsoo.github.io/pnigeus/assets/offline-CLMar2_Y.js",
+      "httpStatus": 200,
+      "observedBytes": 31838,
+      "observedSha256": "687ea56133230e1fd23bcec464bab292b062d0f6d6d2fea972c79b6c390ded8f",
+      "state": "verified"
+    },
+    {
+      "path": "assets/shapes-D19gtFRI.js",
+      "bytes": 54322,
+      "sha256": "3379b7954865c2600da758e3b3e291f6895400e8de603aa55bdfbb2a2e631962",
+      "url": "https://antonsoo.github.io/pnigeus/assets/shapes-D19gtFRI.js",
+      "httpStatus": 200,
+      "observedBytes": 54322,
+      "observedSha256": "3379b7954865c2600da758e3b3e291f6895400e8de603aa55bdfbb2a2e631962",
+      "state": "verified"
+    },
+    {
+      "path": "assets/shapes-ph047G3t.css",
+      "bytes": 8078,
+      "sha256": "29aa3f216f000da66891549607574964675d38e4914dad05dab50c13f21b369b",
+      "url": "https://antonsoo.github.io/pnigeus/assets/shapes-ph047G3t.css",
+      "httpStatus": 200,
+      "observedBytes": 8078,
+      "observedSha256": "29aa3f216f000da66891549607574964675d38e4914dad05dab50c13f21b369b",
+      "state": "verified"
+    },
+    {
+      "path": "assets/timing-D6fd4X4I.js",
+      "bytes": 28022,
+      "sha256": "fa12c6de20f61782ef5f67063e0c232e0cc0871ea6bea8b6b341730d60734a64",
+      "url": "https://antonsoo.github.io/pnigeus/assets/timing-D6fd4X4I.js",
+      "httpStatus": 200,
+      "observedBytes": 28022,
+      "observedSha256": "fa12c6de20f61782ef5f67063e0c232e0cc0871ea6bea8b6b341730d60734a64",
+      "state": "verified"
+    },
+    {
+      "path": "assets/timing-zSVyLjeA.css",
+      "bytes": 3888,
+      "sha256": "966418915719d3e5baebde3502f969b97483b66c0b9fc9f6f75cfa437f401e4c",
+      "url": "https://antonsoo.github.io/pnigeus/assets/timing-zSVyLjeA.css",
+      "httpStatus": 200,
+      "observedBytes": 3888,
+      "observedSha256": "966418915719d3e5baebde3502f969b97483b66c0b9fc9f6f75cfa437f401e4c",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/IBMPlex-OFL.txt",
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "url": "https://antonsoo.github.io/pnigeus/fonts/IBMPlex-OFL.txt",
+      "httpStatus": 200,
+      "observedBytes": 4456,
+      "observedSha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/IBMPlexSans-Regular.woff2",
+      "bytes": 63020,
+      "sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+      "url": "https://antonsoo.github.io/pnigeus/fonts/IBMPlexSans-Regular.woff2",
+      "httpStatus": 200,
+      "observedBytes": 63020,
+      "observedSha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/IBMPlexSans-SemiBold.woff2",
+      "bytes": 67060,
+      "sha256": "f78048030eab62e860efa39a0df79e2e5581bf122eb95b9bc42c0b8a4988d205",
+      "url": "https://antonsoo.github.io/pnigeus/fonts/IBMPlexSans-SemiBold.woff2",
+      "httpStatus": 200,
+      "observedBytes": 67060,
+      "observedSha256": "f78048030eab62e860efa39a0df79e2e5581bf122eb95b9bc42c0b8a4988d205",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/NotoSerif-OFL.txt",
+      "bytes": 4396,
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+      "url": "https://antonsoo.github.io/pnigeus/fonts/NotoSerif-OFL.txt",
+      "httpStatus": 200,
+      "observedBytes": 4396,
+      "observedSha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/NotoSerif-Regular.ttf",
+      "bytes": 444064,
+      "sha256": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6",
+      "url": "https://antonsoo.github.io/pnigeus/fonts/NotoSerif-Regular.ttf",
+      "httpStatus": 200,
+      "observedBytes": 444064,
+      "observedSha256": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6",
+      "state": "verified"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1732,
+      "sha256": "20a33ef7a90ce896848361ed51aa8b1aa41fb98ea496952556c5dd3d6cdc9f13",
+      "url": "https://antonsoo.github.io/pnigeus/index.html",
+      "httpStatus": 200,
+      "observedBytes": 1732,
+      "observedSha256": "20a33ef7a90ce896848361ed51aa8b1aa41fb98ea496952556c5dd3d6cdc9f13",
+      "state": "verified"
+    },
+    {
+      "path": "shapes.html",
+      "bytes": 1769,
+      "sha256": "361b2e4db1d3e2444336d4326aabab0677d2f9b43fcaa624a379a1ab9f76dd79",
+      "url": "https://antonsoo.github.io/pnigeus/shapes.html",
+      "httpStatus": 200,
+      "observedBytes": 1769,
+      "observedSha256": "361b2e4db1d3e2444336d4326aabab0677d2f9b43fcaa624a379a1ab9f76dd79",
+      "state": "verified"
+    },
+    {
+      "path": "sources/hero-fig76.jpg",
+      "bytes": 115259,
+      "sha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+      "url": "https://antonsoo.github.io/pnigeus/sources/hero-fig76.jpg",
+      "httpStatus": 200,
+      "observedBytes": 115259,
+      "observedSha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+      "state": "verified"
+    },
+    {
+      "path": "sources/hero-schmidt-192.jpg",
+      "bytes": 441836,
+      "sha256": "b353ae798dfcf466b9a95d965adee39a9dbd179b4534a3b62f5b915916f9e10d",
+      "url": "https://antonsoo.github.io/pnigeus/sources/hero-schmidt-192.jpg",
+      "httpStatus": 200,
+      "observedBytes": 441836,
+      "observedSha256": "b353ae798dfcf466b9a95d965adee39a9dbd179b4534a3b62f5b915916f9e10d",
+      "state": "verified"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 13800,
+      "sha256": "32689d818368e613b85dab7320947d3f48222b12bb0af01435ded033405c9808",
+      "url": "https://antonsoo.github.io/pnigeus/sw.js",
+      "httpStatus": 200,
+      "observedBytes": 13800,
+      "observedSha256": "32689d818368e613b85dab7320947d3f48222b12bb0af01435ded033405c9808",
+      "state": "verified"
+    },
+    {
+      "path": "timing.html",
+      "bytes": 1819,
+      "sha256": "5534bbe22f8c15a60d2808fb1e0436e229d156a57de578166a14600ef4489289",
+      "url": "https://antonsoo.github.io/pnigeus/timing.html",
+      "httpStatus": 200,
+      "observedBytes": 1819,
+      "observedSha256": "5534bbe22f8c15a60d2808fb1e0436e229d156a57de578166a14600ef4489289",
+      "state": "verified"
+    }
+  ],
+  "scope": "Compares canonical responses with this captured build inventory during the recorded pass. Extra hosted files, browser behavior, public source, registry releases and deployment provenance are not established."
+}

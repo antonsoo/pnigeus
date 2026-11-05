@@ -1,0 +1,433 @@
+{
+  "boundary": "local, real response bodies; no browser route stubs",
+  "browsers": [
+    {
+      "engine": "chromium",
+      "stalledMilliseconds": 17208,
+      "activeMilliseconds": 38767,
+      "currentStateSnapshotPreserved": true,
+      "siblingRequestAbortedOnFailure": true,
+      "cancellationAndRetryRooms": ["pump", "shapes.html", "timing.html"],
+      "coldSharedBandwidth": 65536,
+      "coldMilliseconds": 40777,
+      "independentlyVerifiedCacheFiles": 18,
+      "readinessSamples": [
+        {
+          "milliseconds": 1620,
+          "status": "Saving the complete edition. Offline use is not available yet.",
+          "controller": false
+        },
+        {
+          "milliseconds": 2623,
+          "status": "Saving the complete edition. Offline use is not available yet.",
+          "controller": false
+        },
+        {
+          "milliseconds": 3625,
+          "status": "Saving offline copy: 0 of 18 files verified. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 4627,
+          "status": "Saving offline copy: 0 of 18 files verified. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 5629,
+          "status": "Saving offline copy: 0 of 18 files verified. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 6632,
+          "status": "Saving offline copy: 0 of 18 files verified. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 7634,
+          "status": "Saving offline copy: 1 of 18 files verified. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 8636,
+          "status": "Saving offline copy: 3 of 18 files verified. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 9639,
+          "status": "Saving offline copy: 3 of 18 files verified; receiving 13 of 53 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 10643,
+          "status": "Saving offline copy: 3 of 18 files verified; receiving 26 of 53 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 11645,
+          "status": "Saving offline copy: 4 of 18 files verified; receiving 43 of 53 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 12647,
+          "status": "Saving offline copy: 8 of 18 files verified. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 13649,
+          "status": "Saving offline copy: 9 of 18 files verified; receiving 16 of 62 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 14651,
+          "status": "Saving offline copy: 9 of 18 files verified; receiving 24 of 65 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 15654,
+          "status": "Saving offline copy: 9 of 18 files verified; receiving 38 of 62 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 16656,
+          "status": "Saving offline copy: 9 of 18 files verified; receiving 52 of 62 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 17658,
+          "status": "Saving offline copy: 14 of 18 files verified. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 18661,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 14 of 113 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 19664,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 24 of 113 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 20667,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 71 of 434 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 21669,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 87 of 434 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 22671,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 111 of 434 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 23673,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 72 of 113 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 24675,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 151 of 434 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 25678,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 96 of 113 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 26682,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 110 of 113 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 27684,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 12 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 28686,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 36 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 29686,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 229 of 434 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 30689,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 72 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 31691,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 99 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 32694,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 120 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 33697,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 142 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 34699,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 170 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 35702,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 411 of 434 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 36705,
+          "status": "Saving offline copy: 17 of 18 files verified; receiving 231 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 37707,
+          "status": "Saving offline copy: 17 of 18 files verified; receiving 289 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 38710,
+          "status": "Saving offline copy: 17 of 18 files verified; receiving 366 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 39713,
+          "status": "Saving offline copy: 17 of 18 files verified; receiving 423 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 40717,
+          "status": "Ready offline · pump, shape and timing studies, Latin and Greek readings, source images and fonts verified.",
+          "controller": true
+        }
+      ],
+      "foregroundDuringInstallAndStoppedOriginExport": true
+    },
+    {
+      "engine": "firefox",
+      "stalledMilliseconds": 15778,
+      "activeMilliseconds": 38835,
+      "currentStateSnapshotPreserved": true,
+      "siblingRequestAbortedOnFailure": true,
+      "cancellationAndRetryRooms": ["pump", "shapes.html", "timing.html"],
+      "coldSharedBandwidth": 65536,
+      "coldMilliseconds": 41105,
+      "independentlyVerifiedCacheFiles": 18,
+      "readinessSamples": [
+        {
+          "milliseconds": 1866,
+          "status": "Saving the complete edition. Offline use is not available yet.",
+          "controller": false
+        },
+        {
+          "milliseconds": 2870,
+          "status": "Saving the complete edition. Offline use is not available yet.",
+          "controller": false
+        },
+        {
+          "milliseconds": 3874,
+          "status": "Saving the complete edition. Offline use is not available yet.",
+          "controller": false
+        },
+        {
+          "milliseconds": 4878,
+          "status": "Saving offline copy: 1 of 18 files verified; receiving 6 of 10 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 5882,
+          "status": "Saving offline copy: 2 of 18 files verified; receiving 9 of 13 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 6886,
+          "status": "Saving offline copy: 3 of 18 files verified; receiving 17 of 31 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 7890,
+          "status": "Saving offline copy: 3 of 18 files verified; receiving 23 of 31 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 8894,
+          "status": "Saving offline copy: 4 of 18 files verified. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 9897,
+          "status": "Saving offline copy: 5 of 18 files verified. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 10899,
+          "status": "Saving offline copy: 5 of 18 files verified; receiving 42 of 53 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 11903,
+          "status": "Saving offline copy: 8 of 18 files verified. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 12910,
+          "status": "Saving offline copy: 9 of 18 files verified; receiving 8 of 62 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 13914,
+          "status": "Saving offline copy: 9 of 18 files verified; receiving 21 of 65 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 14919,
+          "status": "Saving offline copy: 9 of 18 files verified; receiving 30 of 65 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 15923,
+          "status": "Saving offline copy: 11 of 18 files verified. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 16925,
+          "status": "Saving offline copy: 12 of 18 files verified. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 17928,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 10 of 113 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 18931,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 19 of 113 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 19934,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 75 of 434 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 20937,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 91 of 434 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 21940,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 58 of 113 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 22943,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 128 of 434 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 23946,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 155 of 434 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 24949,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 91 of 113 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 25959,
+          "status": "Saving offline copy: 14 of 18 files verified; receiving 195 of 434 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 26964,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 212 of 434 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 27967,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 24 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 28971,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 48 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 29974,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 248 of 434 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 30977,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 87 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 31981,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 113 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 32985,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 132 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 33990,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 152 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 34994,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 181 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 35998,
+          "status": "Saving offline copy: 15 of 18 files verified; receiving 202 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 37001,
+          "status": "Saving offline copy: 17 of 18 files verified; receiving 257 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 38005,
+          "status": "Saving offline copy: 17 of 18 files verified; receiving 314 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 39008,
+          "status": "Saving offline copy: 17 of 18 files verified; receiving 372 of 431 KB. Your experiment stays editable.",
+          "controller": false
+        },
+        {
+          "milliseconds": 40013,
+          "status": "Checking every file in this page’s offline edition…",
+          "controller": true
+        },
+        {
+          "milliseconds": 41017,
+          "status": "Ready offline · pump, shape and timing studies, Latin and Greek readings, source images and fonts verified.",
+          "controller": true
+        }
+      ],
+      "foregroundDuringInstallAndStoppedOriginExport": true
+    }
+  ]
+}

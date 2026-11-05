@@ -1,0 +1,33 @@
+{
+  "boundary": "local replay of the actual archived legacy Pages build; shared ten-minute HTTP caching; not an actual public deployment",
+  "rows": [
+    {
+      "name": "chromium",
+      "oldEdition": "02363524c4e953e9e08b8c2f874791778baf7bab30a1f918c21a4525725bcf3c",
+      "newEdition": "19b5e497bff303e266e0c7cca9beb74c0630b4958c585bbfea529008461937c9",
+      "cacheControl": "max-age=600",
+      "oldVerifiedExport": true,
+      "newOfflineTiming": true,
+      "state": {
+        "status": "Ready offline \u00b7 pump, shape and timing studies, Latin and Greek readings, source images and fonts verified.",
+        "controller": "http://127.0.0.1:42325/pnigeus/sw.js",
+        "caches": ["pnigeus-19b5e497bff303e266e0c7cca9beb74c0630b4958c585bbfea529008461937c9"],
+        "scripts": ["http://127.0.0.1:42325/pnigeus/assets/main-QzZ4oSXO.js"]
+      }
+    },
+    {
+      "name": "firefox",
+      "oldEdition": "02363524c4e953e9e08b8c2f874791778baf7bab30a1f918c21a4525725bcf3c",
+      "newEdition": "19b5e497bff303e266e0c7cca9beb74c0630b4958c585bbfea529008461937c9",
+      "cacheControl": "max-age=600",
+      "oldVerifiedExport": true,
+      "newOfflineTiming": true,
+      "state": {
+        "status": "Ready offline \u00b7 pump, shape and timing studies, Latin and Greek readings, source images and fonts verified.",
+        "controller": "http://127.0.0.1:42255/pnigeus/sw.js",
+        "caches": ["pnigeus-19b5e497bff303e266e0c7cca9beb74c0630b4958c585bbfea529008461937c9"],
+        "scripts": ["http://127.0.0.1:42255/pnigeus/assets/main-QzZ4oSXO.js"]
+      }
+    }
+  ]
+}

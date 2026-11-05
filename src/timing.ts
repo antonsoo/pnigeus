@@ -214,6 +214,7 @@ $("#timing-reading").addEventListener("click", () => {
     .finally(() => {
       button.disabled = false;
       saving = null;
+      if (document.activeElement === $("#timing-cancel")) button.focus();
       $("#timing-cancel").hidden = true;
     });
 });

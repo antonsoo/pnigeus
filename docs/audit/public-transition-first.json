@@ -1,0 +1,12 @@
+{
+  "boundary": "actual public origin, old Chromium and Firefox profiles held open across the first deployment",
+  "oldEdition": "02363524c4e953e9e08b8c2f874791778baf7bab30a1f918c21a4525725bcf3c",
+  "newEdition": "19b5e497bff303e266e0c7cca9beb74c0630b4958c585bbfea529008461937c9",
+  "bothOldTabsInitiallyControlledAndComplete": true,
+  "chromiumNewWorkerWaitedForOldTab": true,
+  "chromiumOldPumpAndActualReadingExportWorked": true,
+  "chromiumOldTabClosedAndNewWorkerActivated": true,
+  "result": "reopened Chromium tab did not reach the reviewer readiness selector within 30 seconds; no state snapshot was captured by that script version",
+  "remainingChecks": "not completed, including Firefox transition; not a successful full transition receipt",
+  "cause": "not established; current fresh public profiles and separate archived-build replay pass"
+}

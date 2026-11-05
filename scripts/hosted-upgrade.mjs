@@ -94,7 +94,7 @@ try {
     await page.close();
     // Wait outside the controlled scope, allowing default activation.
     const supervisor = await context.newPage();
-    await supervisor.goto("https://antonsoo.github.io/");
+    await supervisor.goto("https://antonsoo.github.io/robots.txt");
     await supervisor.waitForFunction(
       async () => {
         const registration = await navigator.serviceWorker.getRegistration("/pnigeus/");
@@ -170,6 +170,28 @@ try {
   receipt.completedAt = new Date().toISOString();
   await writeFile(output, `${JSON.stringify(receipt, null, 2)}\n`);
   console.log(`Review receipt: ${output}`);
+} catch (error) {
+  receipt.error = error instanceof Error ? error.message : String(error);
+  receipt.failureStates = [];
+  for (const fixture of fixtures) {
+    for (const page of fixture.context.pages())
+      try {
+        receipt.failureStates.push({
+          engine: fixture.name,
+          url: page.url(),
+          state: await page.evaluate(async () => ({
+            status: document.querySelector("#offline")?.textContent,
+            reload: document.querySelector("#offline-reload")?.outerHTML,
+            controller: navigator.serviceWorker.controller?.scriptURL,
+            caches: await caches.keys(),
+            scripts: [...document.scripts].map((s) => s.src),
+          })),
+          inspection: await inspect(page),
+        });
+      } catch {}
+  }
+  await writeFile(output, `${JSON.stringify(receipt, null, 2)}\n`);
+  throw error;
 } finally {
   for (const { context, browser } of fixtures) {
     await context.close();

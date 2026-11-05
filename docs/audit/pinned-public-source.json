@@ -1,0 +1,44 @@
+[
+  {
+    "pin": "ef38e0e7a01401fdb5cda80c8fb58633c7e6b6aa",
+    "file": "src/timing.ts",
+    "bytes": 21068,
+    "sha256": "9828e14a3a72be46fc58756e901051edbbd8c5892e6ce2fe79a5ff9e4a8b64e1",
+    "rawBytesMatchGitObject": true
+  },
+  {
+    "pin": "ef38e0e7a01401fdb5cda80c8fb58633c7e6b6aa",
+    "file": "src/offline-worker.js",
+    "bytes": 7366,
+    "sha256": "4ca96d17885e6f6863728781edff384ca6c34c1531f3d1ba61c24a7e4dfd6b4b",
+    "rawBytesMatchGitObject": true
+  },
+  {
+    "pin": "ef38e0e7a01401fdb5cda80c8fb58633c7e6b6aa",
+    "file": "src/asset-transfer.js",
+    "bytes": 2806,
+    "sha256": "d1ba99f2e568a1999d26cb6f39a5c4eb0bef32ab9efbc94a681972ea9d2f9cc8",
+    "rawBytesMatchGitObject": true
+  },
+  {
+    "pin": "ef38e0e7a01401fdb5cda80c8fb58633c7e6b6aa",
+    "file": "docs/audit.md",
+    "bytes": 8775,
+    "sha256": "36fa274eca742ec99beb657e699f1e2f2aca2391081657ec3c03093ee928e1d7",
+    "rawBytesMatchGitObject": true
+  },
+  {
+    "pin": "ef38e0e7a01401fdb5cda80c8fb58633c7e6b6aa",
+    "file": "public/sources/hero-schmidt-192.jpg",
+    "bytes": 441836,
+    "sha256": "b353ae798dfcf466b9a95d965adee39a9dbd179b4534a3b62f5b915916f9e10d",
+    "rawBytesMatchGitObject": true
+  },
+  {
+    "pin": "ef38e0e7a01401fdb5cda80c8fb58633c7e6b6aa",
+    "file": "public/sources/hero-fig76.jpg",
+    "bytes": 115259,
+    "sha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+    "rawBytesMatchGitObject": true
+  }
+]

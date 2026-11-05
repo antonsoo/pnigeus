@@ -136,3 +136,35 @@ The full Firefox-only rerun and the repeated combined run both passed. The
 reviewer now captures page/cache status on a subsequent failure. This remains an unexplained
 intermittent observation, not a guaranteed completion-time bound. Install and
 repair failures retain the open work and offer retry.
+
+## Publication and a legacy transition check
+
+On 2026-11-05, source through `ef38e0e` and the reviewed static edition were
+pushed. The [canonical public byte receipt](audit/hosted-initial.json) checks all
+19 build files, including the worker, plus the real entry URL before and after.
+All match the clean-install build. The complete build inventory digest is
+`99e414211123e856edb9c8a60d6a019ba293230b0972c3efeec80d51a998c166`.
+The [pinned raw-source receipt](audit/pinned-public-source.json) independently
+matches six Git objects, including both source images, with public raw bytes.
+These establish source and hosted bytes; they do not establish hosted CI.
+
+The [first actual-public transition](audit/public-transition-first.json) was
+**incomplete**. Both old profiles were controlled and complete before deployment.
+Chromium kept using and exporting from the old build while the new worker waited;
+activation followed closure. The reopened tab then exceeded a 30-second readiness
+wait. The earlier driver retained no failure-state snapshot, so the cause is not
+established, and Firefox's remaining transition was not run. Fresh public
+profiles pass readiness and the operated catalogue journeys.
+
+A [separate local legacy replay](audit/legacy-upgrade.json) uses the actual
+archived Pages tree `5feb2905cc6cf3eb1fb87a28c723c407bc3b8dbf`, not a newly built
+approximation. Both engines pass old export, waiting activation and new offline
+timing with a shared ten-minute HTTP cache. The public driver now captures
+failure state and uses a plain outside-scope page during activation. This replay
+is useful additional evidence; it does not turn the earlier public timeout into
+a successful result.
+
+The final keyboard audit also found that timing-save cancellation hid the
+focused Cancel button. It now returns focus to Save illustrated reading, matching
+the other two rooms. The transfer reviewer cancels by keyboard and checks focus
+in each room before retrying. This changes no physical or search assumptions.

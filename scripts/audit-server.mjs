@@ -18,6 +18,7 @@ export async function auditServer(directory) {
   let port = 0;
   let server;
   let bandwidth = 0;
+  let cacheControl = "no-store";
   let cursor = 0;
   const streams = [];
   const faults = new Map();
@@ -71,7 +72,7 @@ export async function auditServer(directory) {
         res.writeHead(200, {
           "Content-Type": fault?.mime ?? MIME[path.extname(file)] ?? "application/octet-stream",
           "Content-Length": bytes.length,
-          "Cache-Control": "no-store",
+          "Cache-Control": cacheControl,
         });
         if (bandwidth || fault?.stall) streams.push({ bytes, offset: 0, res, stall: fault?.stall });
         else res.end(bytes);
@@ -102,6 +103,9 @@ export async function auditServer(directory) {
     },
     useDirectory(directory) {
       root = path.resolve(directory);
+    },
+    cacheControl(value) {
+      cacheControl = value;
     },
     limit(bytesPerSecond) {
       bandwidth = bytesPerSecond;
