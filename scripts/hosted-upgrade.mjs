@@ -91,18 +91,19 @@ try {
     const oldDownload = page.waitForEvent("download");
     await page.locator("#study").click();
     await (await oldDownload).saveAs(path.join(path.dirname(output), `${name}-old-reading.html`));
-    await page.close();
-    // Wait outside the controlled scope, allowing default activation.
+    // Keep the exact waiting worker handle. A generic active/no-waiting
+    // snapshot can observe the old active worker during the transition.
     const supervisor = await context.newPage();
     await supervisor.goto("https://antonsoo.github.io/robots.txt");
-    await supervisor.waitForFunction(
-      async () => {
-        const registration = await navigator.serviceWorker.getRegistration("/pnigeus/");
-        return registration?.active?.state === "activated" && !registration.waiting;
-      },
-      null,
-      { timeout: 30000 },
-    );
+    await supervisor.evaluate(async () => {
+      window.pendingEdition = (await navigator.serviceWorker.getRegistration("/pnigeus/"))?.waiting;
+      if (!window.pendingEdition)
+        throw new Error("The expected waiting edition disappeared before closure.");
+    });
+    await page.close();
+    await supervisor.waitForFunction(() => window.pendingEdition.state === "activated", null, {
+      timeout: 60000,
+    });
     const next = await context.newPage();
     next.on("pageerror", (e) => errors.push(e.message));
     await next.goto(base);

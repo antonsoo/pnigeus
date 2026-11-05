@@ -42,13 +42,16 @@ for (const [name, engine] of Object.entries({ chromium, firefox })) {
     const downloading = page.waitForEvent("download");
     await page.locator("#study").click();
     await (await downloading).saveAs(path.join(output, `${name}-old.html`));
-    await page.close();
     const supervisor = await context.newPage();
     await supervisor.goto(server.supervisor);
-    await supervisor.waitForFunction(async (base) => {
-      const r = await navigator.serviceWorker.getRegistration(base);
-      return !r.waiting && r.active?.state === "activated";
+    await supervisor.evaluate(async (base) => {
+      window.pendingEdition = (await navigator.serviceWorker.getRegistration(base)).waiting;
+      if (!window.pendingEdition) throw new Error("No expected waiting worker");
     }, server.base);
+    await page.close();
+    await supervisor.waitForFunction(() => window.pendingEdition.state === "activated", null, {
+      timeout: 60000,
+    });
     const next = await context.newPage();
     await next.goto(server.base);
     await next.waitForFunction(

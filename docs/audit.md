@@ -151,7 +151,8 @@ These establish source and hosted bytes; they do not establish hosted CI.
 The [first actual-public transition](audit/public-transition-first.json) was
 **incomplete**. Both old profiles were controlled and complete before deployment.
 Chromium kept using and exporting from the old build while the new worker waited;
-activation followed closure. The reopened tab then exceeded a 30-second readiness
+the old tab closed and a generic registration-state check returned. The reopened
+tab then exceeded a 30-second readiness
 wait. The earlier driver retained no failure-state snapshot, so the cause is not
 established, and Firefox's remaining transition was not run. Fresh public
 profiles pass readiness and the operated catalogue journeys.
@@ -168,3 +169,37 @@ The final keyboard audit also found that timing-save cancellation hid the
 focused Cancel button. It now returns focus to Save illustrated reading, matching
 the other two rooms. The transfer reviewer cancels by keyboard and checks focus
 in each room before retrying. This changes no physical or search assumptions.
+
+### Final edition and reviewer correction
+
+The keyboard fix is published from `61a079a`, Pages commit `c8f7041`. Its edition
+is `11a9a0bd103225ea250cccdd9fb4a5bad2c08f9b3b5897e4e187cf0c2294b384`.
+The [final canonical receipt](audit/hosted-final.json) verifies every current
+build file. The [keyboard transfer run](audit/keyboard-transfers.json) repeats
+the slow-body, cold-install and all-room cancel/retry checks on this edition;
+keyboard cancellation must return focus to its room's save button.
+
+The [repeated public transition](audit/public-transition-repeat.json) captured
+why its result cannot be called a successful upgrade: after its generic
+registration-state wait returned, the reopened Chromium tab still used the old
+edition. It honestly reported its complete old cache, while a new cache also
+existed. This is consistent with premature reopening by the reviewer. The
+reviewer now holds the exact waiting worker object and requires that object's
+`activated` state before opening the new controlled tab. A plain outside-scope
+page holds that reference, without keeping an old controlled client open.
+
+The [exact-build replay](audit/exact-upgrade-replay.json) uses archived Pages
+commit `403901b` and the final build, both with a ten-minute HTTP cache. With the
+corrected wait, both engines pass activation and the new offline timing lesson.
+It is a local replay of the exact published bytes. The earlier two live
+transition attempts remain incomplete; they are not relabelled as passes.
+Fresh public lesson/catalogue workflows and hosted-byte identity are verified
+separately. GitHub's Actions API reports zero runs for these repositories at
+this review; no hosted CI success is claimed.
+
+A [fresh install/build](audit/clean-install-final.json) from the final runtime
+source revision reproduces the reviewed 19-file inventory exactly. The
+[post-journey inventory](audit/after-public-journeys.json) rechecks canonical
+public bytes after the last four operated public catalogue/lesson workflows.
+The catalogue retains its pinned review of the same physical/search assumptions;
+the later keyboard correction changes only focus recovery.

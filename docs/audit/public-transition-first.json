@@ -5,8 +5,8 @@
   "bothOldTabsInitiallyControlledAndComplete": true,
   "chromiumNewWorkerWaitedForOldTab": true,
   "chromiumOldPumpAndActualReadingExportWorked": true,
-  "chromiumOldTabClosedAndNewWorkerActivated": true,
   "result": "reopened Chromium tab did not reach the reviewer readiness selector within 30 seconds; no state snapshot was captured by that script version",
   "remainingChecks": "not completed, including Firefox transition; not a successful full transition receipt",
-  "cause": "not established; current fresh public profiles and separate archived-build replay pass"
+  "cause": "not established; current fresh public profiles and separate archived-build replay pass",
+  "chromiumOldTabClosedAndGenericRegistrationWaitReturned": true
 }

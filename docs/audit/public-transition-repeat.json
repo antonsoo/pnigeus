@@ -1,0 +1,52 @@
+{
+  "startedAt": "2026-11-05T08:05:55.443Z",
+  "base": "https://antonsoo.github.io/pnigeus/",
+  "expectedOld": "19b5e497bff303e266e0c7cca9beb74c0630b4958c585bbfea529008461937c9",
+  "scope": "Actual public origin, existing browser tabs and service-worker controller transition across deployment. Offline checks disable browser networking; the public origin remains running.",
+  "workflows": [],
+  "expectedNew": "11a9a0bd103225ea250cccdd9fb4a5bad2c08f9b3b5897e4e187cf0c2294b384",
+  "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '19b5e497bff303e266e0c7cca9beb74c0630b4958c585bbfea529008461937c9'\n- '11a9a0bd103225ea250cccdd9fb4a5bad2c08f9b3b5897e4e187cf0c2294b384'\n",
+  "failureStates": [
+    {
+      "engine": "chromium",
+      "url": "https://antonsoo.github.io/pnigeus/",
+      "state": {
+        "status": "Ready offline \u00b7 pump, shape and timing studies, Latin and Greek readings, source images and fonts verified.",
+        "reload": "<button id=\"offline-reload\" type=\"button\" hidden=\"\">Reload to use the offline copy</button>",
+        "controller": "https://antonsoo.github.io/pnigeus/sw.js",
+        "caches": [
+          "pnigeus-19b5e497bff303e266e0c7cca9beb74c0630b4958c585bbfea529008461937c9",
+          "pnigeus-11a9a0bd103225ea250cccdd9fb4a5bad2c08f9b3b5897e4e187cf0c2294b384"
+        ],
+        "scripts": ["https://antonsoo.github.io/pnigeus/assets/main-QzZ4oSXO.js"]
+      },
+      "inspection": {
+        "type": "PNIGEUS_EDITION",
+        "edition": "19b5e497bff303e266e0c7cca9beb74c0630b4958c585bbfea529008461937c9",
+        "complete": true,
+        "verified": 18,
+        "total": 18,
+        "missing": []
+      }
+    },
+    {
+      "engine": "firefox",
+      "url": "https://antonsoo.github.io/pnigeus/",
+      "state": {
+        "status": "Ready offline \u00b7 pump, shape and timing studies, Latin and Greek readings, source images and fonts verified.",
+        "reload": "<button id=\"offline-reload\" type=\"button\" hidden=\"\">Reload to use the offline copy</button>",
+        "controller": "https://antonsoo.github.io/pnigeus/sw.js",
+        "caches": ["pnigeus-19b5e497bff303e266e0c7cca9beb74c0630b4958c585bbfea529008461937c9"],
+        "scripts": ["https://antonsoo.github.io/pnigeus/assets/main-QzZ4oSXO.js"]
+      },
+      "inspection": {
+        "type": "PNIGEUS_EDITION",
+        "edition": "19b5e497bff303e266e0c7cca9beb74c0630b4958c585bbfea529008461937c9",
+        "complete": true,
+        "verified": 18,
+        "total": 18,
+        "missing": []
+      }
+    }
+  ]
+}
