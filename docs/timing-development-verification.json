@@ -1,0 +1,38 @@
+[
+  {
+    "browser": "chromium",
+    "width": 1440,
+    "development": true,
+    "initialWithinSeconds": 3.679,
+    "bestWithinSeconds": 12,
+    "textareaFont": "Workshop, sans-serif",
+    "pageErrors": []
+  },
+  {
+    "browser": "chromium",
+    "width": 375,
+    "development": true,
+    "initialWithinSeconds": 3.679,
+    "bestWithinSeconds": 12,
+    "textareaFont": "Workshop, sans-serif",
+    "pageErrors": []
+  },
+  {
+    "browser": "firefox",
+    "width": 1440,
+    "development": true,
+    "initialWithinSeconds": 3.679,
+    "bestWithinSeconds": 12,
+    "textareaFont": "Workshop, sans-serif",
+    "pageErrors": []
+  },
+  {
+    "browser": "firefox",
+    "width": 375,
+    "development": true,
+    "initialWithinSeconds": 3.679,
+    "bestWithinSeconds": 12,
+    "textareaFont": "Workshop, sans-serif",
+    "pageErrors": []
+  }
+]

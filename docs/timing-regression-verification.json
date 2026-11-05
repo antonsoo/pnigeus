@@ -1,0 +1,283 @@
+{
+  "sourceCommit": "54bb5f0246c463e16558b3e90028493d31fe964b",
+  "boundary": "local production; original pump and shape workflows plus independent output checks",
+  "pump": {
+    "browserReceiptSha256": "3be1b6f23200d62a345fcd7f4f8162d338ecb66e00eb964f3a8f4b63551de340",
+    "independentOutputCheck": {
+      "browser_workflows": 4,
+      "comparisons": 708,
+      "max_absolute_errors": {
+        "numeric": 6.821210263296962e-13,
+        "svg_pixels": 0.00043152776964916484
+      },
+      "method": "independent pressure-coordinate RK4, dt <= 0.002 s; bisection from water conservation and PV",
+      "status": "passed"
+    },
+    "audio": {
+      "status": "passed",
+      "wav_files": 8,
+      "live_buffers": 8,
+      "samples_per_format": 1920000,
+      "results": [
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "example": "one-pipe",
+          "samples": 240000,
+          "maximum_live_error": 0.0,
+          "maximum_wav_error_lsb": 0,
+          "live_to_wav_error_lsb": 0
+        },
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "example": "four-pipes",
+          "samples": 240000,
+          "maximum_live_error": 1.4551915228366852e-11,
+          "maximum_wav_error_lsb": 0,
+          "live_to_wav_error_lsb": 0
+        },
+        {
+          "engine": "chromium",
+          "width": 375,
+          "example": "one-pipe",
+          "samples": 240000,
+          "maximum_live_error": 0.0,
+          "maximum_wav_error_lsb": 0,
+          "live_to_wav_error_lsb": 0
+        },
+        {
+          "engine": "chromium",
+          "width": 375,
+          "example": "four-pipes",
+          "samples": 240000,
+          "maximum_live_error": 1.4551915228366852e-11,
+          "maximum_wav_error_lsb": 0,
+          "live_to_wav_error_lsb": 0
+        },
+        {
+          "engine": "firefox",
+          "width": 1440,
+          "example": "one-pipe",
+          "samples": 240000,
+          "maximum_live_error": 0.0,
+          "maximum_wav_error_lsb": 0,
+          "live_to_wav_error_lsb": 0
+        },
+        {
+          "engine": "firefox",
+          "width": 1440,
+          "example": "four-pipes",
+          "samples": 240000,
+          "maximum_live_error": 1.4551915228366852e-11,
+          "maximum_wav_error_lsb": 0,
+          "live_to_wav_error_lsb": 0
+        },
+        {
+          "engine": "firefox",
+          "width": 375,
+          "example": "one-pipe",
+          "samples": 240000,
+          "maximum_live_error": 0.0,
+          "maximum_wav_error_lsb": 0,
+          "live_to_wav_error_lsb": 0
+        },
+        {
+          "engine": "firefox",
+          "width": 375,
+          "example": "four-pipes",
+          "samples": 240000,
+          "maximum_live_error": 1.4551915228366852e-11,
+          "maximum_wav_error_lsb": 0,
+          "live_to_wav_error_lsb": 0
+        }
+      ],
+      "scope": "digital samples; modern sine tones and illustrative amplitude, not physical speakers or ancient pipe acoustics"
+    }
+  },
+  "shapes": {
+    "browserReceiptSha256": "4c6787867362a9baf13ac98d488f30ae44f3a2b698983fd8a9f80ce1e0c51215",
+    "independentOutputCheck": {
+      "status": "passed",
+      "workflows": 4,
+      "observations": 28,
+      "csv_rows": 6972,
+      "comparisons": 97780,
+      "maximum_absolute_errors": {
+        "physical": 1.2789769243681803e-13,
+        "svg": 0.0007812867521295175
+      },
+      "method": "Independent pressure-coordinate water solver and cross-section quadrature.\n\nNo application imports or closed-form cap primitives. Simpson integration of\nquadratic cross-sections, split at rim and roof, provides geometric volumes.\nThe app instead solves outside height from inside height and inverts pressure.\n",
+      "results": [
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "label": "published-endpoint",
+          "rows": 249
+        },
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "label": "full",
+          "rows": 249
+        },
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "label": "cone",
+          "rows": 249
+        },
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "label": "half-size",
+          "rows": 249
+        },
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "label": "shallow-wide",
+          "rows": 249
+        },
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "label": "cylinder-keyboard",
+          "rows": 249
+        },
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "label": "empty-limit",
+          "rows": 249
+        },
+        {
+          "engine": "chromium",
+          "width": 375,
+          "label": "published-endpoint",
+          "rows": 249
+        },
+        {
+          "engine": "chromium",
+          "width": 375,
+          "label": "full",
+          "rows": 249
+        },
+        {
+          "engine": "chromium",
+          "width": 375,
+          "label": "cone",
+          "rows": 249
+        },
+        {
+          "engine": "chromium",
+          "width": 375,
+          "label": "half-size",
+          "rows": 249
+        },
+        {
+          "engine": "chromium",
+          "width": 375,
+          "label": "shallow-wide",
+          "rows": 249
+        },
+        {
+          "engine": "chromium",
+          "width": 375,
+          "label": "cylinder-keyboard",
+          "rows": 249
+        },
+        {
+          "engine": "chromium",
+          "width": 375,
+          "label": "empty-limit",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 1440,
+          "label": "published-endpoint",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 1440,
+          "label": "full",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 1440,
+          "label": "cone",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 1440,
+          "label": "half-size",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 1440,
+          "label": "shallow-wide",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 1440,
+          "label": "cylinder-keyboard",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 1440,
+          "label": "empty-limit",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 375,
+          "label": "published-endpoint",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 375,
+          "label": "full",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 375,
+          "label": "cone",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 375,
+          "label": "half-size",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 375,
+          "label": "shallow-wide",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 375,
+          "label": "cylinder-keyboard",
+          "rows": 249
+        },
+        {
+          "engine": "firefox",
+          "width": 375,
+          "label": "empty-limit",
+          "rows": 249
+        }
+      ]
+    }
+  }
+}

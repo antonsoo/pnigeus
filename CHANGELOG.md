@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-04
+
+- Pump timing investigation: place seven strokes over twelve seconds, change
+  demand and tank area, retain an earlier account and inspect shared-axis curves.
+- Integrated time below/inside/above an explicitly modern pressure window;
+  exhaustive search of all 792 equal-air allocations, including impossible targets.
+- Interval and full action CSVs, script-free illustrated comparisons with source
+  drawing and Latin reading, immutable save snapshots, cancellation and retry.
+- Independent pressure-coordinate numerical audit and actual browser/artifact
+  review, including native reopening and offline use with the origin stopped.
+
 ## 0.2.0 — 2026-10-22
 
 - Shape and usable-wind study: hemisphere, cylinder and cone, initial water fill,

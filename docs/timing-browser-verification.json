@@ -1,0 +1,311 @@
+{
+  "boundary": "local production build; no publication claim",
+  "cases": [
+    {
+      "type": "case",
+      "settings": {
+        "tank": 6,
+        "pipes": 2,
+        "strokes": [0, 1, 2, 1, 1, 2]
+      },
+      "slots": [
+        {
+          "peak": 853.5972311639083,
+          "trough": 486.2161140102429,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 769.660175884457,
+          "trough": 422.9864223642467,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 989.0341424603927,
+          "trough": 590.4474242469612,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 873.3322694603703,
+          "trough": 501.24427051059837,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 784.6075680613704,
+          "trough": 434.1603543593792,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 1000.0886386177182,
+          "trough": 599.0609766415337,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        }
+      ],
+      "within": 12,
+      "complete": true
+    },
+    {
+      "type": "case",
+      "settings": {
+        "tank": 6,
+        "pipes": 2,
+        "strokes": [0, 1, 2, 1, 1, 2]
+      },
+      "slots": [
+        {
+          "peak": 853.5972311639083,
+          "trough": 486.2161140102429,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 769.660175884457,
+          "trough": 422.9864223642467,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 989.0341424603927,
+          "trough": 590.4474242469612,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 873.3322694603703,
+          "trough": 501.24427051059837,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 784.6075680613704,
+          "trough": 434.1603543593792,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 1000.0886386177182,
+          "trough": 599.0609766415337,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        }
+      ],
+      "within": 12,
+      "complete": true
+    },
+    {
+      "type": "case",
+      "settings": {
+        "tank": 6,
+        "pipes": 2,
+        "strokes": [0, 1, 2, 1, 1, 2]
+      },
+      "slots": [
+        {
+          "peak": 853.5972311639083,
+          "trough": 486.2161140102429,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 769.660175884457,
+          "trough": 422.9864223642467,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 989.0341424603927,
+          "trough": 590.4474242469612,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 873.3322694603703,
+          "trough": 501.24427051059837,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 784.6075680613704,
+          "trough": 434.1603543593792,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 1000.0886386177182,
+          "trough": 599.0609766415337,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        }
+      ],
+      "within": 12,
+      "complete": true
+    },
+    {
+      "type": "case",
+      "settings": {
+        "tank": 6,
+        "pipes": 2,
+        "strokes": [0, 1, 2, 1, 1, 2]
+      },
+      "slots": [
+        {
+          "peak": 853.5972311639083,
+          "trough": 486.2161140102429,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 769.660175884457,
+          "trough": 422.9864223642467,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 989.0341424603927,
+          "trough": 590.4474242469612,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 873.3322694603703,
+          "trough": 501.24427051059837,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 784.6075680613704,
+          "trough": 434.1603543593792,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        },
+        {
+          "peak": 1000.0886386177182,
+          "trough": 599.0609766415337,
+          "below": 0,
+          "within": 2,
+          "above": 0
+        }
+      ],
+      "within": 12,
+      "complete": true
+    }
+  ],
+  "browsers": [
+    {
+      "id": "chromium-1440",
+      "keyboard": true,
+      "budget": true,
+      "comparison": true,
+      "search": true,
+      "history": true,
+      "actualCsvAndGraph": true,
+      "nativeReadingAndDownload": true,
+      "sourceSha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+      "accessibility": true,
+      "offlineWithStoppedOrigin": true,
+      "controlledReloadNeeded": false,
+      "pageErrors": []
+    },
+    {
+      "id": "chromium-375",
+      "keyboard": true,
+      "budget": true,
+      "comparison": true,
+      "search": true,
+      "history": true,
+      "actualCsvAndGraph": true,
+      "nativeReadingAndDownload": true,
+      "sourceSha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+      "accessibility": true,
+      "offlineWithStoppedOrigin": true,
+      "controlledReloadNeeded": false,
+      "pageErrors": []
+    },
+    {
+      "id": "chromium-uncontrolled",
+      "savedIsNotReady": true,
+      "explicitReloadRetainsUrlSettings": true,
+      "readinessRequiresController": true,
+      "setup": "actual generated worker with clients.claim suppressed"
+    },
+    {
+      "id": "chromium-faults",
+      "invalidQuery": true,
+      "delayedSaveSnapshot": true,
+      "corruptSourceRefused": true,
+      "stalledBodyCancelledAndRetried": true
+    },
+    {
+      "id": "firefox-1440",
+      "keyboard": true,
+      "budget": true,
+      "comparison": true,
+      "search": true,
+      "history": true,
+      "actualCsvAndGraph": true,
+      "nativeReadingAndDownload": true,
+      "sourceSha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+      "accessibility": true,
+      "offlineWithStoppedOrigin": true,
+      "controlledReloadNeeded": false,
+      "pageErrors": []
+    },
+    {
+      "id": "firefox-375",
+      "keyboard": true,
+      "budget": true,
+      "comparison": true,
+      "search": true,
+      "history": true,
+      "actualCsvAndGraph": true,
+      "nativeReadingAndDownload": true,
+      "sourceSha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133",
+      "accessibility": true,
+      "offlineWithStoppedOrigin": true,
+      "controlledReloadNeeded": false,
+      "pageErrors": []
+    },
+    {
+      "id": "firefox-uncontrolled",
+      "savedIsNotReady": true,
+      "explicitReloadRetainsUrlSettings": true,
+      "readinessRequiresController": true,
+      "setup": "actual generated worker with clients.claim suppressed"
+    },
+    {
+      "id": "firefox-faults",
+      "invalidQuery": true,
+      "delayedSaveSnapshot": true,
+      "corruptSourceRefused": true,
+      "stalledBodyCancelledAndRetried": true
+    }
+  ]
+}

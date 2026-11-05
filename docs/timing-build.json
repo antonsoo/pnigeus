@@ -1,0 +1,106 @@
+{
+  "sourceCommit": "54bb5f0246c463e16558b3e90028493d31fe964b",
+  "boundary": "local build, not hosted bytes",
+  "command": "npm run build",
+  "output": "dist/",
+  "base": "/pnigeus/",
+  "node": "v26.7.0",
+  "edition": "af49cdf0dc103cdda07aec2926a8c33921465a4c63e132909bacdc68d41e5875",
+  "files": [
+    {
+      "file": "assets/main-Bznl6PjT.css",
+      "bytes": 1280,
+      "sha256": "5873556065cfd9aaa724923fd1d6f20d6e871d0d5206c34f0460d95230db8f73"
+    },
+    {
+      "file": "assets/main-DinUenEc.js",
+      "bytes": 13354,
+      "sha256": "c6eb7de5d019645e3a5787649bbadd8709f628750f8ee1fb3c938f4325e447cb"
+    },
+    {
+      "file": "assets/offline-BfWAMmf0.js",
+      "bytes": 27443,
+      "sha256": "511607396c22edda52da48b92d5a469248a776ec7aab552d5e52fd9844d4c474"
+    },
+    {
+      "file": "assets/offline-C9A2EXqx.css",
+      "bytes": 10262,
+      "sha256": "4d1b068b6fe760a02a8452595b4e03b33e15950f4e8a098c625de1c15b756725"
+    },
+    {
+      "file": "assets/shapes-D3MkGPPm.js",
+      "bytes": 53817,
+      "sha256": "2303abc31c39efc645da3ab3d2c922bcf9ae4b49a350b330e6286abed1d98dec"
+    },
+    {
+      "file": "assets/shapes-ph047G3t.css",
+      "bytes": 8078,
+      "sha256": "29aa3f216f000da66891549607574964675d38e4914dad05dab50c13f21b369b"
+    },
+    {
+      "file": "assets/timing-CVLgGDnF.js",
+      "bytes": 21334,
+      "sha256": "a0a451921ade139bd8151460fb50ff1185444935b87bde94d75c93e324339ec9"
+    },
+    {
+      "file": "assets/timing-zSVyLjeA.css",
+      "bytes": 3888,
+      "sha256": "966418915719d3e5baebde3502f969b97483b66c0b9fc9f6f75cfa437f401e4c"
+    },
+    {
+      "file": "fonts/IBMPlex-OFL.txt",
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    },
+    {
+      "file": "fonts/IBMPlexSans-Regular.woff2",
+      "bytes": 63020,
+      "sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a"
+    },
+    {
+      "file": "fonts/IBMPlexSans-SemiBold.woff2",
+      "bytes": 67060,
+      "sha256": "f78048030eab62e860efa39a0df79e2e5581bf122eb95b9bc42c0b8a4988d205"
+    },
+    {
+      "file": "fonts/NotoSerif-OFL.txt",
+      "bytes": 4396,
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    },
+    {
+      "file": "fonts/NotoSerif-Regular.ttf",
+      "bytes": 444064,
+      "sha256": "5473d2e43bdd018ee124a4addba8091fd0a29894b121cbb741023af6549662b6"
+    },
+    {
+      "file": "index.html",
+      "bytes": 1732,
+      "sha256": "403f4a6118f2dc4a9e25ec3a80af3cdd71e41e2968a5d77a2a8a5be5757d7f46"
+    },
+    {
+      "file": "shapes.html",
+      "bytes": 1769,
+      "sha256": "7296170b279fd752f051f139871336cb19b6de6a3dc384d7b5df0885cb031bdb"
+    },
+    {
+      "file": "sources/hero-fig76.jpg",
+      "bytes": 115259,
+      "sha256": "6bb3ec5db3a250a4d44895b51aa442f0de2800cc328e0d717b7177a4d58b6133"
+    },
+    {
+      "file": "sources/hero-schmidt-192.jpg",
+      "bytes": 441836,
+      "sha256": "b353ae798dfcf466b9a95d965adee39a9dbd179b4534a3b62f5b915916f9e10d"
+    },
+    {
+      "file": "sw.js",
+      "bytes": 4443,
+      "sha256": "d321ec9d561b164e4dfaf907ed5564892a7bb0d91623fde19475e42cdcb0399d"
+    },
+    {
+      "file": "timing.html",
+      "bytes": 1819,
+      "sha256": "5accd020f19b02878e0368f709d5f616374f401b8a306b30ba2b0057cca02a1b"
+    }
+  ]
+}

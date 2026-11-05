@@ -98,6 +98,55 @@ grammar notes and an exact CSV download. It opens and prints offline. Inspect
 the [actual saved reading](examples/shape-reading.html), its
 [PDF](examples/shape-reading.pdf) and [CSV](examples/shape-curves.csv).
 
+## Seven strokes. Twelve seconds.
+
+The timing room asks **when to replace the wind the pipes consume**. Place
+seven strokes at six instants, with three strokes already stored before the
+clock starts. Keep an earlier attempt and move its strokes; both pressure
+histories share the same axes. Change demand or tank area without rewriting
+the kept account.
+
+![A distributed timing holds the target while the same air supplied early misses it](docs/assets/timing-desktop.png)
+
+With two open pipes and tank area ratio 6, delivering all seven strokes at the
+start gives **3.679 seconds** inside the chosen 400–1100 Pa window. A different
+allocation gives **12 seconds**, with the same air. Earlier excess pressure
+drives faster outflow under the chosen outlet law. Water buffers pressure;
+it does not hold it constant.
+
+The controls allow unspent strokes. On request, the search checks all **792**
+allocations of exactly seven strokes. Four meet the full window for those
+settings; some other pipe/tank settings have none. This finite-domain result
+does not establish what arbitrary pumping actions could do, or when real pipes
+would sound. Timing, target and all numerical inputs are modern choices.
+
+Run `npm run dev` and open **http://127.0.0.1:4386/pnigeus/timing.html**.
+Both existing workshops also link to it. Keep “All at the start,” then load
+“Two, then one per slot.” Move a first-slot stroke later, or check the search
+and inspect a best timing. Save an interval CSV, complete action CSV or
+script-free illustrated reading with both accounts, explanation and source.
+Saving can be cancelled even while a source response body is stalled.
+
+[Source boundary and derivation](docs/timing-model.md) ·
+[Browser and artifact review](docs/timing-review.md) ·
+[Saved comparison, gzip](examples/timing/reading.html.gz) ·
+[Printed comparison](examples/timing/reading.pdf) ·
+[Interval account](examples/timing/intervals.csv) ·
+[Full action account](examples/timing/events.csv).
+Decompress the HTML before opening it; image and fonts are embedded.
+
+```sh
+npm run verify:timing
+# Build dist/ first; this starts its own production servers:
+npm run test:timing
+```
+
+The independent pressure-coordinate RK4 solver checks all **9,504** allocations
+across twelve pipe/tank settings, including feasible counts and best durations.
+The browser review operates both engines at desktop and 375px, keeps comparisons,
+edits by keyboard, checks actual curves and CSV, opens the native reading without
+scripts, and shuts down the origin before offline use.
+
 ## Read and keep the evidence
 
 - Inspect the chamber, water, pump, open rim and pressure head in the cutaway.

@@ -1,0 +1,93 @@
+{
+  "method": "pressure-coordinate RK4, dt=0.02 s, linear root-pressure crossings",
+  "cases": 9504,
+  "intervals": 57024,
+  "maximum_pressure_error_pa": 1.0913936421275139e-11,
+  "maximum_interval_time_error_s": 5.486030654200391e-7,
+  "searches": [
+    {
+      "tank": 3,
+      "pipes": 1,
+      "count": 792,
+      "full": 0,
+      "best": 10.000000000000007
+    },
+    {
+      "tank": 3,
+      "pipes": 2,
+      "count": 792,
+      "full": 0,
+      "best": 11.760542772470176
+    },
+    {
+      "tank": 3,
+      "pipes": 3,
+      "count": 792,
+      "full": 0,
+      "best": 8.710833493975096
+    },
+    {
+      "tank": 3,
+      "pipes": 4,
+      "count": 792,
+      "full": 0,
+      "best": 5.368202567746882
+    },
+    {
+      "tank": 6,
+      "pipes": 1,
+      "count": 792,
+      "full": 0,
+      "best": 10.000000000000007
+    },
+    {
+      "tank": 6,
+      "pipes": 2,
+      "count": 792,
+      "full": 4,
+      "best": 12.000000000000007
+    },
+    {
+      "tank": 6,
+      "pipes": 3,
+      "count": 792,
+      "full": 0,
+      "best": 8.767153841743452
+    },
+    {
+      "tank": 6,
+      "pipes": 4,
+      "count": 792,
+      "full": 0,
+      "best": 5.930975597690315
+    },
+    {
+      "tank": 12,
+      "pipes": 1,
+      "count": 792,
+      "full": 0,
+      "best": 10.000000000000007
+    },
+    {
+      "tank": 12,
+      "pipes": 2,
+      "count": 792,
+      "full": 9,
+      "best": 12.000000000000007
+    },
+    {
+      "tank": 12,
+      "pipes": 3,
+      "count": 792,
+      "full": 0,
+      "best": 8.679015076340365
+    },
+    {
+      "tank": 12,
+      "pipes": 4,
+      "count": 792,
+      "full": 0,
+      "best": 6.041418788183887
+    }
+  ]
+}

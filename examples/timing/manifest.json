@@ -1,0 +1,49 @@
+{
+  "sourceCommit": "54bb5f0246c463e16558b3e90028493d31fe964b",
+  "settings": {
+    "tank": 6,
+    "pipes": 2,
+    "strokes": [
+      0,
+      1,
+      2,
+      1,
+      1,
+      2
+    ]
+  },
+  "kept": {
+    "tank": 6,
+    "pipes": 2,
+    "strokes": [
+      7,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "files": [
+    {
+      "file": "intervals.csv",
+      "bytes": 855,
+      "sha256": "05131aaa86c342465ef067dc6d3efd83a911e10921f95ee90b074596d7005ee4"
+    },
+    {
+      "file": "events.csv",
+      "bytes": 3294,
+      "sha256": "97fbc39a7937576df44ec954e242690ea6be55a37d860518b9ef7e6b1059f495"
+    },
+    {
+      "file": "reading.html.gz",
+      "bytes": 760217,
+      "sha256": "fa59c123ef52c7f34dbcafae7796c64070ad53033ccaa428f983feaa70bb291b"
+    },
+    {
+      "file": "reading.pdf",
+      "bytes": 630868,
+      "sha256": "ca8b33862e2dcbc7e54e39743e2faea205661c1c5d81fa93b0e567fcc8cb0b03"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+slot,start_s,end_s,strokes,open_pipes,tank_over_chamber_area,target_low_pa,target_high_pa,release_start_pa,release_end_pa,below_s,within_s,above_s,starting_strokes,stroke_ambient_litres,exercise_budget,model
+1,0,2,0,2,6,400,1100,853.5972311639083,486.2161140102429,0,2,0,3,1,7,modern_quasi_static_constant_section
+2,2,4,1,2,6,400,1100,769.660175884457,422.9864223642467,0,2,0,3,1,7,modern_quasi_static_constant_section
+3,4,6,2,2,6,400,1100,989.0341424603927,590.4474242469612,0,2,0,3,1,7,modern_quasi_static_constant_section
+4,6,8,1,2,6,400,1100,873.3322694603703,501.24427051059837,0,2,0,3,1,7,modern_quasi_static_constant_section
+5,8,10,1,2,6,400,1100,784.6075680613704,434.1603543593792,0,2,0,3,1,7,modern_quasi_static_constant_section
+6,10,12,2,2,6,400,1100,1000.0886386177182,599.0609766415337,0,2,0,3,1,7,modern_quasi_static_constant_section

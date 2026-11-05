@@ -1,0 +1,16 @@
+{
+  "method": "pressure-coordinate RK4, dt=0.02 s, linear root-pressure crossings",
+  "cases": 4,
+  "intervals": 24,
+  "maximum_pressure_error_pa": 1.0231815394945443e-12,
+  "maximum_interval_time_error_s": 1.3322676295501878e-15,
+  "searches": [
+    {
+      "tank": 6,
+      "pipes": 2,
+      "count": 4,
+      "full": 4,
+      "best": 12.000000000000007
+    }
+  ]
+}
