@@ -132,7 +132,7 @@ claim that Vitruvius's inverted funnel must be conical.
 A [combined-run timeout](audit/offline-timeout.json) is retained too. Firefox
 once exceeded the reviewer's 120-second readiness wait during slow font repair.
 That reviewer version did not capture enough state to establish the cause.
-The full Firefox-only rerun and the repeated combined run both passed; the
-latter records per-second slow-repair samples. This remains an unexplained
+The full Firefox-only rerun and the repeated combined run both passed. The
+reviewer now captures page/cache status on a subsequent failure. This remains an unexplained
 intermittent observation, not a guaranteed completion-time bound. Install and
 repair failures retain the open work and offer retry.
