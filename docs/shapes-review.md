@@ -170,3 +170,14 @@ and opened a newly exported Greek reading with its complete page image.
 The source and Pages branches are public. No registry release or hosted CI
 execution is established. The [initial public review](publication.md) remains
 a record of the earlier ten-file edition.
+
+## 2026-11-25: retained reading regenerated
+
+The retained shape reading (HTML and PDF) was regenerated on 2026-11-25 by
+running `scripts/shapes-browser.mjs` on a build of commit `715f10b`, for the
+author-name and license change. The credit now reads PolyForm Noncommercial,
+Anthony Mercer, and the edition identifier is the current build's; the embedded
+styles also carry the offline-actions rules added since October. The curve CSV
+came out byte-identical, the PDF still has nine pages, and the public site saved
+the same HTML. [shapes-artifacts.json](shapes-artifacts.json) has the new sizes
+and hashes.

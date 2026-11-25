@@ -8,13 +8,13 @@
     },
     {
       "file": "examples/one-pipe-reading.html",
-      "bytes": 1649123,
-      "sha256": "da7205659652b8964622d4a823a326ca8a4f2df460a5bb0d622f7ca7efa7f494"
+      "bytes": 1649347,
+      "sha256": "6b5c96425c8d2573c3aa56c73f2877158e7cd8f9a0c8788a9517e744f08a7ca7"
     },
     {
       "file": "examples/one-pipe-reading.pdf",
-      "bytes": 587566,
-      "sha256": "50b51afe7f4c7674f311c744755e430d9d08ebb48a114cd6bf52ec21271555da"
+      "bytes": 588360,
+      "sha256": "5c767d52d5dea3a8327e626d4693f4bd4335c00a93472c640158ca33a9aee7bf"
     },
     {
       "file": "examples/one-pipe-release.wav",
@@ -61,5 +61,12 @@
       "bytes": 48003,
       "sha256": "267ed18716b13cdc4351635f965e7ae112ace3e6daf8bd3d36c6f1743536da49"
     }
-  ]
+  ],
+  "regenerated": {
+    "date": "2026-11-25",
+    "sourceRevision": "715f10bcec82b89df89ed7e2be2ab0e9a3c0eb98",
+    "edition": "11a9a0bd103225ea250cccdd9fb4a5bad2c08f9b3b5897e4e187cf0c2294b384",
+    "files": ["examples/one-pipe-reading.html", "examples/one-pipe-reading.pdf"],
+    "reason": "author-name and license change; see the review notes"
+  }
 }

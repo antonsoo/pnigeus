@@ -44,18 +44,25 @@
     },
     {
       "file": "examples/shape-reading.html",
-      "bytes": 1476807,
-      "sha256": "1fbfe77284e0ef5584f52a07538a7c994b61d2b3b80c0a230ad343f971b0beb3"
+      "bytes": 1476946,
+      "sha256": "0523395e5aee9d5f62ef96d024dd0096a22f8e722e192945434826cb7a33e66e"
     },
     {
       "file": "examples/shape-reading.pdf",
-      "bytes": 631505,
-      "sha256": "22cc406fbde1299191baba789c451354eaa2bf0ff5e720a8c9c999597a6f42c1"
+      "bytes": 631521,
+      "sha256": "139755df0c17bb689d08a1bafaf4762450c4aa4e079744925e1b32fbb7195833"
     },
     {
       "file": "examples/shape-curves.csv",
       "bytes": 58278,
       "sha256": "e84b23daa2b32d9ca4b5632cb202cfa9e1d68ea610d84ef5e219f6ca63b02df8"
     }
-  ]
+  ],
+  "regenerated": {
+    "date": "2026-11-25",
+    "sourceRevision": "715f10bcec82b89df89ed7e2be2ab0e9a3c0eb98",
+    "edition": "11a9a0bd103225ea250cccdd9fb4a5bad2c08f9b3b5897e4e187cf0c2294b384",
+    "files": ["examples/shape-reading.html", "examples/shape-reading.pdf"],
+    "reason": "author-name and license change; see the review notes"
+  }
 }

@@ -132,3 +132,16 @@ This document records the initial local review. The subsequent
 Pages bytes and hosted browser workflows. The app remains private in npm
 metadata because it is a static exhibit, not a registry package. No hosted CI
 execution or registry release is established by these reviews.
+
+## 2026-11-25: retained reading regenerated
+
+The retained one-pipe reading (HTML and PDF) was regenerated on 2026-11-25 by
+running `scripts/browser-review.mjs` on a build of commit `715f10b`, for the
+author-name and license change. The credit now reads PolyForm Noncommercial,
+Anthony Mercer, and the edition identifier is the current build's. Two changes
+made to the tool since October also show: the chamber note now says Hero calls
+his chamber a hollow hemisphere, links to the shape workshop, and the print
+rules keep h3 headings with their text. The measurement CSV and release WAV came
+out byte-identical, the PDF still has nine pages, and the public site saved the
+same HTML in the same run against it. [artifacts.json](artifacts.json) has the
+new sizes and hashes.
